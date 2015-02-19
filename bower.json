@@ -1,6 +1,6 @@
 {
   "name": "ns-assets",
-  "private": true,
+  "private": false,
   "dependencies": {
     "html5shiv": "~3.7.2",
     "bootstrap": "~3.1.1",
