@@ -3,3 +3,10 @@ node_modules
 .sass-cache
 app/bower_components
 test/bower_components
+dist/fonts/
+dist/images/
+dist/.htaccess
+dist/404.html
+dist/favicon.png
+dist/index.html
+dist/robots.txt
