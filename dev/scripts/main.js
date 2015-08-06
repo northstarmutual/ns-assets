@@ -12354,4 +12354,3 @@ return jQuery;
 
 }(jQuery);
 
-console.log('\'Allo \'Allo!');
