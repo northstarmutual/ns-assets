@@ -16,6 +16,8 @@ cd ns-assets
 
 Install bower packages by running `bower install`
 
+Install packages specified in *package.json* by running `npm install`
+
 Once packages have been installed see if you can build it by running the `gulp` command in the `ns-assets` folder.
 
 Once you're able to build you can set up livereload and monitor the files in realtime by running `gulp serve`
