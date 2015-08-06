@@ -1,7 +1,9 @@
 'use strict';
 // generated on 2015-02-19 using generator-gulp-webapp 0.1.0
 
-var gulp = require('gulp');
+var gulp = require('gulp'),
+    gulpif = require('gulp-if'),
+    argv = require('yargs').argv;
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -27,29 +29,28 @@ gulp.task('scripts', function () {
 gulp.task('html', ['styles', 'scripts'], function () {
     var jsFilter = $.filter('**/*.js');
     var cssFilter = $.filter('**/*.css');
-
     return gulp.src('app/*.html')
         .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
         .pipe(jsFilter)
-        .pipe($.uglify())
+        .pipe(gulpif(argv.production, $.uglify()))
         .pipe(jsFilter.restore())
         .pipe(cssFilter)
-        .pipe($.csso())
+        .pipe(gulpif(argv.production, $.csso()))
         .pipe(cssFilter.restore())
         .pipe($.useref.restore())
         .pipe($.useref())
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest(gulp.distFolder))
         .pipe($.size());
 });
 
 gulp.task('images', function () {
     return gulp.src('app/images/**/*')
-        .pipe($.cache($.imagemin({
+        .pipe($.imagemin({
             optimizationLevel: 3,
             progressive: true,
             interlaced: true
-        })))
-        .pipe(gulp.dest('dist/images'))
+        }))
+        .pipe(gulp.dest(gulp.distFolder + '/images'))
         .pipe($.size());
 });
 
@@ -57,22 +58,41 @@ gulp.task('fonts', function () {
     return $.bowerFiles()
         .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
         .pipe($.flatten())
-        .pipe(gulp.dest('dist/fonts'))
+        .pipe(gulp.dest(gulp.distFolder + '/fonts'))
         .pipe($.size());
 });
 
 gulp.task('extras', function () {
     return gulp.src(['app/*.*', '!app/*.html'], { dot: true })
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest(gulp.distFolder));
+});
+
+gulp.task('move', function () {
+    var distFolder = '';
+    (argv.env == 'production') ? distFolder = 'dist' : distFolder = 'dev';
+    var files = [
+        './' + distFolder + '/styles/**/*.*',
+        './' + distFolder + '/fonts/**/*.*',
+        './' + distFolder + '/images/**/*.*',
+        './' + distFolder + '/scripts/**/*.*',
+        './' + distFolder + '/**/*.*'
+    ];
+    return gulp.src(files, { base: './' + distFolder + '/'}).pipe(gulp.dest('\\\\arthur3\\cool_ice\\assets\\tester'));
 });
 
 gulp.task('clean', function () {
-    return gulp.src(['.tmp', 'dist'], { read: false }).pipe($.clean());
+    var distFolder = '';
+    (argv.env == 'production') ? distFolder = 'dist' : distFolder = 'dev';
+    return gulp.src(['.tmp', distFolder], { read: false }).pipe($.clean());
 });
 
 gulp.task('build', ['html', 'images', 'fonts', 'extras']);
 
 gulp.task('default', ['clean'], function () {
+    (argv.env == 'production') ? gulp.distFolder = 'dist' : gulp.distFolder = 'dev';
+    //console.log(argv.env);
+    (argv.env == 'production') ?
+      console.log("Building production files in dist folder") : console.log('Run "gulp --env production" to build production assets');
     gulp.start('build');
 });
 
