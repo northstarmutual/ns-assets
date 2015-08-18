@@ -1,92 +1,6 @@
-$container-bg: #F8F8F8 !default;
-$ns-blue: #05007B !default;
-$ns-brwn-gold: #998d57 !default;
-//
-// Overrides
-//
-
-// Brand colors
-// -------------------------
-$brand-primary:                  #677895 !default;
-$brand-success:                  #5cb85c !default;
-$brand-warning:                  #f0ad4e !default;
-$brand-danger:                   #d9534f !default;
-$brand-info:                     #5bc0de !default;
-
-// Scaffolding
-// -------------------------
-$body-bg:                        #1D2747 !default;
-$text-color:                     #555555 !default;
-
-// Typography
-// -------------------------
-$font-size-base:                 13px !default;
-
-// Iconography
-// -------------------------
-
-$icon-font-path:                 "../fonts/" !default;
-// $icon-font-path: "../bower_components/bootstrap-sass/vendor/assets/fonts/bootstrap/";
-$icon-font-name:                 "glyphicons-halflings-regular" !default;
-
-// Components
-// -------------------------
-// Based on 14px font-size and 1.428 line-height (~20px to start)
-
-$padding-base-vertical:          3px !default;
-$padding-base-horizontal:        6px !default;
-
-$padding-large-vertical:         6px !default;
-$padding-large-horizontal:       12px !default;
-
-$padding-small-vertical:         3px !default;
-$padding-small-horizontal:       6px !default;
-
-$line-height-large:              1.33 !default;
-$line-height-small:              1.5 !default;
-
-$border-radius-base:             4px !default;
-$border-radius-large:            6px !default;
-$border-radius-small:            3px !default;
-
-// Forms
-// -------------------------
-
-$input-border-focus:             $brand-primary !default;
-
-
-// Navbar
-// -------------------------
-
-$navbar-default-bg:                        $brand-primary !default;
-$navbar-default-link-color:                #fff !default;
-$navbar-default-link-hover-color:          darken($navbar-default-link-color, 10%) !default;
-$navbar-default-link-active-color:         #fff !default;
-
-
-// List group
-$list-group-link-color:          $brand-primary !default;
-
-
-//== Tooltips
-//
-//##
-
-//** Tooltip max width
-// $tooltip-max-width:           200px !default;
-//** Tooltip text color
-// $tooltip-color:               #fff !default;
-//** Tooltip background color
-$tooltip-bg:                  $brand-primary !default;
-// $tooltip-opacity:             .9 !default;
-
-//** Tooltip arrow width
-// $tooltip-arrow-width:         5px !default;
-//** Tooltip arrow color
-$tooltip-arrow-color:         $brand-primary !default;
-
+@import 'variables.scss';
+@import 'gridforms-show.scss';
 // Importing a subset of the bootstrap library
-// @import '../bower_components/gridforms/gridforms/gridforms';
 @import '../bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_variables';
 @import '../bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins';
 @import '../bower_components/bootstrap-sass/vendor/assets/stylesheets/bootstrap/_normalize';
@@ -230,7 +144,7 @@ body {
 
 .app-ribbon {
   margin-bottom: 0;
-  border-color: $ns-brwn-gold;
+  border-color: $ns-brown-gold;
 }
 
 .contact-container {
@@ -259,8 +173,6 @@ body {
 .clickable {
   cursor: pointer;
 }
-
-
 
 .fileinput-button {
   position: relative;
@@ -1019,3 +931,11 @@ span.list-item-name {
 select.mini {
   font-size: 12px;
 }
+
+.half{
+  width:48%;
+}
+.third{
+  width:32%;
+}
+

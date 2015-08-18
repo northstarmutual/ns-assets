@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
-    return gulp.src('app/styles/main.scss')
+    return gulp.src('app/styles/*.scss')
         .pipe($.rubySass({
             style: 'expanded',
             precision: 10
@@ -69,7 +69,13 @@ gulp.task('extras', function () {
 
 gulp.task('move', function () {
     var distFolder = '';
-    (argv.env == 'production') ? distFolder = 'dist' : distFolder = 'dev';
+    var server = '';
+    var assetsPath = '';
+    (argv.production) ? distFolder = 'dist' : distFolder = 'dev';
+    (typeof(argv.server) == "undefined") ? server = 'arthur3' : server = argv.server;
+    assetsPath = '\\\\' + server + '\\cool_ice\\assets\\common';
+    console.log("Moving files to: " + assetsPath);
+    console.log('To move them to a different server pass the option "gulp move --server=arthur2"');
     var files = [
         './' + distFolder + '/styles/**/*.*',
         './' + distFolder + '/fonts/**/*.*',
@@ -77,22 +83,22 @@ gulp.task('move', function () {
         './' + distFolder + '/scripts/**/*.*',
         './' + distFolder + '/**/*.*'
     ];
-    return gulp.src(files, { base: './' + distFolder + '/'}).pipe(gulp.dest('\\\\arthur3\\cool_ice\\assets\\tester'));
+    return gulp.src(files, { base: './' + distFolder + '/'}).pipe(gulp.dest(assetsPath));
 });
 
 gulp.task('clean', function () {
     var distFolder = '';
-    (argv.env == 'production') ? distFolder = 'dist' : distFolder = 'dev';
+    (argv.production) ? distFolder = 'dist' : distFolder = 'dev';
     return gulp.src(['.tmp', distFolder], { read: false }).pipe($.clean());
 });
 
 gulp.task('build', ['html', 'images', 'fonts', 'extras']);
 
 gulp.task('default', ['clean'], function () {
-    (argv.env == 'production') ? gulp.distFolder = 'dist' : gulp.distFolder = 'dev';
+    (argv.production) ? gulp.distFolder = 'dist' : gulp.distFolder = 'dev';
     //console.log(argv.env);
-    (argv.env == 'production') ?
-      console.log("Building production files in dist folder") : console.log('Run "gulp --env production" to build production assets');
+    (argv.production) ?
+      console.log("Building production files in dist folder") : console.log('Run "gulp --production" to build production assets');
     gulp.start('build');
 });
 
@@ -142,6 +148,7 @@ gulp.task('watch', ['connect', 'serve'], function () {
         'app/*.html',
         '.tmp/styles/**/*.css',
         'app/scripts/**/*.js',
+        'app/styles/**/*.css',
         'app/images/**/*'
     ]).on('change', function (file) {
         server.changed(file.path);

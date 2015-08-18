@@ -1,0 +1,123 @@
+$container-bg: #F8F8F8 !default;
+$ns-blue: #1F4598 !default;
+$ns-gold: #C6922C !default;
+$ns-brown-gold: #998d57 !default;
+$default-link-color: #244296 !default;
+//
+// Overrides
+//
+
+// Brand colors
+// -------------------------
+// $brand-primary:                  #1D2747 !default;
+$brand-primary:                  #677895 !default;
+$brand-success:                  #5cb85c !default;
+$brand-warning:                  #f0ad4e !default;
+$brand-danger:                   #d9534f !default;
+$brand-info:                     #5bc0de !default;
+
+// Scaffolding
+// -------------------------
+$body-bg:                        #1D2747 !default;
+$text-color:                     #555555 !default;
+
+// Typography
+// -------------------------
+$font-size-base:                 13px !default;
+
+// Iconography
+// -------------------------
+
+$icon-font-path:                 "../fonts/" !default;
+// $icon-font-path: "../bower_components/bootstrap-sass/vendor/assets/fonts/bootstrap/";
+$icon-font-name:                 "glyphicons-halflings-regular" !default;
+
+// Components
+// -------------------------
+// Based on 14px font-size and 1.428 line-height (~20px to start)
+
+$padding-base-vertical:          3px !default;
+$padding-base-horizontal:        6px !default;
+
+$padding-large-vertical:         6px !default;
+$padding-large-horizontal:       12px !default;
+
+$padding-small-vertical:         3px !default;
+$padding-small-horizontal:       6px !default;
+
+$line-height-large:              1.33 !default;
+$line-height-small:              1.5 !default;
+
+$border-radius-base:             4px !default;
+$border-radius-large:            6px !default;
+$border-radius-small:            3px !default;
+
+// Forms
+// -------------------------
+
+$input-border-focus:             $brand-primary !default;
+
+
+// Navbar
+// -------------------------
+
+$navbar-default-bg:                        $brand-primary !default;
+$navbar-default-link-color:                #fff !default;
+$navbar-default-link-hover-color:          darken($navbar-default-link-color, 10%) !default;
+$navbar-default-link-active-color:         #fff !default;
+
+
+// List group
+$list-group-link-color:          $brand-primary !default;
+
+
+//== Tooltips
+//
+//##
+
+//** Tooltip max width
+// $tooltip-max-width:           200px !default;
+//** Tooltip text color
+// $tooltip-color:               #fff !default;
+//** Tooltip background color
+$tooltip-bg:                  $brand-primary !default;
+// $tooltip-opacity:             .9 !default;
+
+//** Tooltip arrow width
+// $tooltip-arrow-width:         5px !default;
+//** Tooltip arrow color
+$tooltip-arrow-color:         $brand-primary !default;
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+//** Background for the dropdown menu.
+// $dropdown-bg:                    #fff !default;
+// //** Dropdown menu `border-color`.
+// $dropdown-border:                rgba(0,0,0,.15) !default;
+// //** Dropdown menu `border-color` **for IE8**.
+// $dropdown-fallback-border:       #ccc !default;
+// //** Divider color for between dropdown items.
+// $dropdown-divider-bg:            #e5e5e5 !default;
+
+//** Dropdown link text color.
+$dropdown-link-color:            $ns-blue !default;
+//** Hover color for dropdown links.
+$dropdown-link-hover-color:      darken($ns-blue, 5%) !default;
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg:         #f5f5f5 !default;
+
+// //** Active dropdown menu item text color.
+// $dropdown-link-active-color:     $component-active-color !default;
+// //** Active dropdown menu item background color.
+// $dropdown-link-active-bg:        $component-active-bg !default;
+
+// //** Disabled dropdown menu item background color.
+// $dropdown-link-disabled-color:   $gray-light !default;
+
+// //** Text color for headers within dropdown menus.
+// $dropdown-header-color:          $gray-light !default;
+
+// //** Deprecated `$dropdown-caret-color` as of v3.1.0
+// $dropdown-caret-color:           #000 !default;
