@@ -34,19 +34,20 @@ By default the commands `gulp` and `gulp move` command are meant for development
 
 When moving test it's a good idea to have the files like you'd want them in production so for this we'll build them like so `gulp --production`.
 
-Then to move them run `gulp move --server=Arthur2`
+To move un minified files to Arthur2 run `gulp move --server=Arthur2`
+To move minified files to Arthur2 run `gulp move --production --server=Arthur2`
 
 # Building and moving the assets for production (Arthur)
 
 If you just built the files for production using `gulp --production` you won't need to do this again.
 
-To move them to the production machine run `gulp move --server=Arthur`
+To move them to the production machine run `gulp move --production --server=Arthur`
 
 # Combining the two
 
 To build the files and move them in one shot run the command below
 
-`gulp --production && gulp move --server=Arthur2`
+`gulp --production && gulp move --production --server=Arthur2`
 
 
 
