@@ -3,6 +3,7 @@
 
 var gulp = require('gulp'),
     gulpif = require('gulp-if'),
+    rev = require('gulp-rev'),
     argv = require('yargs').argv;
 
 // load plugins
@@ -67,12 +68,13 @@ gulp.task('extras', function () {
         .pipe(gulp.dest(gulp.distFolder));
 });
 
+//gulp.task('move', ['cleanServer'], function () {
 gulp.task('move', function () {
     var distFolder = '';
     var server = '';
     var assetsPath = '';
     (argv.production) ? distFolder = 'dist' : distFolder = 'dev';
-    (typeof(argv.server) == "undefined") ? server = 'arthur3' : server = argv.server;
+    (typeof(argv.server) == "undefined") ? server = 'thor' : server = argv.server;
     assetsPath = '\\\\' + server + '\\cool_ice\\assets\\common';
     console.log("Moving files to: " + assetsPath);
     console.log('To move them to a different server pass the option "gulp move --server=arthur2"');
@@ -83,7 +85,9 @@ gulp.task('move', function () {
         './' + distFolder + '/scripts/**/*.*',
         './' + distFolder + '/**/*.*'
     ];
-    return gulp.src(files, { base: './' + distFolder + '/'}).pipe(gulp.dest(assetsPath));
+    return gulp.src(files, { base: './' + distFolder + '/'})
+        .pipe($.clean())
+        .pipe(gulp.dest(assetsPath));
 });
 
 gulp.task('clean', function () {
