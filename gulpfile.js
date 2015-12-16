@@ -22,8 +22,6 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
     return gulp.src('app/scripts/**/*.js')
-        .pipe($.jshint())
-        .pipe($.jshint.reporter(require('jshint-stylish')))
         .pipe($.size());
 });
 
@@ -57,7 +55,7 @@ gulp.task('images', function () {
 
 gulp.task('fonts', function () {
     return $.bowerFiles()
-        .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
+        .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
         .pipe($.flatten())
         .pipe(gulp.dest(gulp.distFolder + '/fonts'))
         .pipe($.size());
@@ -86,7 +84,6 @@ gulp.task('move', function () {
         './' + distFolder + '/**/*.*'
     ];
     return gulp.src(files, { base: './' + distFolder + '/'})
-        .pipe($.clean())
         .pipe(gulp.dest(assetsPath));
 });
 
@@ -96,10 +93,23 @@ gulp.task('clean', function () {
     return gulp.src(['.tmp', distFolder], { read: false }).pipe($.clean());
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras']);
+gulp.task('docs', function () {
+    var distFolder = '';
+    (argv.production) ? distFolder = 'dist' : distFolder = 'dev';
+    var files = [
+        './' + distFolder + '/fonts/**/*.*',
+        './' + distFolder + '/images/**/*.*',
+        './' + distFolder + '/scripts/**/*.*',
+    ];
+    return gulp.src(files, { base: './' + distFolder + '/'})
+        .pipe(gulp.dest('./docs'));
+});
+
+gulp.task('build', ['html', 'images', 'fonts', 'extras', 'docs']);
 
 gulp.task('default', ['clean'], function () {
     (argv.production) ? gulp.distFolder = 'dist' : gulp.distFolder = 'dev';
+    gulp.styleGuideFolder = 'docs';
     //console.log(argv.env);
     (argv.production) ?
       console.log("Building production files in dist folder") : console.log('Run "gulp --production" to build production assets');
@@ -121,7 +131,7 @@ gulp.task('connect', function () {
         });
 });
 
-gulp.task('serve', ['connect', 'styles'], function () {
+gulp.task('serve', ['connect', 'styles', 'docs'], function () {
     require('opn')('http://localhost:9000');
 });
 
@@ -143,7 +153,7 @@ gulp.task('wiredep', function () {
         .pipe(gulp.dest('app'));
 });
 
-gulp.task('watch', ['connect', 'serve'], function () {
+gulp.task('watch', ['connect', 'serve', 'docs'], function () {
     var server = $.livereload();
 
     // watch for changes
@@ -158,8 +168,8 @@ gulp.task('watch', ['connect', 'serve'], function () {
         server.changed(file.path);
     });
 
-    gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/images/**/*', ['images']);
+    gulp.watch('app/styles/**/*.scss', ['styles', 'docs']);
+    gulp.watch('app/scripts/**/*.js', ['scripts', 'docs']);
+    gulp.watch('app/images/**/*', ['images', 'docs']);
     gulp.watch('bower.json', ['wiredep']);
 });

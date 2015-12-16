@@ -1,0 +1,19 @@
+@media print {
+  .app-container {
+    width: 960px;
+  }
+  .print-title {
+    margin-top: 15px;
+    text-align: right;
+  }
+  .print-logo {
+    width: 55% !important;
+  }
+
+  a[href]:after {
+    content: "";
+  }
+  abbr[title]:after {
+    content: "";
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    {% include head.html %}
+
+    <style type="text/css">
+      .breadcrumb {
+        padding: 8px 15px !important;
+        margin-bottom: 18px !important;
+        list-style: none;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+      }
+
+      .breadcrumb a {
+        font-size: 16px;
+      }
+
+      .docs-example {
+        background-color: initial !important;
+        padding:0;
+        border: 0;
+        border-radius: 0;
+      }
+      .docs-example+.highlight {
+          border: 0;
+          margin-top: 15px;
+          padding: 15px;
+          background-color: #fff;
+          border-radius: 0;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    {{ content }}
+  </body>
+</html>

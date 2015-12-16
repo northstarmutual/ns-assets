@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>
+    Getting started &middot; Style Guide
+  </title>
+
+  <link rel="stylesheet" href="/docs/styleguide/docs.css">
+  <link rel="icon" type="image/png" href="/docs/styleguide/images/favicon.png">
+  <script src="/docs/styleguide/scripts/main.js"></script>
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="navbar pg-header">
+  <div class="navbar-inner">
+    <div class="col-6">
+      <h1 class="brand">
+        <a href="/docs/styleguide/">
+          <img src="/docs/styleguide/images/NSM-logo-web.gif" alt="North Star Mutual Insurance Company"
+            class="img-responsive" title="North Star Mutual Insurance Company">
+        </a>
+      </h1>
+    </div>
+    <div class="col-6">
+      <h1 class="pg-title">
+        Getting started
+      </h1>
+    </div>
+  </div>
+</div>
+<div class="navbar navbar-default app-ribbon">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/docs/styleguide/">
+      <span class="glyphicon glyphicon-home"></span>
+      Style Guide
+    </a>
+  </div>
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a  href="/docs/styleguide/about">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="http://gitlab.galaxy.local/onlinequoting/ns-assets/docs" target="_blank">Gitlab</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="/blob/master/README.md#install" target="_blank">Install</a></li>
+    </ul>
+  </div>
+</div>
+
+      
+
+        <div class="inner-container clearfix"><!-- (LOCATION:  462,H,1003) -->
+    <ol class="breadcrumb hidden-print">
+      <li class="active">Getting started</li>
+    </ol>
+    <div class="app-container column markdown-body">
+      <h1 class="page-title">
+        Getting started
+      </h1>
+      <div class="markdown-body">
+        <h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#main-stylesheet-bundle" id="markdown-toc-main-stylesheet-bundle">Main stylesheet bundle</a>    <ul>
+      <li><a href="#contents-1" id="markdown-toc-contents-1">Contents</a></li>
+    </ul>
+  </li>
+  <li><a href="#employee-menu-bundle" id="markdown-toc-employee-menu-bundle">Employee Menu bundle</a></li>
+  <li><a href="#supporting-ie7" id="markdown-toc-supporting-ie7">Supporting IE7</a></li>
+  <li><a href="#main-javascript-bundle" id="markdown-toc-main-javascript-bundle">Main JavaScript bundle</a>    <ul>
+      <li><a href="#contents-2" id="markdown-toc-contents-2">Contents</a></li>
+    </ul>
+  </li>
+  <li><a href="#other-javascript-bundles" id="markdown-toc-other-javascript-bundles">Other JavaScript bundles</a>    <ul>
+      <li><a href="#oldie" id="markdown-toc-oldie">oldie</a></li>
+      <li><a href="#datatables" id="markdown-toc-datatables">dataTables</a>        <ul>
+          <li><a href="#contents-3" id="markdown-toc-contents-3">Contents</a></li>
+        </ul>
+      </li>
+      <li><a href="#fileupload" id="markdown-toc-fileupload">fileUpload</a></li>
+    </ul>
+  </li>
+  <li><a href="#other-legacy-files" id="markdown-toc-other-legacy-files">Other Legacy Files</a></li>
+</ul>
+
+<h2 id="main-stylesheet-bundle">Main stylesheet bundle</h2>
+
+<p>The <code>main</code> stylesheet for the front end toolkit is named… <code>main</code> :)  Have a look at the following section of code to see how to add this to your page.</p>
+
+<div class="highlight"><pre><code class="language-bis" data-lang="bis">&lt;head&gt;
+@     call,NSEXTASSETS_ 0011 ('Stylesheet','main','') .
+&lt;/head&gt;</code></pre></div>
+
+<p>Using the <code>NSEXTASSETS_</code> routine isolates you from hardcoding the actual path to the file.  This way the version of the file can be updated without making changes to the codebase.</p>
+
+<h3 id="contents-1">Contents</h3>
+
+<p>The contents of the <code>main</code> bundle includes the css for all of the components associated with this styleguide.  Any new components should be added to the <code>main</code> bundle for use by all other pages.</p>
+
+<p><em>By adding all the styles in one file we can cache and gzip it, so the user should only have to download this file one time.  For every other request the users computer should grab it from its cache without having to download it.  This speeds up the load time of the site.</em></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">stylesheets
+├── main.css
+│   ├── main.scss
+│   ├──── variables.scss
+│   ├──── ns-bootstrap.scss
+│   ├────── mixins.scss
+│   ├────── variables.scss
+│   ├────── normalize.scss
+│   ├────── print.scss
+│   ├────── scaffolding.scss
+│   ├────── type.scss
+│   ├────── grid.scss
+│   ├────── tables.scss
+│   ├────── forms.scss
+│   ├────── buttons.scss
+│   ├────── glyphicons.scss
+│   ├────── dropdowns.scss
+│   ├────── input-groups.scss
+│   ├────── list-group.scss
+│   ├────── navs.scss
+│   ├────── navbar.scss
+│   ├────── breadcrumbs.scss
+│   ├────── pagination.scss
+│   ├────── labels.scss
+│   ├────── badges.scss
+│   ├────── jumbotron.scss
+│   ├────── alerts.scss
+│   ├────── panels.scss
+│   ├────── wells.scss
+│   ├────── close.scss
+│   ├────── modals.scss
+│   ├────── tooltip.scss
+│   ├────── popovers.scss
+│   ├────── utilities.scss
+│   ├────── responsive-utilities.scss
+│   ├────── responsive-embed.scss
+│   ├────── progress-bars.scss
+│   ├──── layout.scss
+│   ├──── utility.scss
+│   ├──── responsive.scss
+│   ├──── swatches.scss
+│   ├──── bulletin.scss
+│   ├──── print.scss
+│   ├──── menu.scss
+│   ├──── overrides.scss
+│   ├──── summary.scss
+│   ├──── file-upload.scss
+│   ├──── upload-progress.scss
+│   ├──── bootstrap-datepicker.scss
+│   ├──── gridforms-show.scss
+│   └──── data-tables.scss</code></pre></div>
+
+<h2 id="employee-menu-bundle">Employee Menu bundle</h2>
+
+<p>The <code>menu</code> bundle is only used for the Employee Menu.  This also requires the <code>main</code> bundle.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">├── menu.css 
+    ├── menu.scss
+    ├────── variables.scss</code></pre></div>
+
+<h2 id="supporting-ie7">Supporting IE7</h2>
+
+<p>If you need support for IE7 add the following file to your page.  Will also need to add <code>oldie</code> JavaScript file to your page as well…</p>
+
+<ul>
+  <li>Applies IE7-specific styles to Bootstrap components and HTML elements.</li>
+  <li>Includes bug fixes for the usual suspects: hasLayout, inline-block bug, z-index bug., etc</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-bis" data-lang="bis">&lt;!--[if lt IE 9  ]&gt;
+@     call,NSEXTASSETS_ 0011 ('Stylesheet','oldie','') .
+&lt;![endif]--&gt;</code></pre></div>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">├── oldie.css
+    ├── bootstrap-ie7fix.css</code></pre></div>
+
+<h2 id="main-javascript-bundle">Main JavaScript bundle</h2>
+
+<p>If you are going to use any of the JavaScript plugins you’ll also have to include the <code>main</code> JavaScript file.</p>
+
+<div class="highlight"><pre><code class="language-bis" data-lang="bis">&lt;head&gt;
+@     call,NSEXTASSETS_ 0011 ('JavaScript','main','') .
+&lt;/head&gt;</code></pre></div>
+
+<h3 id="contents-2">Contents</h3>
+
+<p>Here is the contents of the <code>main</code> JavaScript bundle.  For complete up-to-date reference please have a look at the <a href="http://gitlab.galaxy.local/onlinequoting/ns-assets/blob/master/bower.json">bower.json</a> file.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">├── main.js
+    ├── jquery.js 
+    ├── bootstrap.js
+    │   ├────── alert.js
+    │   ├────── dropdown.js
+    │   ├────── tooltip.js
+    │   ├────── modal.js
+    │   ├────── transition.js
+    │   ├────── button.js
+    │   ├────── popover.js
+    │   ├────── collapse.js
+    │   ├────── tab.js
+    │   ├────── affix.js
+    │   ├────── scrollspy.js
+    ├── datepicker.js
+    ├── inputmask.js
+    ├── formatCurrency.js</code></pre></div>
+
+<ul>
+  <li>jquery.js (Version ~1.11.3)
+    <ul>
+      <li>Required for many of the plugins listed.  As well as very handy</li>
+    </ul>
+  </li>
+  <li>bootstrap.js (Version ~3.3.5)
+    <ul>
+      <li>Needed for bootstrap javascript plugins
+        <ul>
+          <li><a href="/docs/styleguide/javascript#modals">modals</a></li>
+          <li><a href="/docs/styleguide/javascript#tabs">tabs</a></li>
+          <li><a href="/docs/styleguide/javascript.md#tooltips">tooltips</a></li>
+          <li><a href="/docs/styleguide/#popover">popover</a></li>
+          <li><a href="/docs/styleguide/#affix">affix</a></li>
+          <li><a href="/docs/styleguide/#alert-messages">alert-messages</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>datepicker.js (Version ~1.5.0)
+    <ul>
+      <li>Used for jquery datepicker. <a href="/docs/styleguide/#datepicker">example</a></li>
+    </ul>
+  </li>
+  <li>inputmask.js (Version ~3.2.5)
+    <ul>
+      <li>input masks for phone, date, etc.  <a href="/docs/styleguide/#input-masks">example</a></li>
+    </ul>
+  </li>
+  <li>formatCurrency.js (Version ~1.4.0)
+    <ul>
+      <li><a href="/docs/styleguide/#input-masks">example</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="other-javascript-bundles">Other JavaScript bundles</h2>
+
+<p>There are a few other JavaScript bundles that are used throughout our site.</p>
+
+<h3 id="oldie">oldie</h3>
+
+<p>The <code>oldie</code> JavaScript bundle should be included for browsers older than IE 9.</p>
+
+<div class="highlight"><pre><code class="language-bis" data-lang="bis">&lt;!--[if lt IE 9  ]&gt;
+@     call,NSEXTASSETS_ 0011 ('JavaScript','oldie','') .
+&lt;![endif]--&gt;</code></pre></div>
+
+<p>This includes the following files which adds support for HTML5 elements and allows media queries to work with old IE.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">├── oldie.js
+    ├── html5shiv.js
+    └── respond.js</code></pre></div>
+
+<h3 id="datatables">dataTables</h3>
+
+<p>To get <code>dataTables</code> working on your page inclde the <code>dataTables</code> bundle.  <strong>You must first include the <code>main</code> bundle for this to work</strong></p>
+
+<div class="highlight"><pre><code class="language-bis" data-lang="bis">@     call,NSEXTASSETS_ 0011 ('JavaScript','dataTables','') .</code></pre></div>
+
+<h4 id="contents-3">Contents</h4>
+
+<p><a href="http://legacy.datatables.net/">Docs for legacy dataTables</a></p>
+
+<p>The file <code>dataTables-1.9.3</code> is is a special version of <code>dataTables</code> that has been modified to work with <strong>ICE</strong>.</p>
+
+<p>The <code>dt_bootstrap-1.0.0.js</code> allows the pagination routine to use the bootstrap styles.</p>
+
+<p><a href="/docs/styleguide/javascript#datatables">Example</a></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">├── dataTables.js
+    ├── dataTables-1.9.3.js
+    └── dt_bootstrap-1.0.0.js</code></pre></div>
+
+<h3 id="fileupload">fileUpload</h3>
+
+<p>To use the jquery file upload plugin add the <code>fileUpload</code> bundle to your page.  <strong>You must first include the <code>main</code> bundle for this to work</strong></p>
+
+<div class="highlight"><pre><code class="language-bis" data-lang="bis">@     call,NSEXTASSETS_ 0011 ('JavaScript','fileUpload','') .</code></pre></div>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">├── dataTables.js
+    ├── jquery-ui.min.js
+    ├── jquery.tmpl.min.js
+    ├── jquery.iframe-transport.js
+    ├── jquery.fileupload.js
+    ├── jquery.fileupload-process.js
+    ├── jquery.fileupload-validate.js
+    ├── jquery.fileupload-ui.js
+    ├── jquery.fileupload-jquery-ui.js
+    ├── file_upload-1.0.6.js</code></pre></div>
+
+<h2 id="other-legacy-files">Other Legacy Files</h2>
+
+<p>There are numerous other legacy JavaScript and CSS files that can be found in <code>23b210</code> and <code>23b410</code>.</p>
+
+<p>Most of these are for one off use cases… Should the need arise to use one of them again just use the <code>NSEXTASSETS_</code> routine to add them to your page.</p>
+
+      </div>
+    </div><!-- .app-container -->
+    <div class="col-3">
+      
+        <nav class="menu docs-menu">
+  <a class="menu-item selected" href="/docs/styleguide/getting-started/">
+    Getting started
+  </a>
+  <a class="menu-item " href="/docs/styleguide/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item " href="/docs/styleguide/layout/">
+    Layout
+  </a>
+  <a class="menu-item " href="/docs/styleguide/type/">
+    Type
+  </a>
+  <a class="menu-item " href="/docs/styleguide/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item " href="/docs/styleguide/forms/">
+    Forms
+  </a>
+  <a class="menu-item " href="/docs/styleguide/tables/">
+    Tables
+  </a>
+  <a class="menu-item " href="/docs/styleguide/images/">
+    Images
+  </a>
+  <a class="menu-item " href="/docs/styleguide/helpers/">
+    Helper classes
+  </a>
+  <a class="menu-item " href="/docs/styleguide/components/">
+    Components
+  </a>
+  <a class="menu-item " href="/docs/styleguide/javascript/">
+    Javascript
+  </a>
+<!--   <a class="menu-item " href="/docs/styleguide/nav/">
+    Navigation
+  </a>
+  <a class="menu-item " href="/docs/styleguide/alerts/">
+    Alerts
+  </a>
+  <a class="menu-item " href="/docs/styleguide/states/">
+    States
+  </a>
+  <a class="menu-item " href="/docs/styleguide/tooltips/">
+    Tooltips
+  </a>
+  <a class="menu-item " href="/docs/styleguide/utilities/">
+    Utilities
+  </a> -->
+  <a class="menu-item " href="/docs/styleguide/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item " href="/docs/styleguide/colors/">
+    Colors
+  </a>
+  <a class="menu-item " href="/docs/styleguide/examples/">
+    Examples
+  </a>
+</nav>
+<script type="text/javascript">
+$(function () {
+
+  var $body   = $(document.body);
+  var $window = $(window);
+  var $docsMenu = $('.docs-menu');
+  setTimeout(function () {
+    $docsMenu.affix({
+      offset: {
+        top: function() {
+          var offsetTop      = $docsMenu.offset().top
+          var sideBarMargin  = parseInt($docsMenu.children(0).css('margin-top'), 20)
+
+          return (this.top = offsetTop - sideBarMargin)
+        },
+        bottom: function () {
+          var offset = $('.pg-footer').outerHeight(true);
+          return (this.bottom = offset + 43);
+        }
+      }
+    });
+  }, 100)
+
+  var $tocCopy = $("#markdown-toc").clone();
+  $tocCopy.attr("class", "sidemenu-toc").attr("id", "sidemenu-toc");
+  $tocCopy.appendTo(".docs-menu .menu-item.selected");
+
+})
+</script>
+      
+    </div>
+  </div><!-- .inner-container -->
+    </div><!-- .container -->
+
+      <footer class="pg-footer">
+    <div class="container clearfix">
+      <div class="row">
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/about-us">About Us</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/our-values">Our Values</a><br>
+            <a target="_blank" href="http://northstarmutual.com/our-history">Our History</a><br>
+            <a target="_blank" href="http://northstarmutual.com/partnerships-associations">Partnerships &amp; Associations</a><br>
+            <a target="_blank" href="http://northstarmutual.com/recent-highlights">Recent Highlights</a><br>
+            <a target="_blank" href="http://northstarmutual.com/contact-us">Contact Us</a><br>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/products">Products</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/product-farm">Farm</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-home">Home</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-auto">Auto</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-business">Business</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-umbrella">Umbrella</a><br>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="https://paymentsnsmic.billmatrix.com/" target="_blank">Make Payment</a></div>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/claims-service">Claims Service</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/report-claim">Report Claim</a><br>
+            <a target="_blank" href="http://northstarmutual.com/roadside-assistance">Roadside Assistance</a><br>
+            <a target="_blank" href="http://northstarmutual.com/claims-faq">Claims FAQ</a><br>
+            <a target="_blank" href="http://northstarmutual.com/loss-control-tips">Loss Control Tips</a><br>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="https://quote.nstarco.com/cool-ice/default.asp?Category=misc&amp;Service=menu" target="_blank"> Agent Login</a></div>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/legal-notices">Legal Notices</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-minnesota">Minnesota</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-iowa">Iowa</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-nebraska">Nebraska</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-north-dakota">North Dakota</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-oklahoma">Oklahoma</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-south-dakota">South Dakota</a><br>
+          </div>
+        </div>
+      </div>
+      <div class="row sitemap-module">
+        <div class="col-10">
+          <span class="copyright">
+            North Star Mutual Insurance Company • 269 Barstad Road South, PO Box 48 • Cottonwood, MN 56229 • 800-622-5230
+          </span>
+        </div>
+        <div class="col-2 pull right">
+          <a href="#top"><span class="glyphicon glyphicon-upload"></span> Back to top&nbsp;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+  </body>
+</html>
+
+
+

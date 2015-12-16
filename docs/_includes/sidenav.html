@@ -1,0 +1,88 @@
+<nav class="menu docs-menu">
+  <a class="menu-item {% if page.title == "Getting started" %}selected{% endif %}" href="{{ site.baseurl }}/getting-started/">
+    Getting started
+  </a>
+  <a class="menu-item {% if page.title == "Scaffolding" %}selected{% endif %}" href="{{ site.baseurl }}/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item {% if page.title == "Layout" %}selected{% endif %}" href="{{ site.baseurl }}/layout/">
+    Layout
+  </a>
+  <a class="menu-item {% if page.title == "Typography" %}selected{% endif %}" href="{{ site.baseurl }}/type/">
+    Type
+  </a>
+  <a class="menu-item {% if page.title == "Buttons" %}selected{% endif %}" href="{{ site.baseurl }}/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item {% if page.title == "Forms" %}selected{% endif %}" href="{{ site.baseurl }}/forms/">
+    Forms
+  </a>
+  <a class="menu-item {% if page.title == "Tables" %}selected{% endif %}" href="{{ site.baseurl }}/tables/">
+    Tables
+  </a>
+  <a class="menu-item {% if page.title == "Images" %}selected{% endif %}" href="{{ site.baseurl }}/images/">
+    Images
+  </a>
+  <a class="menu-item {% if page.title == "Helper classes" %}selected{% endif %}" href="{{ site.baseurl }}/helpers/">
+    Helper classes
+  </a>
+  <a class="menu-item {% if page.title == "Components" %}selected{% endif %}" href="{{ site.baseurl }}/components/">
+    Components
+  </a>
+  <a class="menu-item {% if page.title == "Javascript" %}selected{% endif %}" href="{{ site.baseurl }}/javascript/">
+    Javascript
+  </a>
+<!--   <a class="menu-item {% if page.title == "Navigation" %}selected{% endif %}" href="{{ site.baseurl }}/nav/">
+    Navigation
+  </a>
+  <a class="menu-item {% if page.title == "Alerts" %}selected{% endif %}" href="{{ site.baseurl }}/alerts/">
+    Alerts
+  </a>
+  <a class="menu-item {% if page.title == "States" %}selected{% endif %}" href="{{ site.baseurl }}/states/">
+    States
+  </a>
+  <a class="menu-item {% if page.title == "Tooltips" %}selected{% endif %}" href="{{ site.baseurl }}/tooltips/">
+    Tooltips
+  </a>
+  <a class="menu-item {% if page.title == "Utilities" %}selected{% endif %}" href="{{ site.baseurl }}/utilities/">
+    Utilities
+  </a> -->
+  <a class="menu-item {% if page.title == "Guidelines" %}selected{% endif %}" href="{{ site.baseurl }}/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item {% if page.title == "Colors" %}selected{% endif %}" href="{{ site.baseurl }}/colors/">
+    Colors
+  </a>
+  <a class="menu-item {% if page.title == "Examples" %}selected{% endif %}" href="{{ site.baseurl }}/examples/">
+    Examples
+  </a>
+</nav>
+<script type="text/javascript">
+$(function () {
+
+  var $body   = $(document.body);
+  var $window = $(window);
+  var $docsMenu = $('.docs-menu');
+  setTimeout(function () {
+    $docsMenu.affix({
+      offset: {
+        top: function() {
+          var offsetTop      = $docsMenu.offset().top
+          var sideBarMargin  = parseInt($docsMenu.children(0).css('margin-top'), 20)
+
+          return (this.top = offsetTop - sideBarMargin)
+        },
+        bottom: function () {
+          var offset = $('.pg-footer').outerHeight(true);
+          return (this.bottom = offset + 43);
+        }
+      }
+    });
+  }, 100)
+
+  var $tocCopy = $("#markdown-toc").clone();
+  $tocCopy.attr("class", "sidemenu-toc").attr("id", "sidemenu-toc");
+  $tocCopy.appendTo(".docs-menu .menu-item.selected");
+
+})
+</script>

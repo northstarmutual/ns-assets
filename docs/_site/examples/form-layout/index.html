@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>
+    Form layout &middot; Style Guide
+  </title>
+
+  <link rel="stylesheet" href="/docs/styleguide/docs.css">
+  <link rel="icon" type="image/png" href="/docs/styleguide/images/favicon.png">
+  <script src="/docs/styleguide/scripts/main.js"></script>
+
+    <style type="text/css">
+      .docs-example {
+        background-color: initial !important;
+        padding:0;
+        border:0;
+      }
+
+      .docs-example+.highlight {
+        padding-left: 20px;
+        background-color: #DCDCDC;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="navbar pg-header">
+  <div class="navbar-inner">
+    <div class="col-6">
+      <h1 class="brand">
+        <a href="/docs/styleguide/">
+          <img src="/docs/styleguide/images/NSM-logo-web.gif" alt="North Star Mutual Insurance Company"
+            class="img-responsive" title="North Star Mutual Insurance Company">
+        </a>
+      </h1>
+    </div>
+    <div class="col-6">
+      <h1 class="pg-title">
+        Form layout
+      </h1>
+    </div>
+  </div>
+</div>
+<div class="navbar navbar-default app-ribbon">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/docs/styleguide/">
+      <span class="glyphicon glyphicon-home"></span>
+      Style Guide
+    </a>
+  </div>
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a  href="/docs/styleguide/about">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="http://gitlab.galaxy.local/onlinequoting/ns-assets/docs" target="_blank">Gitlab</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="/blob/master/README.md#install" target="_blank">Install</a></li>
+    </ul>
+  </div>
+</div>
+
+      <div class="inner-container docs-layout clearfix">
+        <ol class="breadcrumb hidden-print">
+          <li class="active">
+            <a href="/docs/styleguide/examples/">Examples</a>
+          </li>
+        </ol>
+      
+<div class="docs-example clearfix"><div class="app-container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3>Form layout</h3>
+    </div>
+    <div class="panel-body">
+    <form class="grid-form-show">
+      <fieldset>
+        <div data-row-span="2">
+          <div data-field-span="1">
+            <label>Field 1</label>
+            <input type="text" />
+          </div>
+          <div data-field-span="1">
+            <label>Field 2</label>
+            <input type="text" />
+          </div>
+        </div>
+        <div data-row-span="3">
+          <div data-field-span="1">
+            <button type="button" class="btn btn-primary"> Submit </button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    </div>
+  </div>
+</div>
+<!-- The contact piece should be a comman @call routine -->
+<div class="contact-container hidden-print hidden-sm hidden-md hidden-xs">
+  <div class="bulletin bulletin-top">
+    <h3 class="soft-hdg">Contact Us</h3>
+    <address>
+      <strong>North Star Mutual</strong><br />
+      <span title="Phone">Phone:</span> (800) 622-5230<br />
+      <span title="Fax">Fax:</span> (507) 423-6323
+    </address>
+    <address>
+      <strong>Support Email</strong><br />
+      <a href="mailto:info@northstarmutual.com">info@northstarmutual.com</a>
+    </address>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"app-container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h3&gt;</span>Form layout<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"grid-form-show"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;fieldset&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Field 1<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Field 2<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span> Submit <span class="nt">&lt;/button&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/fieldset&gt;</span>
+    <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!-- The contact piece should be a comman @call routine --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"contact-container hidden-print hidden-sm hidden-md hidden-xs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bulletin bulletin-top"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"soft-hdg"</span><span class="nt">&gt;</span>Contact Us<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;address&gt;</span>
+      <span class="nt">&lt;strong&gt;</span>North Star Mutual<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">title=</span><span class="s">"Phone"</span><span class="nt">&gt;</span>Phone:<span class="nt">&lt;/span&gt;</span> (800) 622-5230<span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">title=</span><span class="s">"Fax"</span><span class="nt">&gt;</span>Fax:<span class="nt">&lt;/span&gt;</span> (507) 423-6323
+    <span class="nt">&lt;/address&gt;</span>
+    <span class="nt">&lt;address&gt;</span>
+      <span class="nt">&lt;strong&gt;</span>Support Email<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:info@northstarmutual.com"</span><span class="nt">&gt;</span>info@northstarmutual.com<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/address&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+      </div>
+
+    </div><!-- .container -->
+  </body>
+</html>

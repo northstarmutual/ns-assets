@@ -1,0 +1,75 @@
+// Overrides
+.badge-primary {
+  @include label-variant($label-primary-bg);
+}
+
+.badge-success {
+  @include label-variant($label-success-bg);
+}
+
+.badge-info {
+  @include label-variant($label-info-bg);
+}
+
+.badge-warning {
+  @include label-variant($label-warning-bg);
+}
+
+.badge-danger {
+  @include label-variant($label-danger-bg);
+}
+
+.control-label-err {
+  color: $state-danger-text;
+}
+
+.form-control-err {
+  border-color: $state-danger-text;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.form-control-err:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+}
+
+// Glyph Icon Sizes
+.icon-lg {
+  font-size: 24px;
+}
+
+.span-form-control {
+  display: block;
+  width: 100%;
+  height: 26px;
+  padding: 3px 6px;
+  font-size: 13px;
+  line-height: 1.42857;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+// Variations
+// -------------------------
+
+.progress-bar-success {
+  @include progress-bar-variant($progress-bar-success-bg);
+}
+
+.progress-bar-info {
+  @include progress-bar-variant($progress-bar-info-bg);
+}
+
+.progress-bar-warning {
+  @include progress-bar-variant($progress-bar-warning-bg);
+}
+
+.progress-bar-danger {
+  @include progress-bar-variant($progress-bar-danger-bg);
+}
+
+// Gold Panel
+// -------------------------
+.panel-gold {
+  @include panel-variant($panel-gold-border, $panel-gold-text, $panel-gold-heading-bg, $panel-gold-border);
+}

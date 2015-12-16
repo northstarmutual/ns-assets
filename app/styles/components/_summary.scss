@@ -1,0 +1,133 @@
+// Umbrella Quote/App Summary Styles
+
+.list-item-container,
+div#list-items-title,
+div#list-items-title a,
+div#list-edit-items-title,
+div#list-edit-settings-title {
+// color: #666;
+  font-size: 15px;
+  line-height: 48px;
+  white-space: nowrap;
+}
+
+div#item-detail-view-details div#list-items-title {
+  background: #f6f5f2;
+  border: 0;
+  line-height: 30px;
+  margin: 40px 0 0;
+  padding: 0 10px;
+}
+
+#list-items-title {
+  background: #f6f5f2;
+  border: 0;
+  line-height: 30px;
+  margin: 40px 0 0;
+  padding: 0 10px;
+}
+
+.list-item-container span,
+div#list-items-title span,
+div#list-edit-items-title span {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  margin: 0 20px 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+div#item-detail-view-details li.list-item span {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  margin: 0 20px 0 0;
+  overflow: hidden;
+}
+
+div#item-detail-view-details ul li.list-item {
+padding-right: 0;
+}
+
+
+div#item-detail-view-details ul,
+div#item-detail-view-details li,
+div#item-detail-view-details dl,
+div#item-detail-view-details dt,
+div#item-detail-view-details dd {
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+div#item-detail-view-details li.list-item {
+  font-size: 15px;
+  line-height: 30px;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+ul#list-items-container {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-item {
+  border-bottom: 1px solid #ebe4de;
+  margin: 0;
+  padding: 0;
+}
+
+span.list-item-qty {
+  width: 130px;
+}
+
+span.list-item-price {
+  width: 75px;
+}
+
+div#item-detail-view-details span.list-item-total,
+div#item-detail-view-details li.list-item span.list-item-total {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+div#list-items-title span.list-item-total {
+  margin: 0 20px 0 0;
+  width: 75px;
+}
+
+.list-item-container span,
+div#list-items-title span,
+div#list-edit-items-title span {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1;
+  margin: 0 20px 0 0;
+  overflow: hidden;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+span.list-item-total {
+  padding: 0 5px 0 0;
+  width: 75px;
+}
+
+div#item-detail-view-details span.list-item-name {
+  width: 65%;
+}
+
+span.list-item-name {
+  width: 147px;
+}

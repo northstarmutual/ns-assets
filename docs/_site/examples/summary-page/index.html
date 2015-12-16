@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>
+    Summary page &middot; Style Guide
+  </title>
+
+  <link rel="stylesheet" href="/docs/styleguide/docs.css">
+  <link rel="icon" type="image/png" href="/docs/styleguide/images/favicon.png">
+  <script src="/docs/styleguide/scripts/main.js"></script>
+
+    <style type="text/css">
+      .docs-example {
+        background-color: initial !important;
+        padding:0;
+        border:0;
+      }
+
+      .docs-example+.highlight {
+        padding-left: 20px;
+        background-color: #DCDCDC;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="navbar pg-header">
+  <div class="navbar-inner">
+    <div class="col-6">
+      <h1 class="brand">
+        <a href="/docs/styleguide/">
+          <img src="/docs/styleguide/images/NSM-logo-web.gif" alt="North Star Mutual Insurance Company"
+            class="img-responsive" title="North Star Mutual Insurance Company">
+        </a>
+      </h1>
+    </div>
+    <div class="col-6">
+      <h1 class="pg-title">
+        Summary page
+      </h1>
+    </div>
+  </div>
+</div>
+<div class="navbar navbar-default app-ribbon">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/docs/styleguide/">
+      <span class="glyphicon glyphicon-home"></span>
+      Style Guide
+    </a>
+  </div>
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a  href="/docs/styleguide/about">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="http://gitlab.galaxy.local/onlinequoting/ns-assets/docs" target="_blank">Gitlab</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="/blob/master/README.md#install" target="_blank">Install</a></li>
+    </ul>
+  </div>
+</div>
+
+      <div class="inner-container docs-layout clearfix">
+        <ol class="breadcrumb hidden-print">
+          <li class="active">
+            <a href="/docs/styleguide/examples/">Examples</a>
+          </li>
+        </ol>
+      <div class="row hidden-print">
+  <div class="col-9" style="padding-left:30px;padding-right:20px">
+    <div class="alert alert-info">
+      <p>Try print preview (ctrl + p) to see the <code>.visible-print</code> and <code>.hidden-print</code> classes at work.</p>
+    </div>
+  </div>
+</div>
+
+<div class="docs-example clearfix"><div class="app-container">
+  <div class="row visible-print">
+    <div class="col-6">
+      <img src="https://quotedev.nstarco.com/assets/common/images/NSM-logo-web.gif" class="print-logo" alt="North Star Mutual Insurance Company" />
+    </div>
+    <div class="col-6">
+      <h1 class="print-title">
+        Umbrella Quote
+        <img src="https://quotedev.nstarco.com/assets/images/umbrella.png" title="Umbrella Quoting System" />
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="panel panel-default panel-pg-hdg">
+        <div class="panel-heading">
+          <strong> Application: UL42005</strong>
+          <strong class="pull-right">
+            Effective:
+            <a href="#" title="Change effective date">
+            07/25/2015
+            </a>
+          </strong>
+        </div>
+        <div class="panel-body">
+          <address>
+            <a href="#">
+              PEARL BAUMAN
+            </a>
+            <br />
+            500 E LINCOLN ST APT 103 <br />
+            HENDRICKS, MN 56136-9561 <br />
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="panel panel-default panel-pg-hdg">
+        <div class="panel-heading">
+          <strong>  NORTH STAR INSURANCE AGENCY (365)  </strong>
+        </div>
+        <div class="panel-body">
+          <address>
+            <strong>NORTH STAR INSURANCE AGENCY</strong><br />
+            PO BOX 48<br />
+            COTTONWOOD, MN 56229 <br />
+            <abbr title="Phone">Phone:</abbr>  (507) 423-6262
+            <br />
+            <abbr title="Fax">Fax:</abbr>  (507) 423-6323
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="half-lg-full-sm qte-btns">
+              <h3 class="summary-hdg">Umbrella App Details</h3>
+            </div>
+            <div class="half-lg-full-sm qte-btns">
+              <h3 class="label label-success summary-hdg-sm">
+                Premium for this Quote is: $ 178.00
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3 qte-btns">
+              <a href="#" id="activePDF-trigger" style="margin-right: 2em;" class="btn btn-sm btn-default hidden-print btn-block">
+                Print Summary Details
+              </a>
+            </div>
+            <div class="col-3 col-offset-6 qte-btns">
+              <a href="#" class="btn btn-default btn-sm pull-right hidden-print btn-block">
+                Complete App
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+        <div class="row">
+          <div id="item-detail-view-details">
+            <div id="list-items-title">
+              <span class="list-item-name"> Policy Limits </span>
+              <span class="list-item-qty"> &nbsp; </span>
+              <span class="list-item-total"> &nbsp; </span>
+            </div>
+            <ul id="list-items-container">
+              <li class="list-item">
+                <span class="list-item-name">
+                  <a href="#">Personal Umbrella  Limit</a>
+                </span>
+                <span class="list-item-qty"> $1,000,000 </span>
+                <span class="list-item-total"> &nbsp; </span>
+              </li>
+              <li class="list-item">
+                <span class="list-item-name">
+                  <a href="#" title="Change effective date">
+                    Effective Date: 07/25/2015
+                  </a>
+                </span>
+                <span class="list-item-qty">
+                </span>
+                <span class="list-item-total"> &nbsp; </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div id="item-detail-view-details">
+            <div id="list-items-title">
+              <span class="list-item-name"> Underlying Limits </span>
+              <span class="list-item-qty"></span>
+            </div>
+            <ul id="list-items-container">
+              <li class="list-item">
+                <span class="list-item-name">
+                  <a href="#">Auto Limits</a>
+                </span>
+                <span class="list-item-qty">250/500/100</span>
+              </li>
+              <li class="list-item">
+                <span class="list-item-name">
+                  <a href="#">Company</a>
+                </span>
+                <span class="list-item-qty">North Star Mutual</span>
+                <span class="list-item-total"></span>
+              </li>
+              <li class="list-item">
+                <span class="list-item-name">
+                  <a href="#">Uninsured/Underinsured</a>
+                </span>
+                <span class="list-item-qty">Not Included</span>
+                <span class="list-item-total"></span>
+              </li>
+              <li class="list-item">
+                <span class="list-item-name">
+                  <a href="#">Primary Residence</a>
+                </span>
+                <span class="list-item-qty"> 300,000 </span>
+                <span class="list-item-total"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+          <div class="row">
+            <div id="item-detail-view-details">
+              <div id="list-items-title">
+                <span class="list-item-name">Residence</span>
+                <span class="list-item-qty">Qty/Present</span>
+                <span class="list-item-total">Premium</span>
+              </div>
+              <ul id="list-items-container">
+                <li class="list-item">
+                  <span class="list-item-name">
+                    <a href="#">Locations</a>
+                  </span>
+                  <span class="list-item-qty">1</span>
+                  <span class="list-item-total">115.00</span>
+                </li>
+                <li class="list-item" style="border-bottom:0">
+                  <span class="list-item-name">&nbsp;</span>
+                  <span class="list-item-qty">Total:</span>
+                  <span class="list-item-total">115.00</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div id="item-detail-view-details">
+              <div id="list-items-title">
+                <span class="list-item-name">Drivers</span>
+                <span class="list-item-qty">Qty</span>
+                <span class="list-item-total">Premium</span>
+              </div>
+              <ul id="list-items-container">
+                <li class="list-item">
+                  <span class="list-item-name">
+                    <a href="#">Drivers 25 and Over</a>
+                  </span>
+                  <span class="list-item-qty">2</span>
+                  <span class="list-item-total">0.00</span>
+                </li>
+                <li class="list-item" style="border-bottom:0">
+                  <span class="list-item-name text-right">Total:</span>
+                  <span class="list-item-qty">2</span>
+                  <span class="list-item-total">0.00</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row ">
+            <div id="item-detail-view-details">
+              <div id="list-items-title">
+                <span class="list-item-name">Vehicles </span>
+                <span class="list-item-qty">Qty</span>
+                <span class="list-item-total">Premium</span>
+              </div>
+              <ul id="list-items-container">
+                <li class="list-item">
+                  <span class="list-item-name">
+                    <a href="#">Automobiles</a>
+                  </span>
+                  <span class="list-item-qty">3</span>
+                  <span class="list-item-total">63.00</span>
+                </li>
+                <li class="list-item" style="border-bottom:0">
+                  <span class="list-item-name text-right">Total:</span>
+                  <span class="list-item-qty">3</span>
+                  <span class="list-item-total">63.00</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row hidden-print">
+            <div id="item-detail-view-details">
+              <div id="list-items-title">
+                <span class="list-item-name">Watercraft</span>
+                <span class="list-item-qty">Qty</span>
+                <span class="list-item-total">Premium</span>
+              </div>
+              <ul id="list-items-container">
+                <li class="list-item" style="border-bottom:0">
+                  <span class="list-item-name">
+                    <a href="#" class="btn btn-success">Add</a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div><!-- /.row -->
+          <div class="row hidden-print">
+            <div id="item-detail-view-details">
+              <div id="list-items-title">
+                <span class="list-item-name">Recreational Vehicles</span>
+                <span class="list-item-qty">Qty</span>
+                <span class="list-item-total">Premium</span>
+              </div>
+              <ul id="list-items-container">
+                <li class="list-item" style="border-bottom:0">
+                  <a href="#" class="btn btn-success">Add</a>
+                </li>
+              </ul>
+            </div>
+          </div><!-- /.row -->
+          <div class="row">
+            <div id="item-detail-view-details">
+              <ul id="list-items-container">
+                <li class="list-item">&nbsp;</li>
+                <li class="list-item" style="border-bottom:0">
+                  <span class="list-item-name">&nbsp;</span>
+                  <span class="list-item-qty"><strong>Total Premium:</strong></span>
+                  <span class="list-item-total"><strong>178.00</strong></span>
+                </li>
+              </ul>
+            </div>
+          </div><!-- /.row -->
+          <div class="row hidden-print top-margin" style="margin-top: 30px;">
+            <div class="col-12">
+              <div class="col-3 col-1-offset qte-btns first-btn">
+                <a href="#" class="btn btn-default fill">New App</a>
+              </div>
+              <div class="col-3 col-1-offset qte-btns">
+                <a href="#" class="btn btn-default fill">
+                  Change As New
+                </a>
+              </div>
+              <div class="col-3 col-1-offset qte-btns">
+              </div>
+              <div class="col-3 col-1-offset qte-btns">
+                <a href="#" class="btn btn-primary fill">
+                  Complete App
+                </a>
+              </div>
+            </div>
+          </div>
+        </div><!-- .panel-body -->
+      </div>
+    </div>
+  </div><!-- .row -->
+  <div class="visible-print row col-12">
+    <p>North Star Mutual Insurance Company &#8226;
+    269 Barstad Road South, PO Box 48 &#8226; Cottonwood, MN 56229 &#8226; 800-622-5230</p>
+  </div>
+</div><!-- .app-container -->
+
+<!-- The contact piece should be a comman @call routine -->
+<div class="contact-container hidden-print hidden-sm hidden-md hidden-xs">
+  <div class="bulletin bulletin-top">
+    <h3 class="soft-hdg">Contact Us</h3>
+    <address>
+      <strong>North Star Mutual</strong><br />
+      <span title="Phone">Phone:</span> (800) 622-5230<br />
+      <span title="Fax">Fax:</span> (507) 423-6323
+    </address>
+    <address>
+      <strong>Support Email</strong><br />
+      <a href="mailto:info@northstarmutual.com">info@northstarmutual.com</a>
+    </address>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"app-container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row visible-print"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://quotedev.nstarco.com/assets/common/images/NSM-logo-web.gif"</span> <span class="na">class=</span><span class="s">"print-logo"</span>
+      <span class="na">alt=</span><span class="s">"North Star Mutual Insurance Company"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"print-title"</span><span class="nt">&gt;</span>
+        Umbrella Quote
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://quotedev.nstarco.com/assets/images/umbrella.png"</span> <span class="na">title=</span><span class="s">"Umbrella Quoting System"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default panel-pg-hdg"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;strong&gt;</span> Application: UL42005<span class="nt">&lt;/strong&gt;</span>
+          <span class="nt">&lt;strong</span> <span class="na">class=</span><span class="s">"pull-right"</span><span class="nt">&gt;</span>
+            Effective:
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Change effective date"</span><span class="nt">&gt;</span>
+            07/25/2015
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/strong&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;address&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+              PEARL BAUMAN
+            <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;br&gt;</span>
+            500 E LINCOLN ST APT 103 <span class="nt">&lt;br&gt;</span>
+            HENDRICKS, MN 56136-9561 <span class="nt">&lt;br&gt;</span>
+          <span class="nt">&lt;/address&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-default panel-pg-hdg"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;strong&gt;</span>  NORTH STAR INSURANCE AGENCY (365)  <span class="nt">&lt;/strong&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;address&gt;</span>
+            <span class="nt">&lt;strong&gt;</span>NORTH STAR INSURANCE AGENCY<span class="nt">&lt;/strong&gt;&lt;BR&gt;</span>
+            PO BOX 48<span class="nt">&lt;br&gt;</span>
+            COTTONWOOD, MN 56229 <span class="nt">&lt;br&gt;</span>
+            <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"Phone"</span><span class="nt">&gt;</span>Phone:<span class="nt">&lt;/abbr&gt;</span>  (507) 423-6262
+            <span class="nt">&lt;BR&gt;</span>
+            <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"Fax"</span><span class="nt">&gt;</span>Fax:<span class="nt">&lt;/abbr&gt;</span>  (507) 423-6323
+          <span class="nt">&lt;/address&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel panel-primary"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-heading"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half-lg-full-sm qte-btns"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"summary-hdg"</span><span class="nt">&gt;</span>Umbrella App Details<span class="nt">&lt;/h3&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half-lg-full-sm qte-btns"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"label label-success summary-hdg-sm"</span><span class="nt">&gt;</span>
+                Premium for this Quote is: $ 178.00
+              <span class="nt">&lt;/h3&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-3 qte-btns"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">id=</span><span class="s">"activePDF-trigger"</span> <span class="na">style=</span><span class="s">"margin-right: 2em;"</span>
+                <span class="na">class=</span><span class="s">"btn btn-sm btn-default hidden-print btn-block"</span><span class="nt">&gt;</span>
+                Print Summary Details
+              <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-3 col-offset-6 qte-btns"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-sm pull-right hidden-print btn-block"</span><span class="nt">&gt;</span>
+                Complete App
+              <span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"panel-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"item-detail-view-details"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"list-items-title"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span> Policy Limits <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span> <span class="ni">&amp;nbsp;</span> <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span> <span class="ni">&amp;nbsp;</span> <span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"list-items-container"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Personal Umbrella  Limit<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span> $1,000,000 <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span> <span class="ni">&amp;nbsp;</span> <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">title=</span><span class="s">"Change effective date"</span><span class="nt">&gt;</span>
+                    Effective Date: 07/25/2015
+                  <span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span> <span class="ni">&amp;nbsp;</span> <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"item-detail-view-details"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"list-items-title"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span> Underlying Limits <span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"list-items-container"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Auto Limits<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>250/500/100<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Company<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>North Star Mutual<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;&lt;/span&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Uninsured/Underinsured<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>Not Included<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;&lt;/span&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Primary Residence<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span> 300,000 <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;&lt;/span&gt;</span>
+              <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"item-detail-view-details"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"list-items-title"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>Residence<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>Qty/Present<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span>Premium<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"list-items-container"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Locations<span class="nt">&lt;/a&gt;</span>
+                  <span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span>115.00<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">style=</span><span class="s">"border-bottom:0"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>Total:<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span>115.00<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"item-detail-view-details"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"list-items-title"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>Drivers<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>Qty<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span>Premium<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"list-items-container"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Drivers 25 and Over<span class="nt">&lt;/a&gt;</span>
+                  <span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span>0.00<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">style=</span><span class="s">"border-bottom:0"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name text-right"</span><span class="nt">&gt;</span>Total:<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span>0.00<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row "</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"item-detail-view-details"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"list-items-title"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>Vehicles <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>Qty<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span>Premium<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"list-items-container"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Automobiles<span class="nt">&lt;/a&gt;</span>
+                  <span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span>63.00<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">style=</span><span class="s">"border-bottom:0"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name text-right"</span><span class="nt">&gt;</span>Total:<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span>63.00<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row hidden-print"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"item-detail-view-details"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"list-items-title"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>Watercraft<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>Qty<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span>Premium<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"list-items-container"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">style=</span><span class="s">"border-bottom:0"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-success"</span><span class="nt">&gt;</span>Add<span class="nt">&lt;/a&gt;</span>
+                  <span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.row --&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row hidden-print"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"item-detail-view-details"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"list-items-title"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span>Recreational Vehicles<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;</span>Qty<span class="nt">&lt;/span&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;</span>Premium<span class="nt">&lt;/span&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"list-items-container"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">style=</span><span class="s">"border-bottom:0"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-success"</span><span class="nt">&gt;</span>Add<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.row --&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"item-detail-view-details"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"list-items-container"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span><span class="nt">&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-item"</span> <span class="na">style=</span><span class="s">"border-bottom:0"</span><span class="nt">&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-name"</span><span class="nt">&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-qty"</span><span class="nt">&gt;&lt;strong&gt;</span>Total Premium:<span class="nt">&lt;/strong&gt;&lt;/span&gt;</span>
+                  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"list-item-total"</span><span class="nt">&gt;&lt;strong&gt;</span>178.00<span class="nt">&lt;/strong&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;/li&gt;</span>
+              <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.row --&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row hidden-print top-margin"</span> <span class="na">style=</span><span class="s">"margin-top: 30px;"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-12"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-3 col-1-offset qte-btns first-btn"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default fill"</span><span class="nt">&gt;</span>New App<span class="nt">&lt;/a&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-3 col-1-offset qte-btns"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default fill"</span><span class="nt">&gt;</span>
+                  Change As New
+                <span class="nt">&lt;/a&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-3 col-1-offset qte-btns"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-3 col-1-offset qte-btns"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-primary fill"</span><span class="nt">&gt;</span>
+                  Complete App
+                <span class="nt">&lt;/a&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- .panel-body --&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- .row --&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"visible-print row col-12"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>North Star Mutual Insurance Company <span class="ni">&amp;#8226;</span>
+    269 Barstad Road South, PO Box 48 <span class="ni">&amp;#8226;</span> Cottonwood, MN 56229 <span class="ni">&amp;#8226;</span> 800-622-5230<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- .app-container --&gt;</span>
+
+<span class="c">&lt;!-- The contact piece should be a comman @call routine --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"contact-container hidden-print hidden-sm hidden-md hidden-xs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bulletin bulletin-top"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"soft-hdg"</span><span class="nt">&gt;</span>Contact Us<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;address&gt;</span>
+      <span class="nt">&lt;strong&gt;</span>North Star Mutual<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">title=</span><span class="s">"Phone"</span><span class="nt">&gt;</span>Phone:<span class="nt">&lt;/span&gt;</span> (800) 622-5230<span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">title=</span><span class="s">"Fax"</span><span class="nt">&gt;</span>Fax:<span class="nt">&lt;/span&gt;</span> (507) 423-6323
+    <span class="nt">&lt;/address&gt;</span>
+    <span class="nt">&lt;address&gt;</span>
+      <span class="nt">&lt;strong&gt;</span>Support Email<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:info@northstarmutual.com"</span><span class="nt">&gt;</span>info@northstarmutual.com<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/address&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+      </div>
+
+    </div><!-- .container -->
+  </body>
+</html>

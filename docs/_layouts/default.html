@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    {% include head.html %}
+
+    {% if page.title == "Javascript" %}
+    <script src="{{ site.baseurl }}/scripts/dataTables.js"></script>
+    {% endif %}
+
+    {% if page.title == "Layout" %}
+    <style type="text/css">
+    .docs-example [class^=col-] {
+      padding: 10px;
+      font-family: $font-family-monospace;
+      background-color: #e7f6e0;
+      border: 1px solid #c8eab9;
+    }
+    </style>
+    {% endif %}
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      {% include nav.html %}
+
+      {% if page.title == "Home" %}
+
+      <div class="inner-container docs-layout clearfix">
+        <div class="app-container">
+          <div class="jumbotron" style="margin-top: 20px">
+            <h1>Style Guide</h1>
+            <p>The CSS toolkit and guidelines for North Star Mutual.</p>
+
+            <a href="{{ site.baseurl }}/getting-started/" class="btn btn-reverse">
+              Read the docs
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      {{ content }}
+    </div><!-- .container -->
+
+    {% include footer.html %}
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+  </body>
+</html>
+
+
+

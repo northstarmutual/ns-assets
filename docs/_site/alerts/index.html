@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>
+    Alerts &middot; Style Guide
+  </title>
+
+  <link rel="stylesheet" href="/docs/styleguide/docs.css">
+  <link rel="icon" type="image/png" href="/docs/styleguide/images/favicon.png">
+  <script src="/docs/styleguide/scripts/main.js"></script>
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="navbar pg-header">
+  <div class="navbar-inner">
+    <div class="col-6">
+      <h1 class="brand">
+        <a href="/docs/styleguide/">
+          <img src="/docs/styleguide/images/NSM-logo-web.gif" alt="North Star Mutual Insurance Company"
+            class="img-responsive" title="North Star Mutual Insurance Company">
+        </a>
+      </h1>
+    </div>
+    <div class="col-6">
+      <h1 class="pg-title">
+        Alerts
+      </h1>
+    </div>
+  </div>
+</div>
+<div class="navbar navbar-default app-ribbon">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/docs/styleguide/">
+      <span class="glyphicon glyphicon-home"></span>
+      Style Guide
+    </a>
+  </div>
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a  href="/docs/styleguide/about">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="http://gitlab.galaxy.local/onlinequoting/ns-assets/docs" target="_blank">Gitlab</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="/blob/master/README.md#install" target="_blank">Install</a></li>
+    </ul>
+  </div>
+</div>
+
+      
+
+        <div class="inner-container clearfix"><!-- (LOCATION:  462,H,1003) -->
+    <ol class="breadcrumb hidden-print">
+      <li class="active">Alerts</li>
+    </ol>
+    <div class="app-container column markdown-body">
+      <h1 class="page-title">
+        Alerts
+      </h1>
+      <div class="markdown-body">
+        <p>Flash messages, or alerts, inform users of successful or pending actions. Use them sparingly. Don’t show more than one at a time.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#default" id="markdown-toc-default">Default</a></li>
+  <li><a href="#variations" id="markdown-toc-variations">Variations</a></li>
+  <li><a href="#with-icon" id="markdown-toc-with-icon">With icon</a></li>
+  <li><a href="#dismiss" id="markdown-toc-dismiss">Dismiss</a></li>
+</ul>
+
+<h2 id="default">Default</h2>
+
+<p>Flash messages start off looking decently neutral—they’re just light blue rounded rectangles.</p>
+
+<div class="docs-example clearfix"><div class="flash">
+  Flash message goes here.
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flash"</span><span class="nt">&gt;</span>
+  Flash message goes here.
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<p>You can put multiple paragraphs of text in a flash message—the last paragraph’s bottom <code>margin</code> will be automatically override.</p>
+
+<div class="docs-example clearfix"><div class="flash">
+  <p>This is a longer flash message in it's own paragraph. It ends up looking something like this. If we keep adding more text, it'll eventually wrap to a new line.</p>
+  <p>And this is another paragraph.</p>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flash"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>This is a longer flash message in it's own paragraph. It ends up looking something like this. If we keep adding more text, it'll eventually wrap to a new line.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p&gt;</span>And this is another paragraph.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<p>Should the need arise, you can quickly space out your flash message from surrounding content with a <code>.flash-messages</code> wrapper. <em>Note the extra top and bottom margin in the example below.</em></p>
+
+<div class="docs-example clearfix"><div class="flash-messages">
+  <div class="flash">
+    Flash message goes here.
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flash-messages"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flash"</span><span class="nt">&gt;</span>
+    Flash message goes here.
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="variations">Variations</h2>
+
+<p>Add <code>.flash-warn</code> or <code>.flash-error</code> to the flash message to make it yellow or red, respectively.</p>
+
+<div class="docs-example clearfix"><div class="flash flash-warn">
+  Flash message goes here.
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flash flash-warn"</span><span class="nt">&gt;</span>
+  Flash message goes here.
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<div class="docs-example clearfix"><div class="flash flash-error">
+  Flash message goes here.
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flash flash-error"</span><span class="nt">&gt;</span>
+  Flash message goes here.
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="with-icon">With icon</h2>
+
+<p>Add an icon to the left of the flash message to give it some funky fresh attention. Just add <code>.flash-with-icon</code> and your Octicon.</p>
+
+<div class="docs-example clearfix"><div class="flash flash-with-icon">
+  <span class="octicon octicon-alert"></span>
+  Flash message with an icon goes here.
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flash flash-with-icon"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"octicon octicon-alert"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  Flash message with an icon goes here.
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="dismiss">Dismiss</h2>
+
+<p>Add a JavaScript enabled (via Crema) dismiss (close) icon on the right of any flash message.</p>
+
+<div class="docs-example clearfix"><div class="flash">
+  <span class="octicon octicon-x flash-close js-flash-close"></span>
+  Dismissable flash message goes here.
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flash"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"octicon octicon-x flash-close js-flash-close"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  Dismissable flash message goes here.
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+
+      </div>
+    </div><!-- .app-container -->
+    <div class="col-3">
+      
+        <nav class="menu docs-menu">
+  <a class="menu-item " href="/docs/styleguide/getting-started/">
+    Getting started
+  </a>
+  <a class="menu-item " href="/docs/styleguide/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item " href="/docs/styleguide/layout/">
+    Layout
+  </a>
+  <a class="menu-item " href="/docs/styleguide/type/">
+    Type
+  </a>
+  <a class="menu-item " href="/docs/styleguide/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item " href="/docs/styleguide/forms/">
+    Forms
+  </a>
+  <a class="menu-item " href="/docs/styleguide/tables/">
+    Tables
+  </a>
+  <a class="menu-item " href="/docs/styleguide/images/">
+    Images
+  </a>
+  <a class="menu-item " href="/docs/styleguide/helpers/">
+    Helper classes
+  </a>
+  <a class="menu-item " href="/docs/styleguide/components/">
+    Components
+  </a>
+  <a class="menu-item " href="/docs/styleguide/javascript/">
+    Javascript
+  </a>
+<!--   <a class="menu-item " href="/docs/styleguide/nav/">
+    Navigation
+  </a>
+  <a class="menu-item selected" href="/docs/styleguide/alerts/">
+    Alerts
+  </a>
+  <a class="menu-item " href="/docs/styleguide/states/">
+    States
+  </a>
+  <a class="menu-item " href="/docs/styleguide/tooltips/">
+    Tooltips
+  </a>
+  <a class="menu-item " href="/docs/styleguide/utilities/">
+    Utilities
+  </a> -->
+  <a class="menu-item " href="/docs/styleguide/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item " href="/docs/styleguide/colors/">
+    Colors
+  </a>
+  <a class="menu-item " href="/docs/styleguide/examples/">
+    Examples
+  </a>
+</nav>
+<script type="text/javascript">
+$(function () {
+
+  var $body   = $(document.body);
+  var $window = $(window);
+  var $docsMenu = $('.docs-menu');
+  setTimeout(function () {
+    $docsMenu.affix({
+      offset: {
+        top: function() {
+          var offsetTop      = $docsMenu.offset().top
+          var sideBarMargin  = parseInt($docsMenu.children(0).css('margin-top'), 20)
+
+          return (this.top = offsetTop - sideBarMargin)
+        },
+        bottom: function () {
+          var offset = $('.pg-footer').outerHeight(true);
+          return (this.bottom = offset + 43);
+        }
+      }
+    });
+  }, 100)
+
+  var $tocCopy = $("#markdown-toc").clone();
+  $tocCopy.attr("class", "sidemenu-toc").attr("id", "sidemenu-toc");
+  $tocCopy.appendTo(".docs-menu .menu-item.selected");
+
+})
+</script>
+      
+    </div>
+  </div><!-- .inner-container -->
+    </div><!-- .container -->
+
+      <footer class="pg-footer">
+    <div class="container clearfix">
+      <div class="row">
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/about-us">About Us</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/our-values">Our Values</a><br>
+            <a target="_blank" href="http://northstarmutual.com/our-history">Our History</a><br>
+            <a target="_blank" href="http://northstarmutual.com/partnerships-associations">Partnerships &amp; Associations</a><br>
+            <a target="_blank" href="http://northstarmutual.com/recent-highlights">Recent Highlights</a><br>
+            <a target="_blank" href="http://northstarmutual.com/contact-us">Contact Us</a><br>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/products">Products</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/product-farm">Farm</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-home">Home</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-auto">Auto</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-business">Business</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-umbrella">Umbrella</a><br>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="https://paymentsnsmic.billmatrix.com/" target="_blank">Make Payment</a></div>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/claims-service">Claims Service</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/report-claim">Report Claim</a><br>
+            <a target="_blank" href="http://northstarmutual.com/roadside-assistance">Roadside Assistance</a><br>
+            <a target="_blank" href="http://northstarmutual.com/claims-faq">Claims FAQ</a><br>
+            <a target="_blank" href="http://northstarmutual.com/loss-control-tips">Loss Control Tips</a><br>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="https://quote.nstarco.com/cool-ice/default.asp?Category=misc&amp;Service=menu" target="_blank"> Agent Login</a></div>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/legal-notices">Legal Notices</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-minnesota">Minnesota</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-iowa">Iowa</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-nebraska">Nebraska</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-north-dakota">North Dakota</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-oklahoma">Oklahoma</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-south-dakota">South Dakota</a><br>
+          </div>
+        </div>
+      </div>
+      <div class="row sitemap-module">
+        <div class="col-10">
+          <span class="copyright">
+            North Star Mutual Insurance Company • 269 Barstad Road South, PO Box 48 • Cottonwood, MN 56229 • 800-622-5230
+          </span>
+        </div>
+        <div class="col-2 pull right">
+          <a href="#top"><span class="glyphicon glyphicon-upload"></span> Back to top&nbsp;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+  </body>
+</html>
+
+
+

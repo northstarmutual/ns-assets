@@ -1,0 +1,24 @@
+# Site settings
+title: North Star Front End Style Guide
+description: Front End Style Guide
+baseurl: "/docs/styleguide" # the subpath of your site, e.g. /blog/
+assetsurl: ""
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  auto_ids: true
+
+permalink: pretty
+port: 8888
+
+version: 2.0.0
+
+sass:
+  sass_dir: ../
+  style: compressed
+
+gitlab:
+  repo: http://gitlab.galaxy.local/onlinequoting/ns-assets/docs
+

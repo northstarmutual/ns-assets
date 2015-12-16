@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>
+    Typography &middot; Style Guide
+  </title>
+
+  <link rel="stylesheet" href="/docs/styleguide/docs.css">
+  <link rel="icon" type="image/png" href="/docs/styleguide/images/favicon.png">
+  <script src="/docs/styleguide/scripts/main.js"></script>
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="navbar pg-header">
+  <div class="navbar-inner">
+    <div class="col-6">
+      <h1 class="brand">
+        <a href="/docs/styleguide/">
+          <img src="/docs/styleguide/images/NSM-logo-web.gif" alt="North Star Mutual Insurance Company"
+            class="img-responsive" title="North Star Mutual Insurance Company">
+        </a>
+      </h1>
+    </div>
+    <div class="col-6">
+      <h1 class="pg-title">
+        Typography
+      </h1>
+    </div>
+  </div>
+</div>
+<div class="navbar navbar-default app-ribbon">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/docs/styleguide/">
+      <span class="glyphicon glyphicon-home"></span>
+      Style Guide
+    </a>
+  </div>
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a  href="/docs/styleguide/about">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="http://gitlab.galaxy.local/onlinequoting/ns-assets/docs" target="_blank">Gitlab</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="/blob/master/README.md#install" target="_blank">Install</a></li>
+    </ul>
+  </div>
+</div>
+
+      
+
+        <div class="inner-container clearfix"><!-- (LOCATION:  462,H,1003) -->
+    <ol class="breadcrumb hidden-print">
+      <li class="active">Typography</li>
+    </ol>
+    <div class="app-container column markdown-body">
+      <h1 class="page-title">
+        Typography
+      </h1>
+      <div class="markdown-body">
+        <p>Headings, paragraphs, blockquotes, lists, and more have some global resets. It’s worth noting these aren’t the same as our Markdown styles.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#headings" id="markdown-toc-headings">Headings</a></li>
+  <li><a href="#page-header" id="markdown-toc-page-header">Page Header</a></li>
+  <li><a href="#body-text" id="markdown-toc-body-text">Body text</a></li>
+  <li><a href="#lead" id="markdown-toc-lead">Lead</a></li>
+  <li><a href="#inline-text-elements" id="markdown-toc-inline-text-elements">Inline text elements</a></li>
+  <li><a href="#alignment-classes" id="markdown-toc-alignment-classes">Alignment classes</a></li>
+  <li><a href="#transformation-classes" id="markdown-toc-transformation-classes">Transformation classes</a></li>
+  <li><a href="#addresses" id="markdown-toc-addresses">Addresses</a></li>
+  <li><a href="#blockquotes" id="markdown-toc-blockquotes">Blockquotes</a></li>
+  <li><a href="#unordered-list" id="markdown-toc-unordered-list">Unordered List</a></li>
+  <li><a href="#ordered-list" id="markdown-toc-ordered-list">Ordered List</a></li>
+  <li><a href="#description" id="markdown-toc-description">Description</a></li>
+  <li><a href="#horizontal-description" id="markdown-toc-horizontal-description">Horizontal description</a></li>
+  <li><a href="#small-text" id="markdown-toc-small-text">Small text</a></li>
+</ul>
+
+<h2 id="headings">Headings</h2>
+
+<div class="docs-example clearfix"><h1>h1. Heading</h1>
+<h2>h2. Heading</h2>
+<h3>h3. Heading</h3>
+<h4>h4. Heading</h4>
+<h5>h5. Heading</h5>
+<h6>h6. Heading</h6></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>h1. Heading<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>h2. Heading<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>h3. Heading<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>h4. Heading<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>h5. Heading<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>h6. Heading<span class="nt">&lt;/h6&gt;</span></code></pre></div>
+
+<div class="docs-example clearfix"><h1>h1. Heading <small>Secondary text</small></h1>
+<h2>h2. Heading <small>Secondary text</small></h2>
+<h3>h3. Heading <small>Secondary text</small></h3>
+<h4>h4. Heading <small>Secondary text</small></h4>
+<h5>h5. Heading <small>Secondary text</small></h5>
+<h6>h6. Heading <small>Secondary text</small></h6></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>h1. Heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>h2. Heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>h3. Heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>h4. Heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>h5. Heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>h6. Heading <span class="nt">&lt;small&gt;</span>Secondary text<span class="nt">&lt;/small&gt;&lt;/h6&gt;</span></code></pre></div>
+
+<h2 id="page-header">Page Header</h2>
+
+<div class="docs-example clearfix"><h1 class="page-header">This is a page header</h1></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"page-header"</span><span class="nt">&gt;</span>This is a page header<span class="nt">&lt;/h1&gt;</span></code></pre></div>
+
+<h2 id="body-text">Body text</h2>
+
+<div class="docs-example clearfix"><p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="lead">Lead</h2>
+
+<p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+
+<div class="docs-example clearfix"><p class="lead">
+  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>
+  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="inline-text-elements">Inline text elements</h2>
+
+<p>Styling for common inline HTML5 elements.</p>
+
+<div class="docs-example clearfix"><p>You can use the mark tag to <mark>highlight</mark> text.</p>
+<p><del>This line of text is meant to be treated as deleted text.</del></p>
+<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+<p><u>This line of text will render as underlined</u></p>
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+<p><strong>This line rendered as bold text.</strong></p>
+<p><em>This line rendered as italicized text.</em></p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>You can use the mark tag to <span class="nt">&lt;mark&gt;</span>highlight<span class="nt">&lt;/mark&gt;</span> text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;del&gt;</span>This line of text is meant to be treated as deleted text.<span class="nt">&lt;/del&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;s&gt;</span>This line of text is meant to be treated as no longer accurate.<span class="nt">&lt;/s&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;ins&gt;</span>This line of text is meant to be treated as an addition to the document.<span class="nt">&lt;/ins&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;u&gt;</span>This line of text will render as underlined<span class="nt">&lt;/u&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>This line rendered as bold text.<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;em&gt;</span>This line rendered as italicized text.<span class="nt">&lt;/em&gt;&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="alignment-classes">Alignment classes</h2>
+
+<div class="docs-example clearfix"><p class="text-left">Left aligned text.</p>
+<p class="text-center">Center aligned text.</p>
+<p class="text-right">Right aligned text.</p>
+<p class="text-justify">Justified text.</p>
+<p class="text-nowrap">No wrap text.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-left"</span><span class="nt">&gt;</span>Left aligned text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-center"</span><span class="nt">&gt;</span>Center aligned text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-right"</span><span class="nt">&gt;</span>Right aligned text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-justify"</span><span class="nt">&gt;</span>Justified text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-nowrap"</span><span class="nt">&gt;</span>No wrap text.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="transformation-classes">Transformation classes</h2>
+
+<div class="docs-example clearfix"><p class="text-lowercase">Lowercased text.</p>
+<p class="text-uppercase">Uppercased text.</p>
+<p class="text-capitalize">Capitalized text.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-lowercase"</span><span class="nt">&gt;</span>Lowercased text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-uppercase"</span><span class="nt">&gt;</span>Uppercased text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-capitalize"</span><span class="nt">&gt;</span>Capitalized text.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="addresses">Addresses</h2>
+<p>Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <br />.</p>
+
+<div class="docs-example clearfix"><address>
+  <strong>Twitter, Inc.</strong><br />
+  1355 Market Street, Suite 900<br />
+  San Francisco, CA 94103<br />
+  <abbr title="Phone">P:</abbr> (123) 456-7890
+</address>
+
+<address>
+  <strong>Full Name</strong><br />
+  <a href="mailto:#">first.last@example.com</a>
+</address></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;address&gt;</span>
+  <span class="nt">&lt;strong&gt;</span>Twitter, Inc.<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+  1355 Market Street, Suite 900<span class="nt">&lt;br&gt;</span>
+  San Francisco, CA 94103<span class="nt">&lt;br&gt;</span>
+  <span class="nt">&lt;abbr</span> <span class="na">title=</span><span class="s">"Phone"</span><span class="nt">&gt;</span>P:<span class="nt">&lt;/abbr&gt;</span> (123) 456-7890
+<span class="nt">&lt;/address&gt;</span>
+
+<span class="nt">&lt;address&gt;</span>
+  <span class="nt">&lt;strong&gt;</span>Full Name<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:#"</span><span class="nt">&gt;</span>first.last@example.com<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/address&gt;</span></code></pre></div>
+
+<h2 id="blockquotes">Blockquotes</h2>
+
+<p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
+
+<div class="docs-example clearfix"><blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
+
+<h2 id="unordered-list">Unordered List</h2>
+
+<p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+
+<div class="docs-example clearfix"><ul>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Nulla volutpat aliquam velit
+    <ul>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ul>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
+</ul></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Nulla volutpat aliquam velit
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Phasellus iaculis neque<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Purus sodales ultricies<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Vestibulum laoreet porttitor sem<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Ac tristique libero volutpat at<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Faucibus porta lacus fringilla vel<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Aenean sit amet erat nunc<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Eget porttitor lorem<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+<h2 id="ordered-list">Ordered List</h2>
+
+<p>A list of items in which the order <em>does</em> explicitly matter.</p>
+
+<div class="docs-example clearfix"><ol>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Nulla volutpat aliquam velit
+    <ol>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ol>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
+</ol></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Nulla volutpat aliquam velit
+    <span class="nt">&lt;ol&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Phasellus iaculis neque<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Purus sodales ultricies<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Vestibulum laoreet porttitor sem<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Ac tristique libero volutpat at<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ol&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Faucibus porta lacus fringilla vel<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Aenean sit amet erat nunc<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Eget porttitor lorem<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></code></pre></div>
+
+<h2 id="description">Description</h2>
+
+<p>A list of terms with their associated descriptions.</p>
+
+<div class="docs-example clearfix"><dl> 
+  <dt>Description lists</dt> 
+  <dd>A description list is perfect for defining terms.</dd> 
+  <dt>Euismod</dt> 
+  <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd> 
+  <dd>Donec id elit non mi porta gravida at eget metus.</dd> 
+  <dt>Malesuada porta</dt> 
+  <dd>Etiam porta sem malesuada magna mollis euismod.</dd> 
+</dl></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;dl&gt;</span> 
+  <span class="nt">&lt;dt&gt;</span>Description lists<span class="nt">&lt;/dt&gt;</span> 
+  <span class="nt">&lt;dd&gt;</span>A description list is perfect for defining terms.<span class="nt">&lt;/dd&gt;</span> 
+  <span class="nt">&lt;dt&gt;</span>Euismod<span class="nt">&lt;/dt&gt;</span> 
+  <span class="nt">&lt;dd&gt;</span>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<span class="nt">&lt;/dd&gt;</span> 
+  <span class="nt">&lt;dd&gt;</span>Donec id elit non mi porta gravida at eget metus.<span class="nt">&lt;/dd&gt;</span> 
+  <span class="nt">&lt;dt&gt;</span>Malesuada porta<span class="nt">&lt;/dt&gt;</span> 
+  <span class="nt">&lt;dd&gt;</span>Etiam porta sem malesuada magna mollis euismod.<span class="nt">&lt;/dd&gt;</span> 
+<span class="nt">&lt;/dl&gt;</span></code></pre></div>
+
+<h2 id="horizontal-description">Horizontal description</h2>
+
+<p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side. Starts off stacked like default <code>&lt;dl&gt;</code>s, but when the navbar expands, so do these.</p>
+
+<div class="docs-example clearfix"><dl class="dl-horizontal"> 
+  <dt>Description lists</dt> 
+  <dd>A description list is perfect for defining terms.</dd> 
+  <dt>Euismod</dt> 
+  <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd> 
+  <dd>Donec id elit non mi porta gravida at eget metus.</dd> 
+  <dt>Malesuada porta</dt> 
+  <dd>Etiam porta sem malesuada magna mollis euismod.</dd> 
+  <dt>Felis euismod semper eget lacinia</dt> 
+  <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd> 
+</dl></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-horizontal"</span><span class="nt">&gt;</span> 
+  <span class="nt">&lt;dt&gt;</span>Description lists<span class="nt">&lt;/dt&gt;</span> 
+  <span class="nt">&lt;dd&gt;</span>A description list is perfect for defining terms.<span class="nt">&lt;/dd&gt;</span> 
+  <span class="nt">&lt;dt&gt;</span>Euismod<span class="nt">&lt;/dt&gt;</span> 
+  <span class="nt">&lt;dd&gt;</span>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<span class="nt">&lt;/dd&gt;</span> 
+  <span class="nt">&lt;dd&gt;</span>Donec id elit non mi porta gravida at eget metus.<span class="nt">&lt;/dd&gt;</span> 
+  <span class="nt">&lt;dt&gt;</span>Malesuada porta<span class="nt">&lt;/dt&gt;</span> 
+  <span class="nt">&lt;dd&gt;</span>Etiam porta sem malesuada magna mollis euismod.<span class="nt">&lt;/dd&gt;</span> 
+  <span class="nt">&lt;dt&gt;</span>Felis euismod semper eget lacinia<span class="nt">&lt;/dt&gt;</span> 
+  <span class="nt">&lt;dd&gt;</span>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.<span class="nt">&lt;/dd&gt;</span> 
+<span class="nt">&lt;/dl&gt;</span></code></pre></div>
+
+<h2 id="small-text">Small text</h2>
+
+<p>For de-emphasizing inline or blocks of text, use the <small> tag to set text at 85% the size of the parent. Heading elements receive their own font-size for nested <small> elements.</small></small></p>
+
+<p>You may alternatively use an inline element with .small in place of any <small>.</small></p>
+
+<div class="docs-example clearfix"><small>This line of text is meant to be treated as fine print.</small></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;small&gt;</span>This line of text is meant to be treated as fine print.<span class="nt">&lt;/small&gt;</span></code></pre></div>
+
+
+      </div>
+    </div><!-- .app-container -->
+    <div class="col-3">
+      
+        <nav class="menu docs-menu">
+  <a class="menu-item " href="/docs/styleguide/getting-started/">
+    Getting started
+  </a>
+  <a class="menu-item " href="/docs/styleguide/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item " href="/docs/styleguide/layout/">
+    Layout
+  </a>
+  <a class="menu-item selected" href="/docs/styleguide/type/">
+    Type
+  </a>
+  <a class="menu-item " href="/docs/styleguide/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item " href="/docs/styleguide/forms/">
+    Forms
+  </a>
+  <a class="menu-item " href="/docs/styleguide/tables/">
+    Tables
+  </a>
+  <a class="menu-item " href="/docs/styleguide/images/">
+    Images
+  </a>
+  <a class="menu-item " href="/docs/styleguide/helpers/">
+    Helper classes
+  </a>
+  <a class="menu-item " href="/docs/styleguide/components/">
+    Components
+  </a>
+  <a class="menu-item " href="/docs/styleguide/javascript/">
+    Javascript
+  </a>
+<!--   <a class="menu-item " href="/docs/styleguide/nav/">
+    Navigation
+  </a>
+  <a class="menu-item " href="/docs/styleguide/alerts/">
+    Alerts
+  </a>
+  <a class="menu-item " href="/docs/styleguide/states/">
+    States
+  </a>
+  <a class="menu-item " href="/docs/styleguide/tooltips/">
+    Tooltips
+  </a>
+  <a class="menu-item " href="/docs/styleguide/utilities/">
+    Utilities
+  </a> -->
+  <a class="menu-item " href="/docs/styleguide/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item " href="/docs/styleguide/colors/">
+    Colors
+  </a>
+  <a class="menu-item " href="/docs/styleguide/examples/">
+    Examples
+  </a>
+</nav>
+<script type="text/javascript">
+$(function () {
+
+  var $body   = $(document.body);
+  var $window = $(window);
+  var $docsMenu = $('.docs-menu');
+  setTimeout(function () {
+    $docsMenu.affix({
+      offset: {
+        top: function() {
+          var offsetTop      = $docsMenu.offset().top
+          var sideBarMargin  = parseInt($docsMenu.children(0).css('margin-top'), 20)
+
+          return (this.top = offsetTop - sideBarMargin)
+        },
+        bottom: function () {
+          var offset = $('.pg-footer').outerHeight(true);
+          return (this.bottom = offset + 43);
+        }
+      }
+    });
+  }, 100)
+
+  var $tocCopy = $("#markdown-toc").clone();
+  $tocCopy.attr("class", "sidemenu-toc").attr("id", "sidemenu-toc");
+  $tocCopy.appendTo(".docs-menu .menu-item.selected");
+
+})
+</script>
+      
+    </div>
+  </div><!-- .inner-container -->
+    </div><!-- .container -->
+
+      <footer class="pg-footer">
+    <div class="container clearfix">
+      <div class="row">
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/about-us">About Us</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/our-values">Our Values</a><br>
+            <a target="_blank" href="http://northstarmutual.com/our-history">Our History</a><br>
+            <a target="_blank" href="http://northstarmutual.com/partnerships-associations">Partnerships &amp; Associations</a><br>
+            <a target="_blank" href="http://northstarmutual.com/recent-highlights">Recent Highlights</a><br>
+            <a target="_blank" href="http://northstarmutual.com/contact-us">Contact Us</a><br>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/products">Products</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/product-farm">Farm</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-home">Home</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-auto">Auto</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-business">Business</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-umbrella">Umbrella</a><br>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="https://paymentsnsmic.billmatrix.com/" target="_blank">Make Payment</a></div>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/claims-service">Claims Service</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/report-claim">Report Claim</a><br>
+            <a target="_blank" href="http://northstarmutual.com/roadside-assistance">Roadside Assistance</a><br>
+            <a target="_blank" href="http://northstarmutual.com/claims-faq">Claims FAQ</a><br>
+            <a target="_blank" href="http://northstarmutual.com/loss-control-tips">Loss Control Tips</a><br>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="https://quote.nstarco.com/cool-ice/default.asp?Category=misc&amp;Service=menu" target="_blank"> Agent Login</a></div>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/legal-notices">Legal Notices</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-minnesota">Minnesota</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-iowa">Iowa</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-nebraska">Nebraska</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-north-dakota">North Dakota</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-oklahoma">Oklahoma</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-south-dakota">South Dakota</a><br>
+          </div>
+        </div>
+      </div>
+      <div class="row sitemap-module">
+        <div class="col-10">
+          <span class="copyright">
+            North Star Mutual Insurance Company • 269 Barstad Road South, PO Box 48 • Cottonwood, MN 56229 • 800-622-5230
+          </span>
+        </div>
+        <div class="col-2 pull right">
+          <a href="#top"><span class="glyphicon glyphicon-upload"></span> Back to top&nbsp;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+  </body>
+</html>
+
+
+

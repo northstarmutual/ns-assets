@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+
+  <title>
+    Forms &middot; Style Guide
+  </title>
+
+  <link rel="stylesheet" href="/docs/styleguide/docs.css">
+  <link rel="icon" type="image/png" href="/docs/styleguide/images/favicon.png">
+  <script src="/docs/styleguide/scripts/main.js"></script>
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="navbar pg-header">
+  <div class="navbar-inner">
+    <div class="col-6">
+      <h1 class="brand">
+        <a href="/docs/styleguide/">
+          <img src="/docs/styleguide/images/NSM-logo-web.gif" alt="North Star Mutual Insurance Company"
+            class="img-responsive" title="North Star Mutual Insurance Company">
+        </a>
+      </h1>
+    </div>
+    <div class="col-6">
+      <h1 class="pg-title">
+        Forms
+      </h1>
+    </div>
+  </div>
+</div>
+<div class="navbar navbar-default app-ribbon">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/docs/styleguide/">
+      <span class="glyphicon glyphicon-home"></span>
+      Style Guide
+    </a>
+  </div>
+
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li><a  href="/docs/styleguide/about">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="http://gitlab.galaxy.local/onlinequoting/ns-assets/docs" target="_blank">Gitlab</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="/blob/master/README.md#install" target="_blank">Install</a></li>
+    </ul>
+  </div>
+</div>
+
+      
+
+        <div class="inner-container clearfix"><!-- (LOCATION:  462,H,1003) -->
+    <ol class="breadcrumb hidden-print">
+      <li class="active">Forms</li>
+    </ol>
+    <div class="app-container column markdown-body">
+      <h1 class="page-title">
+        Forms
+      </h1>
+      <div class="markdown-body">
+        <p>Style individual form controls and utilize common layouts.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+  <li><a href="#gridforms" id="markdown-toc-gridforms">Gridforms</a>    <ul>
+      <li><a href="#markup-your-gridform" id="markdown-toc-markup-your-gridform">Markup your Gridform</a></li>
+    </ul>
+  </li>
+  <li><a href="#controlling-field-width" id="markdown-toc-controlling-field-width">Controlling field width</a></li>
+  <li><a href="#addons" id="markdown-toc-addons">Addons</a></li>
+  <li><a href="#focus" id="markdown-toc-focus">Focus</a></li>
+  <li><a href="#checkboxes-and-radios" id="markdown-toc-checkboxes-and-radios">Checkboxes and radios</a></li>
+  <li><a href="#validation" id="markdown-toc-validation">Validation</a></li>
+  <li><a href="#disabled-state" id="markdown-toc-disabled-state">Disabled state</a></li>
+  <li><a href="#readonly-state" id="markdown-toc-readonly-state">Readonly state</a></li>
+  <li><a href="#kitchen-sink-example" id="markdown-toc-kitchen-sink-example">Kitchen Sink Example</a></li>
+</ul>
+
+<h2 id="overview">Overview</h2>
+
+<ul>
+  <li>Always declare a <code>type</code> on your <code>&lt;button&gt;</code>s.</li>
+  <li>For form submits use <code>btn-primary</code>.</li>
+  <li>For new development use Grid Forms</li>
+  <li>Always surround attributes with <code>""</code> for example <code>id="elementId"</code>.</li>
+  <li>Labels surrounding <code>checkboxes</code> and <code>radios</code> should be <code>clickable</code>.</li>
+</ul>
+
+<h2 id="gridforms">Gridforms</h2>
+<p>An effort to make beautiful forms for web applications that make data entry less painful. Gridforms is a front-end library which handles the boilerplate necessary to build grid based forms.</p>
+
+<p>Gridforms originally from <a href="https://github.com/kumailht/gridforms">gridforms</a></p>
+
+<h3 id="markup-your-gridform">Markup your Gridform</h3>
+
+<div class="docs-example clearfix"><form class="grid-form-show">
+  <fieldset>
+    <legend>Form Section</legend>
+    <div data-row-span="2">
+      <div data-field-span="1">
+        <label>Field 1</label>
+        <input type="text" />
+      </div>
+      <div data-field-span="1">
+        <label>Field 2</label>
+        <input type="text" />
+      </div>
+    </div>
+    <div data-row-span="3">
+      <div data-field-span="1">
+        <button type="button" class="btn btn-primary"> Submit </button>
+      </div>
+    </div>
+  </fieldset>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"grid-form-show"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="nt">&lt;legend&gt;</span>Form Section<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Field 1<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Field 2<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span> Submit <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<p>Marking up a Gridform is quite intuitive, you’ll get a handle on it quickly.
+Start by giving your <code>&lt;form&gt;</code> element a <code>grid-form-show</code> class to turn it into a Gridform.</p>
+
+<p><strong>rows</strong>: A <code>&lt;div&gt;</code> element with the <code>data-row-span</code> attribute makes up a row. Give the attribute a value of <code>2</code> to divide it into 2 columns, give it a value of <code>3</code> to divide it into 3 columns and so on.</p>
+
+<p><strong>fields</strong>: Each row has a set of fields. Fields are wrapped in <code>div</code> elements and have a <code>data-field-span</code> attribute attached to it. Set to “1” in this example, which means the field spans 1 columns.</p>
+
+<p>Optionally use a <code>fieldset</code> with a <code>legend</code> to divide your form into sections.</p>
+
+<h2 id="controlling-field-width">Controlling field width</h2>
+<p>Give an element a percentage of the width by making the <code>data-row-span</code> greater than the <code>data-field-span</code>.  For example setting the <code>row-span</code> to <code>2</code> and the field span of <code>1</code> will make the field <code>50</code>% width.  Setting <code>row-span</code> to <code>3</code> and making the <code>field-span</code> of <code>1</code> will make it <code>33</code>%.</p>
+
+<div class="docs-example clearfix"><form class="grid-form-show">
+  <div data-row-span="2">
+    <div data-field-span="1">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" id="exampleInputEmail1" placeholder="Email" />
+    </div>
+  </div>
+  <div data-row-span="2">
+    <div data-field-span="1">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" id="exampleInputPassword1" placeholder="Password" />
+    </div>
+  </div>
+  <div data-row-span="3">
+    <div data-field-span="1">
+      <label for="exampleInputPassword2">Re-Type</label>
+      <input type="password2" id="exampleInputPassword2" placeholder="Re-Type Password" />
+    </div>
+  </div>
+  <div data-row-span="1">
+    <div data-field-span="1">
+      <label for="exampleInputFile">File input</label>
+      <span class="btn btn-success fileinput-button">
+          <i class="glyphicon glyphicon-plus"></i>
+          <span>Add files...</span>
+          <input type="file" name="files" multiple="" />
+      </span>
+      <p class="help-block">Example block-level help text here.</p>
+    </div>
+  </div>
+  <div data-row-span="1">
+    <div data-field-span="1">
+      <label>&nbsp;</label>
+      <label><input type="checkbox" /> Check me out</label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"grid-form-show"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputEmail1"</span><span class="nt">&gt;</span>Email address<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">id=</span><span class="s">"exampleInputEmail1"</span> <span class="na">placeholder=</span><span class="s">"Email"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputPassword1"</span><span class="nt">&gt;</span>Password<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">id=</span><span class="s">"exampleInputPassword1"</span> <span class="na">placeholder=</span><span class="s">"Password"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputPassword2"</span><span class="nt">&gt;</span>Re-Type<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password2"</span> <span class="na">id=</span><span class="s">"exampleInputPassword2"</span> <span class="na">placeholder=</span><span class="s">"Re-Type Password"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"exampleInputFile"</span><span class="nt">&gt;</span>File input<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"btn btn-success fileinput-button"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"glyphicon glyphicon-plus"</span><span class="nt">&gt;&lt;/i&gt;</span>
+          <span class="nt">&lt;span&gt;</span>Add files...<span class="nt">&lt;/span&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"files"</span> <span class="na">multiple=</span><span class="s">""</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"help-block"</span><span class="nt">&gt;</span>Example block-level help text here.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span><span class="ni">&amp;nbsp;</span><span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Check me out<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h2 id="addons">Addons</h2>
+
+<div class="docs-example clearfix"><form class="grid-form-show">
+  <fieldset>
+    <legend>Form Section</legend>
+    <div data-row-span="6">
+      <div data-field-span="3">
+        <label>Amount 1</label>
+        <div class="input-group">
+          <div class="input-group-addon">$</div>
+          <input type="text" placeholder="Amount" />
+          <div class="input-group-addon">.00</div>
+        </div>
+      </div>
+      <div data-field-span="2">
+        <label>Amount 2</label>
+        <div class="input-group">
+          <div class="input-group-addon">$</div>
+          <input type="text" placeholder="Amount2" />
+          <div class="input-group-addon">.00</div>
+        </div>
+      </div>
+      <div data-field-span="1">
+        <label>Amount 3</label>
+        <div class="input-group">
+          <div class="input-group-addon">$</div>
+          <input type="text" placeholder="Amount3" />
+          <div class="input-group-addon">.00</div>
+        </div>
+      </div>
+    </div>
+    <div data-row-span="1">
+      <div data-field-span="1">
+        <button type="button" class="btn btn-primary"> Submit </button>
+      </div>
+    </div>
+  </fieldset>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"grid-form-show"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;fieldset&gt;</span>
+    <span class="nt">&lt;legend&gt;</span>Form Section<span class="nt">&lt;/legend&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Amount 1<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-addon"</span><span class="nt">&gt;</span>$<span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Amount"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-addon"</span><span class="nt">&gt;</span>.00<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Amount 2<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-addon"</span><span class="nt">&gt;</span>$<span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Amount2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-addon"</span><span class="nt">&gt;</span>.00<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Amount 3<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-addon"</span><span class="nt">&gt;</span>$<span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Amount3"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-addon"</span><span class="nt">&gt;</span>.00<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span> Submit <span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/fieldset&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h2 id="focus">Focus</h2>
+
+<p>You can use the <code>autofocus</code> attribute on your form input if you’d like that field to have input on page load.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"someinput"</span> <span class="na">autofocus</span><span class="nt">&gt;</span></code></pre></div>
+
+<h2 id="checkboxes-and-radios">Checkboxes and radios</h2>
+
+<p>Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
+
+<p><strong>When using checkboxes or radio buttons please wrap them in a label.  This allows you to click on the words next to the input making it easier to hit.</strong></p>
+
+<p>Disabled checkboxes and radios are supported, but to provide a “not-allowed” cursor on hover of the parent <code>&lt;label&gt;</code>, you’ll need to add the <code>.disabled</code> class to the parent element.</p>
+
+<div class="docs-example clearfix"><form class="grid-form-show">
+  <div data-row-span="1">
+    <div data-field-span="1">
+      <label>Checkbox Group Vertical</label>
+      <label>
+        <input type="checkbox" value="" />
+        Option one is this and that&mdash;be sure to include why it's great
+      </label>
+      <br />
+      <label class="disabled">
+        <input type="checkbox" value="" disabled="" />
+        Option two is disabled
+      </label>
+    </div>
+  </div>
+  <div data-row-span="1">
+    <div data-field-span="1">
+      <label>Checkbox Group Horizontal</label>
+      <label>
+        <input type="checkbox" value="" />
+        Option A 
+      </label>
+      <label>
+        <input type="checkbox" value="" />
+        Option B
+      </label>
+      <label>
+        <input type="checkbox" value="" />
+        Option C
+      </label>
+    </div>
+  </div>
+  <div data-row-span="1">
+    <div data-field-span="1">
+      <label>Radio Group Vertical</label>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="" />
+        Option one is this and that&mdash;be sure to include why it's great
+      </label>
+      <br />
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+        Option two can be something else and selecting it will deselect option one
+      </label>
+      <br />
+      <label class="disabled">
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="" />
+        Option three is disabled
+      </label>
+    </div>
+  </div>
+  <div data-row-span="1">
+    <div data-field-span="1">
+      <label>Radio Group Horizontal</label>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="" />
+        Apple
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+        Pear
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" />
+        Bananner
+      </label>
+    </div>
+  </div>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"grid-form-show"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>Checkbox Group Vertical<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        Option one is this and that<span class="ni">&amp;mdash;</span>be sure to include why it's great
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+        Option two is disabled
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>Checkbox Group Horizontal<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        Option A 
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        Option B
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        Option C
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>Radio Group Vertical<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        Option one is this and that<span class="ni">&amp;mdash;</span>be sure to include why it's great
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios2"</span> <span class="na">value=</span><span class="s">"option2"</span><span class="nt">&gt;</span>
+        Option two can be something else and selecting it will deselect option one
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios3"</span> <span class="na">value=</span><span class="s">"option3"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+        Option three is disabled
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>Radio Group Horizontal<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span>
+        Apple
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios2"</span> <span class="na">value=</span><span class="s">"option2"</span><span class="nt">&gt;</span>
+        Pear
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios3"</span> <span class="na">value=</span><span class="s">"option3"</span><span class="nt">&gt;</span>
+        Bananner
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h2 id="validation">Validation</h2>
+
+<p>Bootstrap includes validation styles for error, warning, and success states on form controls. To use, add .has-warning, .has-error, or .has-success to the parent element.</p>
+
+<div class="docs-example clearfix"><form class="grid-form-show">
+  <div data-row-span="2">
+    <div data-field-span="1" class="has-success">
+      <label> Input with success</label>
+      <input type="text" />
+      <span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+    </div>
+  </div>
+  <div data-row-span="2">
+    <div data-field-span="1" class="has-warning">
+      <label> Input with warning</label>
+      <input type="text" />
+    </div>
+  </div>
+  <div data-row-span="2">
+    <div data-field-span="1" class="has-error">
+      <label> Input with error</label>
+      <input type="text" />
+    </div>
+  </div>
+  <div data-row-span="1">
+    <div data-field-span="1">
+      <label>Individual Checkboxes Validation</label>
+      <label class="has-success">
+        <input type="checkbox" value="" />
+        Checkbox with success
+      </label>
+      <label class="has-warning">
+        <input type="checkbox" value="" />
+        Checkbox with warning
+      </label>
+      <label class="has-error">
+        <input type="checkbox" value="" />
+        Checkbox with error
+      </label>
+    </div>
+  </div>
+  <div data-row-span="1">
+    <div data-field-span="1" class="has-error">
+      <label>Checkboxes Group Validation</label>
+      <label>
+        <input type="checkbox" value="" />
+        Checkbox with success
+      </label>
+      <label>
+        <input type="checkbox" value="" />
+        Checkbox with warning
+      </label>
+      <label>
+        <input type="checkbox" value="" />
+        Checkbox with error
+      </label>
+    </div>
+  </div>
+  <div data-row-span="1">
+    <div data-field-span="1" class="has-error">
+      <label>Radio Group Horizontal</label>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" />
+        Option 1
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+        Option 2
+      </label>
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" />
+        Option 3
+      </label>
+    </div>
+  </div>
+  
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"grid-form-show"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"has-success"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span> Input with success<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"helpBlock2"</span> <span class="na">class=</span><span class="s">"help-block"</span><span class="nt">&gt;</span>A block of help text that breaks onto a new line and may extend beyond one line.<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"has-warning"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span> Input with warning<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"has-error"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span> Input with error<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>Individual Checkboxes Validation<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"has-success"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        Checkbox with success
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"has-warning"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        Checkbox with warning
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"has-error"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        Checkbox with error
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"has-error"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>Checkboxes Group Validation<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        Checkbox with success
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        Checkbox with warning
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">value=</span><span class="s">""</span><span class="nt">&gt;</span>
+        Checkbox with error
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">"has-error"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>Radio Group Horizontal<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios1"</span> <span class="na">value=</span><span class="s">"option1"</span><span class="nt">&gt;</span>
+        Option 1
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios2"</span> <span class="na">value=</span><span class="s">"option2"</span><span class="nt">&gt;</span>
+        Option 2
+      <span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios3"</span> <span class="na">value=</span><span class="s">"option3"</span><span class="nt">&gt;</span>
+        Option 3
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h2 id="disabled-state">Disabled state</h2>
+<p>Add the <code>disabled</code> boolean attribute on an input to prevent user interactions. Disabled inputs appear lighter and add a <code>not-allowed </code>cursor.</p>
+
+<div class="docs-example clearfix"><form class="grid-form-show">
+  <div data-row-span="2">
+    <div data-field-span="1">
+      <input type="text" placeholder="Disabled input here…" disabled="" />
+    </div>
+  </div>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"grid-form-show"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Disabled input here…"</span> <span class="na">disabled</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h2 id="readonly-state">Readonly state</h2>
+<p>Add the <code>readonly</code> boolean attribute on an input to prevent modification of the input’s value. Read-only inputs appear lighter (just like disabled inputs), but retain the standard cursor.</p>
+
+<div class="docs-example clearfix"><form class="grid-form-show">
+  <div data-row-span="2">
+    <div data-field-span="1">
+      <input type="text" placeholder="Readonly input here…" readonly="" />
+    </div>
+  </div>
+</form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"grid-form-show"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Readonly input here…"</span> <span class="na">readonly</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h2 id="kitchen-sink-example">Kitchen Sink Example</h2>
+
+<p>This example shows multiple form fields, and input types.</p>
+
+<div class="docs-example clearfix"><h2>Personal Bank Account Initial Application</h2>
+  <form class="grid-form-show">
+    <fieldset>
+      <legend>Please open an account at</legend>
+      <div data-row-span="1">
+        <div data-field-span="1">
+          <label>Branch Name</label>
+          <input type="text" />
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Personal Details (Sole/First Accountholder/Minor)</legend>
+      <div data-row-span="4">
+        <div data-field-span="1">
+          <label>Title</label>
+          <input id="r1" name="customer-title" type="radio" /><label for="r1"> Mr.</label>
+          <input id="r2" name="customer-title" type="radio" /><label for="r2"> Mrs.</label>  
+          <input id="r3" name="customer-title" type="radio" /><label for="r3"> Ms.</label>
+        </div>
+        <div data-field-span="3">
+          <label>Full Name</label>
+          <input type="text" />
+        </div>
+      </div>
+      <div data-row-span="2">
+        <div data-field-span="1">
+          <label>Date of birth</label>
+          <input type="text" />
+        </div>
+        <div data-field-span="1">
+          <label>Nationality</label>
+          <select>
+            <option value="United States" title="United States">United States</option>
+          </select>
+        </div>
+      </div>
+      <div data-row-span="4">
+        <div data-field-span="2" data-field-error="Please enter a valid email address">
+          <label>E-mail</label>
+          <input type="text" />
+        </div>
+        <div data-field-span="1">
+          <label>Mobile No.</label>
+          <input type="text" />
+        </div>
+        <div data-field-span="1">
+          <label>Existing Bank Account No. (if any)</label>
+          <input type="text" />
+        </div>
+      </div>
+      <div data-row-span="2">
+        <div data-field-span="1">
+          <label>In case of a minor please provide details (Name of parent and natural guardian)</label>
+          <input type="text" />
+        </div>
+        <div data-field-span="1">
+          <label>Name of father/spouse</label>
+          <input type="text" />
+        </div>
+      </div>
+      <br />
+      <fieldset>
+        <legend>Residential address</legend>
+        <div data-row-span="2">
+          <div data-field-span="1">
+            <label>Flat no. and bldg. name</label>
+            <input type="text" />
+          </div>
+          <div data-field-span="1">
+            <label>Road no./name</label>
+            <input type="text" />
+          </div>
+        </div>
+        <div data-row-span="4">
+          <div data-field-span="3">
+            <label>Area and landmark</label>
+            <input type="text" />
+          </div>
+          <div data-field-span="1">
+            <label>City</label>
+            <input type="text" />
+          </div>
+        </div>
+        <div data-row-span="4">
+          <div data-field-span="1">
+            <label>Telephone Residence</label>
+            <input type="text" />
+          </div>
+          <div data-field-span="1">
+            <label>Office</label>
+            <input type="text" />
+          </div>
+          <div data-field-span="1">
+            <label>Fax</label>
+            <input type="text" />
+          </div>
+          <div data-field-span="1">
+            <label>Pin code</label>
+            <input type="text" />
+          </div>
+        </div>
+      </fieldset>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>Mailing Address (If different from the First Accountholder's address)</legend>
+      <div data-row-span="1">
+        <div data-field-span="1">
+          <label>Company name and department/ Flat no. and bldg. name</label>
+          <input type="text" />
+        </div>
+      </div>
+      <div data-row-span="4">
+        <div data-field-span="1">
+          <label>Road no./name</label>
+          <input type="text" />
+        </div>
+        <div data-field-span="1">
+          <label>Area and landmark</label>
+          <input type="text" />
+        </div>
+        <div data-field-span="1">
+          <label>City</label>
+          <input type="text" />
+        </div>
+        <div data-field-span="1">
+          <label>Pin Code</label>
+          <input type="text" />
+        </div>
+      </div>
+      <div data-row-span="4">
+        <div data-field-span="1">
+          <label>Telephone Residence</label>
+          <input type="text" />
+        </div>
+        <div data-field-span="1">
+          <label>Office</label>
+          <input type="text" />
+        </div>
+        <div data-field-span="1">
+          <label>Fax</label>
+          <input type="text" />
+        </div>
+        <div data-field-span="1">
+          <label>Mobile No.</label>
+          <input type="text" />
+        </div>
+      </div>
+      <div data-row-span="1">
+        <div data-field-span="1">
+          <label>E-mail</label>
+          <input type="text" />
+        </div>
+      </div>
+    </fieldset>
+    <br /><br />
+    <fieldset>
+      <legend>Details of Introduction by Existing Customer (If applicable)</legend>
+      <div data-row-span="2">
+        <div data-field-span="1">
+          <label>Customer Name</label>
+          <input type="text" />
+        </div>
+        <div data-field-span="1">
+          <label>Account No.</label>
+          <input type="text" />
+        </div>
+      </div>
+      <div data-row-span="1">
+        <div data-field-span="1">
+          <label>Introducer's signature</label>
+          <textarea></textarea>
+        </div>
+      </div>
+    </fieldset>
+    <br /><br />
+    <fieldset>
+      <legend>Account Details</legend>
+      <div data-row-span="2">
+        <div data-field-span="1">
+          <label>Choice of account</label>
+          <label><input type="checkbox" /> Savings</label> &nbsp;
+          <label><input type="checkbox" /> Current</label> &nbsp;
+          <label><input type="checkbox" /> Fixed deposits</label>
+        </div>
+        <div data-field-span="1">
+          <label>Mode of funding</label>
+          <label><input type="checkbox" /> Cash</label> &nbsp;
+          <label><input type="checkbox" /> Cheque</label> &nbsp;
+          <label><input type="checkbox" /> NEFT</label>
+        </div>
+      </div>
+      <div data-row-span="1">
+        <div data-field-span="1">
+          <label>Amount</label>
+          <input type="text" />
+        </div>
+      </div>
+      <br />
+      <fieldset>
+        <legend>Details of Fixed Deposit</legend>
+        <div data-row-span="2">
+          <div data-field-span="1">
+            <label>Types of deposit</label>
+            <label><input type="checkbox" /> Ordinary</label> &nbsp;
+            <label><input type="checkbox" /> Cumulative</label>
+          </div>
+          <div data-field-span="1">
+            <label>Mode of funding</label>
+            <label><input type="checkbox" /> Cash</label> &nbsp;
+            <label><input type="checkbox" /> Cheque</label> &nbsp;
+            <label><input type="checkbox" /> NEFT</label>
+          </div>
+        </div>
+        <div data-row-span="4">
+          <div data-field-span="2">
+            <label>Amount</label>
+            <input type="text" />
+          </div>
+          <div data-field-span="1">
+            <label>No. of deposits</label>
+            <input type="text" />
+          </div>
+          <div data-field-span="1">
+            <label>Individual Deposit Amount</label>
+            <input type="text" />
+          </div>
+        </div>
+      </fieldset>
+    </fieldset>
+    <br /><br />
+    <fieldset>
+      <legend>Personal Details</legend>
+      <div data-row-span="1">
+        <div data-field-span="1">
+          <label>Occupation</label>
+          <label><input type="checkbox" /> Non-executive</label> &nbsp;
+          <label><input type="checkbox" /> Housewife</label> &nbsp;
+          <label><input type="checkbox" /> Retired</label> &nbsp;
+          <label><input type="checkbox" /> Student</label> &nbsp;
+          <label><input type="checkbox" /> Other</label> &nbsp;
+          <label><input type="checkbox" /> Unemployed</label>
+        </div>
+      </div>
+      <div data-row-span="1">
+        <div data-field-span="1">
+          <label>Job Title</label>
+          <input type="text" />
+        </div>
+      </div>
+      <div data-row-span="2">
+        <div data-field-span="1">
+          <label>Department</label>
+          <input type="text" />
+        </div>
+        <div data-field-span="1">
+          <label>Nature of business</label>
+          <input type="text" />
+        </div>
+      </div>
+      <div data-row-span="2">
+        <div data-field-span="1">
+          <label>Education</label>
+          <label><input type="checkbox" /> Under graduate</label> &nbsp;
+          <label><input type="checkbox" /> Graduate</label> &nbsp;
+          <label><input type="checkbox" /> Others</label>
+        </div>
+        <div data-field-span="1">
+          <label>Monthly Income</label>
+          <label><input type="checkbox" /> Zero Income</label> &nbsp;
+          <label><input type="checkbox" /> Less than $10,000</label> &nbsp;
+          <label><input type="checkbox" /> $10,000+</label>
+        </div>
+      </div>
+      <div data-row-span="2">
+        <div data-field-span="1">
+          <label>Maritial Status</label>
+          <label><input type="checkbox" /> Married</label> &nbsp;
+          <label><input type="checkbox" /> Single</label>
+        </div>
+        <div data-field-span="1">
+          <label>Spouse name</label>
+          <input type="text" />
+        </div>
+      </div>
+      <br />
+      <fieldset>
+        <legend>Other existing bank accounts, if any</legend>
+        <div data-row-span="2">
+          <div data-field-span="1">
+            <label>Name of the Bank / branch</label>
+            <input type="text" />
+          </div>
+          <div data-field-span="1">
+            <label>Name of the Bank / branch</label>
+            <input type="text" />
+          </div>
+        </div>
+      </fieldset>
+    </fieldset>
+    <br /><br />
+    <fieldset>
+      <legend>Reason for Account opening</legend>
+      <div data-row-span="2">
+        <div data-field-span="1">
+          <label>Please specify</label>
+          <input type="text" />
+        </div>
+      </div>
+    </fieldset>
+    <br /><br />
+    <fieldset>
+      <legend>Terms And Conditions</legend>
+      <div data-row-span="1">
+        <div data-field-span="1">
+          <label></label>
+          <label><input type="checkbox" /> I/We confirm having read and understood the account rules of The Banking Corporation Limited ('the Bank'), and hereby agree to be bound by the terms and conditions and amendments governing the account(s) issued by the Bank from time-to-time.</label>
+        </div>
+      </div>
+    </fieldset>
+  </form></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h2&gt;</span>Personal Bank Account Initial Application<span class="nt">&lt;/h2&gt;</span>
+  <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"grid-form-show"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;fieldset&gt;</span>
+      <span class="nt">&lt;legend&gt;</span>Please open an account at<span class="nt">&lt;/legend&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Branch Name<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/fieldset&gt;</span>
+    <span class="nt">&lt;fieldset&gt;</span>
+      <span class="nt">&lt;legend&gt;</span>Personal Details (Sole/First Accountholder/Minor)<span class="nt">&lt;/legend&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Title<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"r1"</span> <span class="na">name=</span><span class="s">"customer-title"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;&lt;label</span> <span class="na">for=</span><span class="s">"r1"</span><span class="nt">&gt;</span> Mr.<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"r2"</span> <span class="na">name=</span><span class="s">"customer-title"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;&lt;label</span> <span class="na">for=</span><span class="s">"r2"</span><span class="nt">&gt;</span> Mrs.<span class="nt">&lt;/label&gt;</span>  
+          <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"r3"</span> <span class="na">name=</span><span class="s">"customer-title"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;&lt;label</span> <span class="na">for=</span><span class="s">"r3"</span><span class="nt">&gt;</span> Ms.<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Full Name<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Date of birth<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Nationality<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;select&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"United States"</span> <span class="na">title=</span><span class="s">"United States"</span><span class="nt">&gt;</span>United States<span class="nt">&lt;/option&gt;</span>
+          <span class="nt">&lt;/select&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"2"</span> <span class="na">data-field-error=</span><span class="s">"Please enter a valid email address"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>E-mail<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Mobile No.<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Existing Bank Account No. (if any)<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>In case of a minor please provide details (Name of parent and natural guardian)<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Name of father/spouse<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;fieldset&gt;</span>
+        <span class="nt">&lt;legend&gt;</span>Residential address<span class="nt">&lt;/legend&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Flat no. and bldg. name<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Road no./name<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"4"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"3"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Area and landmark<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>City<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"4"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Telephone Residence<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Office<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Fax<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Pin code<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/fieldset&gt;</span>
+    <span class="nt">&lt;/fieldset&gt;</span>
+    <span class="nt">&lt;br&gt;</span>
+    <span class="nt">&lt;fieldset&gt;</span>
+      <span class="nt">&lt;legend&gt;</span>Mailing Address (If different from the First Accountholder's address)<span class="nt">&lt;/legend&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Company name and department/ Flat no. and bldg. name<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Road no./name<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Area and landmark<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>City<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Pin Code<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Telephone Residence<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Office<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Fax<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Mobile No.<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>E-mail<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/fieldset&gt;</span>
+    <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+    <span class="nt">&lt;fieldset&gt;</span>
+      <span class="nt">&lt;legend&gt;</span>Details of Introduction by Existing Customer (If applicable)<span class="nt">&lt;/legend&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Customer Name<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Account No.<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Introducer's signature<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;textarea&gt;&lt;/textarea&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/fieldset&gt;</span>
+    <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+    <span class="nt">&lt;fieldset&gt;</span>
+      <span class="nt">&lt;legend&gt;</span>Account Details<span class="nt">&lt;/legend&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Choice of account<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Savings<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Current<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Fixed deposits<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Mode of funding<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Cash<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Cheque<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> NEFT<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Amount<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;fieldset&gt;</span>
+        <span class="nt">&lt;legend&gt;</span>Details of Fixed Deposit<span class="nt">&lt;/legend&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Types of deposit<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Ordinary<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+            <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Cumulative<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Mode of funding<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Cash<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+            <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Cheque<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+            <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> NEFT<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"4"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Amount<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>No. of deposits<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Individual Deposit Amount<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/fieldset&gt;</span>
+    <span class="nt">&lt;/fieldset&gt;</span>
+    <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+    <span class="nt">&lt;fieldset&gt;</span>
+      <span class="nt">&lt;legend&gt;</span>Personal Details<span class="nt">&lt;/legend&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Occupation<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Non-executive<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Housewife<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Retired<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Student<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Other<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Unemployed<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Job Title<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Department<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Nature of business<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Education<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Under graduate<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Graduate<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Others<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Monthly Income<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Zero Income<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Less than $10,000<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> $10,000+<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Maritial Status<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Married<span class="nt">&lt;/label&gt;</span> <span class="ni">&amp;nbsp;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> Single<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Spouse name<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;fieldset&gt;</span>
+        <span class="nt">&lt;legend&gt;</span>Other existing bank accounts, if any<span class="nt">&lt;/legend&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Name of the Bank / branch<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;label&gt;</span>Name of the Bank / branch<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/fieldset&gt;</span>
+    <span class="nt">&lt;/fieldset&gt;</span>
+    <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+    <span class="nt">&lt;fieldset&gt;</span>
+      <span class="nt">&lt;legend&gt;</span>Reason for Account opening<span class="nt">&lt;/legend&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>Please specify<span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/fieldset&gt;</span>
+    <span class="nt">&lt;br&gt;&lt;br&gt;</span>
+    <span class="nt">&lt;fieldset&gt;</span>
+      <span class="nt">&lt;legend&gt;</span>Terms And Conditions<span class="nt">&lt;/legend&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">data-row-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-field-span=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;&lt;/label&gt;</span>
+          <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> I/We confirm having read and understood the account rules of The Banking Corporation Limited ('the Bank'), and hereby agree to be bound by the terms and conditions and amendments governing the account(s) issued by the Bank from time-to-time.<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/fieldset&gt;</span>
+  <span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+
+      </div>
+    </div><!-- .app-container -->
+    <div class="col-3">
+      
+        <nav class="menu docs-menu">
+  <a class="menu-item " href="/docs/styleguide/getting-started/">
+    Getting started
+  </a>
+  <a class="menu-item " href="/docs/styleguide/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="menu-item " href="/docs/styleguide/layout/">
+    Layout
+  </a>
+  <a class="menu-item " href="/docs/styleguide/type/">
+    Type
+  </a>
+  <a class="menu-item " href="/docs/styleguide/buttons/">
+    Buttons
+  </a>
+  <a class="menu-item selected" href="/docs/styleguide/forms/">
+    Forms
+  </a>
+  <a class="menu-item " href="/docs/styleguide/tables/">
+    Tables
+  </a>
+  <a class="menu-item " href="/docs/styleguide/images/">
+    Images
+  </a>
+  <a class="menu-item " href="/docs/styleguide/helpers/">
+    Helper classes
+  </a>
+  <a class="menu-item " href="/docs/styleguide/components/">
+    Components
+  </a>
+  <a class="menu-item " href="/docs/styleguide/javascript/">
+    Javascript
+  </a>
+<!--   <a class="menu-item " href="/docs/styleguide/nav/">
+    Navigation
+  </a>
+  <a class="menu-item " href="/docs/styleguide/alerts/">
+    Alerts
+  </a>
+  <a class="menu-item " href="/docs/styleguide/states/">
+    States
+  </a>
+  <a class="menu-item " href="/docs/styleguide/tooltips/">
+    Tooltips
+  </a>
+  <a class="menu-item " href="/docs/styleguide/utilities/">
+    Utilities
+  </a> -->
+  <a class="menu-item " href="/docs/styleguide/guidelines/">
+    Code guidelines
+  </a>
+  <a class="menu-item " href="/docs/styleguide/colors/">
+    Colors
+  </a>
+  <a class="menu-item " href="/docs/styleguide/examples/">
+    Examples
+  </a>
+</nav>
+<script type="text/javascript">
+$(function () {
+
+  var $body   = $(document.body);
+  var $window = $(window);
+  var $docsMenu = $('.docs-menu');
+  setTimeout(function () {
+    $docsMenu.affix({
+      offset: {
+        top: function() {
+          var offsetTop      = $docsMenu.offset().top
+          var sideBarMargin  = parseInt($docsMenu.children(0).css('margin-top'), 20)
+
+          return (this.top = offsetTop - sideBarMargin)
+        },
+        bottom: function () {
+          var offset = $('.pg-footer').outerHeight(true);
+          return (this.bottom = offset + 43);
+        }
+      }
+    });
+  }, 100)
+
+  var $tocCopy = $("#markdown-toc").clone();
+  $tocCopy.attr("class", "sidemenu-toc").attr("id", "sidemenu-toc");
+  $tocCopy.appendTo(".docs-menu .menu-item.selected");
+
+})
+</script>
+      
+    </div>
+  </div><!-- .inner-container -->
+    </div><!-- .container -->
+
+      <footer class="pg-footer">
+    <div class="container clearfix">
+      <div class="row">
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/about-us">About Us</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/our-values">Our Values</a><br>
+            <a target="_blank" href="http://northstarmutual.com/our-history">Our History</a><br>
+            <a target="_blank" href="http://northstarmutual.com/partnerships-associations">Partnerships &amp; Associations</a><br>
+            <a target="_blank" href="http://northstarmutual.com/recent-highlights">Recent Highlights</a><br>
+            <a target="_blank" href="http://northstarmutual.com/contact-us">Contact Us</a><br>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/products">Products</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/product-farm">Farm</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-home">Home</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-auto">Auto</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-business">Business</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-umbrella">Umbrella</a><br>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="https://paymentsnsmic.billmatrix.com/" target="_blank">Make Payment</a></div>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/claims-service">Claims Service</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/report-claim">Report Claim</a><br>
+            <a target="_blank" href="http://northstarmutual.com/roadside-assistance">Roadside Assistance</a><br>
+            <a target="_blank" href="http://northstarmutual.com/claims-faq">Claims FAQ</a><br>
+            <a target="_blank" href="http://northstarmutual.com/loss-control-tips">Loss Control Tips</a><br>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="https://quote.nstarco.com/cool-ice/default.asp?Category=misc&amp;Service=menu" target="_blank"> Agent Login</a></div>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/legal-notices">Legal Notices</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-minnesota">Minnesota</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-iowa">Iowa</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-nebraska">Nebraska</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-north-dakota">North Dakota</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-oklahoma">Oklahoma</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-south-dakota">South Dakota</a><br>
+          </div>
+        </div>
+      </div>
+      <div class="row sitemap-module">
+        <div class="col-10">
+          <span class="copyright">
+            North Star Mutual Insurance Company • 269 Barstad Road South, PO Box 48 • Cottonwood, MN 56229 • 800-622-5230
+          </span>
+        </div>
+        <div class="col-2 pull right">
+          <a href="#top"><span class="glyphicon glyphicon-upload"></span> Back to top&nbsp;</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+  </body>
+</html>
+
+
+
