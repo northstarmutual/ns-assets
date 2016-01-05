@@ -12,24 +12,24 @@ permalink: /examples/form-validation/
 
 {% example html %}
 <div class="app-container">
-  <div class="panel panel-danger">
-    <div class="panel-heading">
-      <h3 class="panel-title">
-        There are 2 outstanding errors
-      </h3>
-    </div>
-    <div class="panel-body">
-      <ul>
-        <li>Field 1 cannot be blank</li>
-        <li>Field 2 cannot be blank</li>
-      </ul>
-    </div>
-  </div>
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3>{{ page.title }}</h3>
     </div>
     <div class="panel-body">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          There are 2 outstanding errors
+        </h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <li>Field 1 cannot be blank</li>
+          <li>Field 2 cannot be blank</li>
+        </ul>
+      </div>
+    </div>
     <form class="grid-form-show">
       <fieldset>
         <div data-row-span="2">

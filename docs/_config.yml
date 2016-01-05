@@ -20,5 +20,5 @@ sass:
   style: compressed
 
 gitlab:
-  repo: http://gitlab.galaxy.local/onlinequoting/ns-assets/docs
+  repo: http://gitlab.galaxy.local/onlinequoting/ns-assets/
 

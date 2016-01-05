@@ -30,14 +30,14 @@ Form validation errors. [demo](form-validation)
 
 Example summary page based off of Umbrella system. [demo](summary-page)
 
-## dataTables 
+## dataTables server side example
 
-Fully functioning demo of dataTables and files needed to get it to work.[demo](datatables)
+Fully functioning demo of dataTables with ajax calls.[coming soon](#)
 
 ## File upload
 
-Functional demo of file upload and files to get it to work.[demo](file-upload)
+Functional demo of file upload and files to get it to work.[coming soon](#)
 
 ## Add another
 
-More complex example of multiple add another sections. [demo](add-another)
+More complex example of multiple add another sections. [coming soon](#)

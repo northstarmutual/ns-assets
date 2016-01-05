@@ -76,7 +76,7 @@ Give an element a percentage of the width by making the `data-row-span` greater 
   <div data-row-span="3">
     <div data-field-span="1">
       <label for="exampleInputPassword2">Re-Type</label>
-      <input type="password2" id="exampleInputPassword2" placeholder="Re-Type Password">
+      <input type="password" id="exampleInputPassword2" placeholder="Re-Type Password">
     </div>
   </div>
   <div data-row-span="1">

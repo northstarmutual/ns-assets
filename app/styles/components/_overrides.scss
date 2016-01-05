@@ -23,6 +23,32 @@
   color: $state-danger-text;
 }
 
+.form-control {
+  // border: none;
+  // border-bottom: 1px solid $input-border;
+  // font-size: $font-size-large;
+  // padding: 0;
+  height: 27px;
+  // line-height: 1.3;
+  // margin: 0;
+  // border: none;
+  // border-radius: 0;
+  // border-bottom: 1px solid $input-border;
+  // box-shadow: none;
+  &:focus {
+    border: 1px solid #333333;
+    // outline: 0;
+    // border-bottom: 1px solid $body-bg;
+    // box-shadow: none;
+    // color: $body-bg;
+    // font-weight: 300;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(51, 51, 51, 0.6);
+    label {
+      color: darken(#333333, 15%);
+    }
+  }
+}
+
 .form-control-err {
   border-color: $state-danger-text;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);

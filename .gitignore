@@ -6,3 +6,10 @@ test/bower_components
 dist/
 dev/
 docs/_site/
+404-*.html
+manifest.json
+docs/scripts/
+employee_menu-*.html
+404-*.html
+index-*.html
+asset_manifest.json
