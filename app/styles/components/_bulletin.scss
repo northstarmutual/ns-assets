@@ -1,0 +1,28 @@
+.bulletin {
+  padding: 20px;
+  background: #f6f6f2;
+  @include border-bottom-radius(2px);
+
+  p {
+    font-weight: bold;
+  }
+
+}
+
+.bulletin-top {
+  border-top: 5px solid $ns-gold;
+}
+
+.bulletin-right {
+  border-right: 5px solid $ns-gold;
+}
+
+.bulletin-left {
+  border-left: 5px solid $ns-gold;
+}
+
+.bulletin-bottom {
+  border-bottom: 5px solid $ns-gold;
+}
+
+

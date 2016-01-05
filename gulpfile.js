@@ -4,7 +4,10 @@
 var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     rev = require('gulp-rev'),
-    argv = require('yargs').argv;
+    argv = require('yargs').argv,
+    assetManifest = require('gulp-asset-manifest'),
+    request = require('request'),
+    fs = require('fs');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -22,8 +25,6 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
     return gulp.src('app/scripts/**/*.js')
-        .pipe($.jshint())
-        .pipe($.jshint.reporter(require('jshint-stylish')))
         .pipe($.size());
 });
 
@@ -40,6 +41,12 @@ gulp.task('html', ['styles', 'scripts'], function () {
         .pipe(cssFilter.restore())
         .pipe($.useref.restore())
         .pipe($.useref())
+        .pipe(rev())
+        .pipe(assetManifest({
+          bundleName: gulp.bundleName,
+          manifestFile: gulp.distFolder + '/manifest.json',
+          log: true
+        }))
         .pipe(gulp.dest(gulp.distFolder))
         .pipe($.size());
 });
@@ -57,7 +64,7 @@ gulp.task('images', function () {
 
 gulp.task('fonts', function () {
     return $.bowerFiles()
-        .pipe($.filter('**/*.{eot,svg,ttf,woff}'))
+        .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
         .pipe($.flatten())
         .pipe(gulp.dest(gulp.distFolder + '/fonts'))
         .pipe($.size());
@@ -73,11 +80,37 @@ gulp.task('move', function () {
     var distFolder = '';
     var server = '';
     var assetsPath = '';
+    var bundleName = 'common';
     (argv.production) ? distFolder = 'dist' : distFolder = 'dev';
     (typeof(argv.server) == "undefined") ? server = 'thor' : server = argv.server;
-    assetsPath = '\\\\' + server + '\\cool_ice\\assets\\common';
-    console.log("Moving files to: " + assetsPath);
+
+    // Read in the manifest.json file
+    var manifest = JSON.stringify(fs.readFileSync('./' + distFolder + '/manifest.json', 'utf8'));
+
+    // Set the destination
+    switch (true) {
+      case server.toLowerCase() == 'arthur':
+        var host = 'https://quote.nstarco.com';
+        break;
+      case server.toLowerCase() == 'arthur2':
+        var host = 'http://quotetest.nstarco.com';
+        break;
+      case server.toLowerCase() == 'arthur3':
+        var host = 'http://quotedev.nstarco.com';
+        break;
+      case server.toLowerCase() == 'thor':
+        var host = 'http://thor.nstarco.com';
+        break;
+    }
+
+    // Load parameters
+    assetsPath = '\\\\' + server + '\\cool_ice\\assets\\' + bundleName;
+    var versionPath = '/public/default.asp?Category=NS_Public&Service=Assets_Version';
+
+    console.log("Moving new files to: " + assetsPath);
     console.log('To move them to a different server pass the option "gulp move --server=arthur2"');
+    console.log('To move the minified version of the files pass --production"');
+
     var files = [
         './' + distFolder + '/styles/**/*.*',
         './' + distFolder + '/fonts/**/*.*',
@@ -85,9 +118,33 @@ gulp.task('move', function () {
         './' + distFolder + '/scripts/**/*.*',
         './' + distFolder + '/**/*.*'
     ];
-    return gulp.src(files, { base: './' + distFolder + '/'})
-        .pipe($.clean())
+
+    gulp.src(files, { base: './' + distFolder + '/'})
         .pipe(gulp.dest(assetsPath));
+
+
+    var formData = {
+      token: 'G1Ac6E1MChpEfNU71U7b',
+      bundleName: bundleName,
+      m_manifest: manifest
+    }
+    request.post({ url: host + versionPath, formData: formData}, function optionalCallback(err, httpResponse, body) {
+      if (err) {
+        return console.error('assets_version failed:', err);
+      }
+      else if (!err && httpResponse.statusCode == 200) {
+        var response = JSON.parse(body);
+        if (response.status == 0) {
+          console.log('Updated assets versions!');
+          console.log(body);
+          return
+        }
+      }
+      else {
+        console.log("It's dead Jim")
+        return
+      }
+    });
 });
 
 gulp.task('clean', function () {
@@ -96,10 +153,23 @@ gulp.task('clean', function () {
     return gulp.src(['.tmp', distFolder], { read: false }).pipe($.clean());
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras']);
+gulp.task('docs', function () {
+    var distFolder = '';
+    (argv.production) ? distFolder = 'dist' : distFolder = 'dev';
+    var files = [
+        './' + distFolder + '/fonts/**/*.*',
+        './' + distFolder + '/images/**/*.*',
+        './' + distFolder + '/scripts/**/*.*',
+    ];
+    return gulp.src(files, { base: './' + distFolder + '/'})
+        .pipe(gulp.dest('./docs'));
+});
+
+gulp.task('build', ['html', 'images', 'fonts', 'extras', 'docs']);
 
 gulp.task('default', ['clean'], function () {
     (argv.production) ? gulp.distFolder = 'dist' : gulp.distFolder = 'dev';
+    gulp.bundleName = 'common';
     //console.log(argv.env);
     (argv.production) ?
       console.log("Building production files in dist folder") : console.log('Run "gulp --production" to build production assets');
@@ -121,7 +191,7 @@ gulp.task('connect', function () {
         });
 });
 
-gulp.task('serve', ['connect', 'styles'], function () {
+gulp.task('serve', ['connect', 'styles', 'docs'], function () {
     require('opn')('http://localhost:9000');
 });
 
@@ -143,7 +213,7 @@ gulp.task('wiredep', function () {
         .pipe(gulp.dest('app'));
 });
 
-gulp.task('watch', ['connect', 'serve'], function () {
+gulp.task('watch', ['connect', 'serve', 'docs'], function () {
     var server = $.livereload();
 
     // watch for changes
@@ -158,8 +228,8 @@ gulp.task('watch', ['connect', 'serve'], function () {
         server.changed(file.path);
     });
 
-    gulp.watch('app/styles/**/*.scss', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/images/**/*', ['images']);
+    gulp.watch('app/styles/**/*.scss', ['styles', 'docs']);
+    gulp.watch('app/scripts/**/*.js', ['scripts', 'docs']);
+    gulp.watch('app/images/**/*', ['images', 'docs']);
     gulp.watch('bower.json', ['wiredep']);
 });

@@ -1,0 +1,9 @@
+// Import core North Star Mutual styles
+$image-path:                 "images" !default;
+@import "main";
+
+// Import docs styles
+@import "docs/docs";
+@import "docs/anchor";
+@import "docs/syntax";
+

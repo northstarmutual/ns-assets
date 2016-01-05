@@ -2,28 +2,17 @@
   "name": "ns-assets",
   "private": false,
   "dependencies": {
-    "html5shiv": "~3.7.2",
-    "bootstrap-sass": "~3.1.1",
-    "jquery": "~1.11.2",
+    "html5shiv": "~3.7.3",
+    "bootstrap-sass": "~3.3.5",
+    "jquery": "~1.11.3",
     "respond": "~1.4.2"
   },
-  "version": "0.0.0",
+  "version": "2.0.0",
   "authors": [
     "Ed Winn <ed.winn@northstarmutual.com>"
   ],
   "description": "North Star Default Assets",
   "main": [
-    "dist/styles/main.css",
-    "dist/styles/gridforms-show.css",
-    "dist/styles/bootstrap-datepicker.css",
-    "dist/scripts/main.js",
-    "dist/scripts/plugins.js",
-    "dist/scripts/vendor.js",
-    "dist/fonts/glyphicons-halflings-regular.eot",
-    "dist/fonts/glyphicons-halflings-regular.svg",
-    "dist/fonts/glyphicons-halflings-regular.ttf",
-    "dist/fonts/glyphicons-halflings-regular.woff",
-    "dist/fonts/glyphicons-halflings-regular.woff2"
   ],
   "license": "MIT",
   "ignore": [

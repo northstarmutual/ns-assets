@@ -1,0 +1,53 @@
+.signonwrap {
+
+  .container {
+    max-width: 500px;
+  }
+  .inner-container {
+    border-radius: 4px;
+  }
+  .app-container {
+    padding-top:0;
+    padding-bottom:0;
+    border-right: 4px solid #eee;
+  }
+  svg {
+    position: relative;
+    right: 15px;
+  }
+  .logo {
+    width: 300px;
+    margin: 20px auto;
+  }
+  .logo h1 {
+    color: #fff;
+    text-align: center;
+  }
+  .contact-inner {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 40px;
+  }
+  .alert {
+    margin: 5px;
+  }
+  @media (max-width: 767px) {
+    .container {
+      max-width: 325px;
+    }
+    .app-container {
+      border-right:0;
+      border-bottom: 4px solid #eee;
+    }
+    .contact-inner {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    .contact-inner address {
+      float: left;
+      width: 100%;
+      font-size: 13px;
+    }
+  }
+}
+

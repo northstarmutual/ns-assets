@@ -1,0 +1,71 @@
+.PROD-bkd {
+  background-color: #1d2747;
+}
+
+.TEST-bkd {
+  background-color: #FFE680;
+}
+
+.DEV-bkd {
+  background-color: #70Db70;
+}
+
+.THOR-bkd {
+  background-color: #3F3F3F;
+}
+
+.swatch-ns-gold {
+  background-color: $ns-gold;
+}
+
+.swatch-ns-blue {
+  background-color: $ns-blue;
+}
+
+.swatch-brand-primary {
+  background-color: $brand-primary;
+}
+
+.swatch-ns-brown-gold {
+  background-color: $ns-brown-gold;
+}
+
+.swatch-body-bkd {
+  background-color: $body-bg;
+}
+
+.swatch-ns-link-color {
+  background-color: $default-link-color;
+}
+
+.swatch-text-color {
+  background-color: $text-color;
+}
+
+.swatch-gray-light {
+  background-color: $brand-gray-light;
+}
+
+.swatch-gray {
+  background-color: $brand-gray;
+}
+
+.swatch-gray-dark {
+  background-color: $brand-gray-dark;
+}
+
+.swatch-success {
+  background-color: $brand-success;
+}
+
+.swatch-warning {
+  background-color: $brand-warning;
+}
+
+.swatch-danger {
+  background-color: $brand-danger;
+}
+
+.swatch-info {
+  background-color: $brand-info;
+}

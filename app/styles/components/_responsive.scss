@@ -1,0 +1,336 @@
+//
+// Responsiveness... Make adjustments as needed
+//
+
+
+// Phones
+@media (min-width: $screen-xs) and (max-width: $screen-xs-max) {
+
+  div#item-detail-view-details span.list-item-name {
+    width: 45%;
+  }
+
+  .app-container {
+    @include make-sm-column(12);
+  }
+
+  .contact-container {
+    @include make-sm-column(12);
+  }
+
+  .summary-hdg {
+    font-size: 1.6em;
+  }
+
+  .summary-hdg-sm {
+    font-size: 1em;
+    float: none;
+  }
+
+  .half-lg-full-sm {
+    @include make-xs-column(12);
+  }
+
+}
+
+// Tablets
+@media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+  div#item-detail-view-details span.list-item-name {
+    width: 60%;
+  }
+
+  .app-container {
+    @include make-sm-column(12);
+
+  }
+  .contact-container {
+    @include make-sm-column(12);
+  }
+
+  .summary-hdg {
+    font-size: 1.6em;
+  }
+
+  .summary-hdg-sm {
+    font-size: 1.4em;
+    float: none;
+  }
+
+  .half-lg-full-sm {
+    @include make-sm-column(12);
+  }
+
+  .col-1 {
+    @include make-sm-column(1);
+  }
+  .col-2 {
+    @include make-sm-column(2);
+  }
+  .col-3 {
+    @include make-sm-column(3);
+  }
+  .col-4 {
+    @include make-sm-column(4);
+  }
+  .col-5 {
+    @include make-sm-column(5);
+  }
+  .col-6 {
+    @include make-sm-column(6);
+  }
+  .col-7 {
+    @include make-sm-column(7);
+  }
+  .col-8 {
+    @include make-sm-column(8);
+  }
+  .col-9 {
+    @include make-sm-column(9);
+  }
+  .col-10 {
+    @include make-sm-column(10);
+  }
+  .col-11 {
+    @include make-sm-column(11);
+  }
+  .col-12 {
+    @include make-sm-column(12);
+  }
+  // Offset columns
+  .col-offset-1 {
+    @include make-sm-column-offset(1);
+  }
+  .col-offset-2 {
+    @include make-sm-column-offset(2);
+  }
+  .col-offset-3 {
+    @include make-sm-column-offset(3);
+  }
+  .col-offset-4 {
+    @include make-sm-column-offset(4);
+  }
+  .col-offset-5 {
+    @include make-sm-column-offset(5);
+  }
+  .col-offset-6 {
+    @include make-sm-column-offset(6);
+  }
+  .col-offset-7 {
+    @include make-sm-column-offset(7);
+  }
+  .col-offset-8 {
+    @include make-sm-column-offset(8);
+  }
+  .col-offset-9 {
+    @include make-sm-column-offset(9);
+  }
+  .col-offset-10 {
+    @include make-sm-column-offset(10);
+  }
+  .col-offset-11 {
+    @include make-sm-column-offset(11);
+  }
+  .col-offset-12 {
+    @include make-sm-column-offset(12);
+  }
+
+}
+
+// Small desktops
+@media (min-width: $screen-md) and (max-width: $screen-md-max) {
+  div#item-detail-view-details span.list-item-name {
+    width: 60%;
+  }
+
+  .app-container {
+    @include make-sm-column(12);
+  }
+
+  .contact-container {
+    @include make-sm-column(12);
+  }
+
+  .summary-hdg {
+    font-size: 1.6em;
+  }
+
+  .summary-hdg-sm {
+    font-size: 1.4em;
+    float:right;
+  }
+
+  .half-lg-full-sm {
+    @include make-md-column(6);
+  }
+
+  .col-1 {
+    @include make-md-column(1);
+  }
+  .col-2 {
+    @include make-md-column(2);
+  }
+  .col-3 {
+    @include make-md-column(3);
+  }
+  .col-4 {
+    @include make-md-column(4);
+  }
+  .col-5 {
+    @include make-md-column(5);
+  }
+  .col-6 {
+    @include make-md-column(6);
+  }
+  .col-7 {
+    @include make-md-column(7);
+  }
+  .col-8 {
+    @include make-md-column(8);
+  }
+  .col-9 {
+    @include make-md-column(9);
+  }
+  .col-10 {
+    @include make-md-column(10);
+  }
+  .col-11 {
+    @include make-md-column(11);
+  }
+  .col-12 {
+    @include make-md-column(12);
+  }
+  // Offset columns
+  .col-offset-1 {
+    @include make-md-column-offset(1);
+  }
+  .col-offset-2 {
+    @include make-md-column-offset(2);
+  }
+  .col-offset-3 {
+    @include make-md-column-offset(3);
+  }
+  .col-offset-4 {
+    @include make-md-column-offset(4);
+  }
+  .col-offset-5 {
+    @include make-md-column-offset(5);
+  }
+  .col-offset-6 {
+    @include make-md-column-offset(6);
+  }
+  .col-offset-7 {
+    @include make-md-column-offset(7);
+  }
+  .col-offset-8 {
+    @include make-md-column-offset(8);
+  }
+  .col-offset-9 {
+    @include make-md-column-offset(9);
+  }
+  .col-offset-10 {
+    @include make-md-column-offset(10);
+  }
+  .col-offset-11 {
+    @include make-md-column-offset(11);
+  }
+  .col-offset-12 {
+    @include make-md-column-offset(12);
+  }
+
+}
+
+// Large desktop / higher resolution
+@media (min-width: $screen-lg) {
+
+  div#item-detail-view-details span.list-item-name {
+    width: 65%;
+  }
+
+  .summary-hdg {
+    font-size: 1.6em;
+  }
+
+  .summary-hdg-sm {
+    font-size: 1.4em;
+    float:right;
+  }
+
+  .half-lg-full-sm {
+    @include make-lg-column(6);
+  }
+
+  .col-1 {
+    @include make-lg-column(1);
+  }
+  .col-2 {
+    @include make-lg-column(2);
+  }
+  .col-3 {
+    @include make-lg-column(3);
+  }
+  .col-4 {
+    @include make-lg-column(4);
+  }
+  .col-5 {
+    @include make-lg-column(5);
+  }
+  .col-6 {
+    @include make-lg-column(6);
+  }
+  .col-7 {
+    @include make-lg-column(7);
+  }
+  .col-8 {
+    @include make-lg-column(8);
+  }
+  .col-9 {
+    @include make-lg-column(9);
+  }
+  .col-10 {
+    @include make-lg-column(10);
+  }
+  .col-11 {
+    @include make-lg-column(11);
+  }
+  .col-12 {
+    @include make-lg-column(12);
+  }
+  // Offset columns
+  .col-offset-1 {
+    @include make-lg-column-offset(1);
+  }
+  .col-offset-2 {
+    @include make-lg-column-offset(2);
+  }
+  .col-offset-3 {
+    @include make-lg-column-offset(3);
+  }
+  .col-offset-4 {
+    @include make-lg-column-offset(4);
+  }
+  .col-offset-5 {
+    @include make-lg-column-offset(5);
+  }
+  .col-offset-6 {
+    @include make-lg-column-offset(6);
+  }
+  .col-offset-7 {
+    @include make-lg-column-offset(7);
+  }
+  .col-offset-8 {
+    @include make-lg-column-offset(8);
+  }
+  .col-offset-9 {
+    @include make-lg-column-offset(9);
+  }
+  .col-offset-10 {
+    @include make-lg-column-offset(10);
+  }
+  .col-offset-11 {
+    @include make-lg-column-offset(11);
+  }
+  .col-offset-12 {
+    @include make-lg-column-offset(12);
+  }
+
+}

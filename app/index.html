@@ -14,15 +14,59 @@
       <!-- endbower -->
       <!-- endbuild -->
 
+      <!-- build:css styles/oldie.css -->
+      <!--[if lt IE 8  ]>
+      <link rel="stylesheet" href="styles/oldie.css">
+      <![endif]-->
+      <!-- endbuild -->
+
       <!-- build:css styles/main.css -->
       <link rel="stylesheet" href="styles/main.css">
-      <link rel="stylesheet" href="styles/bootstrap-datepicker.css">
       <!-- endbuild -->
 
-      <!-- build:css styles/menu.css -->
-      <link rel="stylesheet" href="styles/menu.css">
+      <!-- build:js scripts/oldie.js -->
+      <!-- bower:js -->
+      <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="bower_components/respond/dest/respond.src.js"></script>
+      <!-- endbower -->
       <!-- endbuild -->
 
+      <!-- build:js scripts/main.js -->
+      <script src="bower_components/jquery/dist/jquery.js"></script>
+      <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+      <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+      <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+      <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+      <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+      <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+      <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+      <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+      <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+      <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+      <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+      <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+      <script src="bower_components/jquery.inputmask/dist/jquery.inputmask.bundle.js"></script>
+      <script src="bower_components/jquery-formatcurrency/jquery.formatCurrency-1.4.0.min.js"></script>
+      <script src="scripts/browser-update.js"></script>
+      <script src="scripts/spin.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js scripts/dataTables.js -->
+      <script src="scripts/datatables/dataTables-1.9.3.js"></script>
+      <script src="scripts/datatables/dt_bootstrap-1.0.0.js"></script>
+      <!-- endbuild -->
+
+      <!-- build:js scripts/fileUpload.js -->
+      <script type="text/javascript" src="scripts/fileUpload/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="scripts/fileUpload/jquery.tmpl.min.js"></script>
+      <script type="text/javascript" src="scripts/fileUpload/jquery.iframe-transport.js"></script>
+      <script type="text/javascript" src="scripts/fileUpload/jquery.fileupload.js"></script>
+      <script type="text/javascript" src="scripts/fileUpload/jquery.fileupload-process.js"></script>
+      <script type="text/javascript" src="scripts/fileUpload/jquery.fileupload-validate.js"></script>
+      <script type="text/javascript" src="scripts/fileUpload/jquery.fileupload-ui.js"></script>
+      <script type="text/javascript" src="scripts/fileUpload/jquery.fileupload-jquery-ui.js"></script>
+      <script type="text/javascript" src="scripts/fileUpload/file_upload-1.0.6.js"></script>
+      <!-- endbuild -->
   </head>
   <body>
   <div class="container">
@@ -42,8 +86,8 @@
             <span class="glyphicon glyphicon-th-list"></span>&nbsp;&nbsp;
           </h1>
         </div>
-      </div><!-- /.navbar-inner -->
-    </div><!-- /.navbar .pg-header -->
+      </div>
+    </div>
     <div class="navbar navbar-default app-ribbon">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -74,9 +118,9 @@
             </ul>
           </li>
         </ul>
-      </div><!--/.nav-collapse -->
-    </div><!-- /.navbar .app-ribon -->
-    <div class="inner-container clearfix"><!-- (LOCATION:  462,H,1003) -->
+      </div>
+    </div>
+    <div class="inner-container clearfix">
       <ol class="breadcrumb hidden-print">
         <li class="active">Frontend Menu</li>
       </ol>
@@ -88,35 +132,291 @@
           <div class="panel-body">
             <ul class="list-group" id="projects">
             </ul>
-          </div><!-- .panel-body -->
-        </div><!-- .panel-primary -->
-      </div><!-- .app-container -->
-  </div><!-- .inner-container -->
-</div><!-- .container -->
+            <div class="docs-example clearfix">
+              <fieldset>
+                <form class="form-horizontal" role="form" method="post" action="https://quotedev.nstarco.com/entry/default.asp?Category=Umbrella&amp;Service=Applicant" id="r-applicant">
+                  <input type="hidden" name="formsubmit" value="true">
+                  <input type="hidden" name="validUSPS" id="validUSPS" value="">
+                  <div class="alert alert-info col-offset-3 col-6">
+                    <p>Does this risk qualify?
+                      <a href="#" class="btn" data-toggle="modal" data-target="#eligibility-modal">
+                      View Eligibility Guidelines
+                      </a>
+                    </p>
+                  </div>
 
-  <!-- build:js scripts/vendor.js -->
-  <!-- bower:js -->
-  <!-- endbower -->
-  <!-- endbuild -->
+                  <div class="row">
+                    <div class="col-offset-3 col-9">
+                      <h2 class="section-hdg">Applicant Information</h2>
+                    </div>
+                  </div>
+                    <div class="form-group <VALSTATE>(p)">
+              <label for="r-applicant-corp" class="col-3 control-label">
+                Is insured a corporation? *
+              </label>
+                      <div class="col-4">
+                        <label class="radio-inline">
+              <input type="radio" name="r-applicant-corp" value="Yes" class="corp-radio" id="corp-yes"> Yes
+                        </label>
+                        <label class="radio-inline">
+              <input type="radio" name="r-applicant-corp" value="No" checked="checked" class="corp-radio" id="corp-no"> No
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-group corpname <VALSTATE>(p)" style="display: none;">
+              <label for="r-applicant-corpname" class="col-3 control-label">
+                Corpration Name *
+              </label>
+                      <div class="col-4">
+              <input type="text" name="r-applicant-corpname" value="" class="form-control" maxlength="36" placeholder="Corporation Name" disabled="" autocomplete="off" id="corpname">
+                      </div>
+                    </div>
+                    <div class="form-group corpname" style="display: none;">
+              <label for="r-applicant-cxname" class="col-3 control-label">
+                Additional Name Info
+              </label>
+                      <div class="col-4">
+              <input type="text" name="r-applicant-cxname" value="" class="form-control" maxlength="36" placeholder="Additonal Name Info" disabled="" autocomplete="off" id="cxname">
+                      </div>
+                    </div>
+                    <div class="form-group appname <VALSTATE>(p)">
+              <label for="r-applicant-firstname" class="col-3 control-label">
+                First Name *
+              </label>
+                      <div class="col-4">
+              <input type="text" name="r-applicant-firstname" value="" class="form-control" maxlength="20" placeholder="First Name" autocomplete="off" id="firstname">
+                      </div>
+                    </div>
+                    <div class="form-group appname <VALSTATE>(p)">
+              <label for="r-applicant-lastname" class="col-3 control-label">
+                Last Name
+              </label>
+                      <div class="col-4">
+              <input type="text" name="r-applicant-lastname" value="" class="form-control" maxlength="20" placeholder="Last Name" autocomplete="off" id="lastname">
+                      </div>
+                    </div>
+                    <div class="form-group appname">
+              <label for="r-applicant-xname" class="col-3 control-label">
+                2nd Named Insured
+              </label>
+                      <div class="col-4">
+              <input type="text" name="r-applicant-xname" value="" class="form-control" maxlength="36" placeholder="2nd Named Insured" autocomplete="off" id="xname">
+                      </div>
+                    </div>
 
-  <!-- build:js scripts/plugins.js -->
-  <!-- endbuild -->
+                    <div class="row">
+                      <div class="col-offset-3 col-9">
+                        <h2 class="section-hdg">Property Address</h2>
+                      </div>
+                    </div>
+                    <div class="form-group <VALSTATE>(p)">
+              <label for="r-applicant-paddress" class="col-3 control-label">
+                Street Address *
+              </label>
+                      <div class="col-4">
+              <input type="text" name="r-applicant-paddress" value="" id="Address2" class="form-control" maxlength="36" placeholder="Street Address" autocomplete="off">
+                      </div>
+                    </div>
+                      <div class="form-group <VALSTATE>(p)">
+              <label for="r-applicant-paddress2" class="col-3 control-label">
+                Street Address 2
+              </label>
+                        <div class="col-4">
+              <input type="text" name="r-applicant-paddress2" value="" class="form-control" maxlength="36" placeholder="Street Address 2" autocomplete="off" id="paddress2">
+                        </div>
+                        <input type="hidden" id="Address1">
+                      </div>
+                    <div class="form-group <VALSTATE>(p)">
+              <label for="r-applicant-pzip" class="col-3 control-label">
+                Zip *
+              </label>
+                      <div class="col-4">
+              <input type="text" name="r-applicant-pzip" value="" id="Zip" class="form-control" maxlength="9" placeholder="Zip" autocomplete="off">
+                      </div>
+                    </div>
+                    <div class="form-group <VALSTATE>(p)">
+              <label for="r-applicant-pcity" class="col-3 control-label">
+                City *
+              </label>
+                      <div class="col-4">
+              <input type="text" name="r-applicant-pcity" value="" id="City" class="form-control" maxlength="17" placeholder="City" autocomplete="off">
+                      </div>
+                    </div>
 
-  <!-- build:js scripts/main.js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/affix.js"></script>
-  <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js"></script>
-  <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
-  <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
-  <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js"></script>
-  <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js"></script>
-  <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js"></script>
-  <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/popover.js"></script>
-  <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/carousel.js"></script>
-  <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
-  <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js"></script>
-  <script src="bower_components/bootstrap-sass/vendor/assets/javascripts/bootstrap/tab.js"></script>
-  <script src="scripts/main.js"></script>
-  <!-- endbuild -->
+                    <div class="form-group <VALSTATE>(p)">
+              <label for="r-applicant-pstate" class="col-3 control-label">
+                State *
+              </label>
+                      <div class="col-4">
+                        <select name="r-applicant-pstate" class="form-control" id="State">
+                          <option selected="" value=" "></option>
+                          <option value="IA">IA</option>
+                          <option value="MN">MN</option>
+                          <option value="NE">NE</option>
+                          <option value="ND">ND</option>
+                          <option value="OK">OK</option>
+                          <option value="SD">SD</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- This should be disabled until they select city / state -->
+                    <div class="form-group <VALSTATE>(p)">
+              <label for="r-applicant-pcounty" class="col-3 control-label">
+                County *
+              </label>
+                      <div class="col-4">
+                        <select name="r-applicant-pcounty" class="form-control" id="pcounty"><option value="1">AITKIN</option><option value="3">ANOKA</option><option value="5">BECKER</option><option value="7">BELTRAMI</option><option value="9">BENTON</option><option value="11">BIG STONE</option><option value="13">BLUE EARTH</option><option value="15">BROWN</option><option value="17">CARLTON</option><option value="19">CARVER</option><option value="21">CASS</option><option value="23">CHIPPEWA</option><option value="25">CHISAGO</option><option value="27">CLAY</option><option value="29">CLEARWATER</option><option value="31">COOK</option><option value="33">COTTONWOOD</option><option value="35">CROW WING</option><option value="37">DAKOTA</option><option value="39">DODGE</option><option value="41">DOUGLAS</option><option value="43">FARIBAULT</option><option value="45">FILLMORE</option><option value="47">FREEBORN</option><option value="49">GOODHUE</option><option value="51">GRANT</option><option value="53">HENNEPIN</option><option value="55">HOUSTON</option><option value="57">HUBBARD</option><option value="59">ISANTI</option><option value="61">ITASCA</option><option value="63">JACKSON</option><option value="65">KANABEC</option><option value="67">KANDIYOHI</option><option value="69">KITTSON</option><option value="71">KOOCHICHING</option><option value="73">LAC QUI PARLE</option><option value="75">LAKE</option><option value="77">LAKE OF THE WOODS</option><option value="79">LE SUEUR</option><option value="81">LINCOLN</option><option value="83" selected="">LYON</option><option value="87">MAHNOMEN</option><option value="89">MARSHALL</option><option value="91">MARTIN</option><option value="85">MCLEOD</option><option value="93">MEEKER</option><option value="95">MILLE LACS</option><option value="97">MORRISON</option><option value="99">MOWER</option><option value="101">MURRAY</option><option value="103">NICOLLET</option><option value="105">NOBLES</option><option value="107">NORMAN</option><option value="109">OLMSTED</option><option value="111">OTTER TAIL</option><option value="113">PENNINGTON</option><option value="115">PINE</option><option value="117">PIPESTONE</option><option value="119">POLK</option><option value="121">POPE</option><option value="123">RAMSEY</option><option value="125">RED LAKE</option><option value="127">REDWOOD</option><option value="129">RENVILLE</option><option value="131">RICE</option><option value="133">ROCK</option><option value="135">ROSEAU</option><option value="139">SCOTT</option><option value="141">SHERBURNE</option><option value="143">SIBLEY</option><option value="137">ST.LOUIS</option><option value="145">STEARNS</option><option value="147">STEELE</option><option value="149">STEVENS</option><option value="151">SWIFT</option><option value="153">TODD</option><option value="155">TRAVERSE</option><option value="157">WABASHA</option><option value="159">WADENA</option><option value="161">WASECA</option><option value="163">WASHINGTON</option><option value="165">WATONWAN</option><option value="167">WILKIN</option><option value="169">WINONA</option><option value="171">WRIGHT</option><option value="173">YELLOW MEDICINE</option></select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="mailTo" class="col-3 control-label">&nbsp;</label>
+                      <div class="col-9">
+                        <label>
+                         <input type="checkbox" id="mailTo" name="mailTo" value="X">
+                          Check here if the Mailing Address is different from the Property Address.
+                        </label>
+                      </div>
+                    </div>
+
+                    <div id="mailingAddress" style="display:none;">
+                      <div class="row">
+                        <div class="col-offset-3 col-9">
+                          <h2 class="section-hdg">Mailing Address</h2>
+                        </div>
+                      </div>
+                      <div class="form-group <VALSTATE>(p)">
+              <label for="r-applicant-maddress" class="col-3 control-label">
+                Street Address *
+              </label>
+                        <div class="col-4">
+              <input type="text" name="r-applicant-maddress" value="" id="MTAddress2" class="form-control" maxlength="36" placeholder="Street Address" autocomplete="off">
+                        </div>
+                      </div>
+                      <div class="form-group <VALSTATE>(p)">
+              <label for="r-applicant-maddress2" class="col-3 control-label">
+                Street Address 2
+              </label>
+                        <div class="col-4">
+              <input type="text" name="r-applicant-maddress2" value="" class="form-control" maxlength="36" placeholder="Address Line 2" autocomplete="off" id="maddress2">
+                        </div>
+                        <input type="hidden" id="MTAddress1">
+                      </div>
+                      <div class="form-group <VALSTATE>(p)">
+              <label for="r-applicant-mcity" class="col-3 control-label">
+                City *
+              </label>
+                        <div class="col-4">
+              <input type="text" name="r-applicant-mcity" value="" id="MTCity" class="form-control" maxlength="17" placeholder="City" autocomplete="off">
+                        </div>
+                      </div>
+                      <div class="form-group <VALSTATE>(p)">
+              <label for="r-applicant-mstate" class="col-3 control-label">
+                State *
+              </label>
+                        <div class="col-4">
+              <input type="text" name="r-applicant-mstate" value="" id="MTState" class="form-control" maxlength="2" placeholder="State" autocomplete="off">
+                        </div>
+                      </div>
+                      <div class="form-group <VALSTATE>(p)">
+              <label for="r-applicant-mzip" class="col-3 control-label">
+                Zip *
+              </label>
+                        <div class="col-4">
+              <input type="text" name="r-applicant-mzip" value="" id="MTZip" class="form-control" maxlength="9" placeholder="Zip" autocomplete="off">
+                        </div>
+                      </div>
+                    </div> <!-- #mailingAddress -->
+                    <div id="validatingAddress" class="form-group validatingAddress" style="display:none;">
+                      <label class="col-3 control-label">&nbsp;</label>
+                      <div class="col-4">
+                      <img src="/assets/images/Loading.gif" height="40" width="40" alt="Validating Address">
+                      <p id="validationMsg"> Validating Address... </p>
+                      </div>
+                    </div>
+                    <div class="errorHelp form-group" id="errorHelp" style="display: none;">
+                      <label class="col-3 control-label">&nbsp;</label>
+                      <div class="col-9 alert alert-danger">
+                        <span id="Description" class="error">&nbsp;</span>
+                        <span id="ReturnText" class="moreInfo">&nbsp;</span>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-offset-3 col-4">
+                        <button type="button" class="btn btn-primary" data-loading-text="Loading..." name="applicant" id="submitButton">
+                          <span class="glyphicon glyphicon-floppy-disk"></span>
+                          Continue
+                        </button>
+                      </div>
+                    </div>
+
+                </form>
+
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="pg-footer">
+    <div class="container clearfix">
+      <div class="row">
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/about-us">About Us</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/our-values">Our Values</a><br>
+            <a target="_blank" href="http://northstarmutual.com/our-history">Our History</a><br>
+            <a target="_blank" href="http://northstarmutual.com/partnerships-associations">Partnerships &amp; Associations</a><br>
+            <a target="_blank" href="http://northstarmutual.com/recent-highlights">Recent Highlights</a><br>
+            <a target="_blank" href="http://northstarmutual.com/contact-us">Contact Us</a><br>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/products">Products</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/product-farm">Farm</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-home">Home</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-auto">Auto</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-business">Business</a><br>
+            <a target="_blank" href="http://northstarmutual.com/product-umbrella">Umbrella</a><br>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="https://paymentsnsmic.billmatrix.com/" target="_blank">Make Payment</a></div>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/claims-service">Claims Service</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/report-claim">Report Claim</a><br>
+            <a target="_blank" href="http://northstarmutual.com/roadside-assistance">Roadside Assistance</a><br>
+            <a target="_blank" href="http://northstarmutual.com/claims-faq">Claims FAQ</a><br>
+            <a target="_blank" href="http://northstarmutual.com/loss-control-tips">Loss Control Tips</a><br>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="https://quote.nstarco.com/cool-ice/default.asp?Category=misc&amp;Service=menu" target="_blank"> Agent Login</a></div>
+          </div>
+          <div class="sitemap-module">
+            <div class="title"><a target="_blank" href="http://northstarmutual.com/legal-notices">Legal Notices</a></div><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-minnesota">Minnesota</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-iowa">Iowa</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-nebraska">Nebraska</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-north-dakota">North Dakota</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-oklahoma">Oklahoma</a><br>
+            <a target="_blank" href="http://northstarmutual.com/ln-south-dakota">South Dakota</a><br>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <span class="copyright">
+            North Star Mutual Insurance Company • 269 Barstad Road South, PO Box 48 • Cottonwood, MN 56229 • 800-622-5230
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
 </body>
 </html>

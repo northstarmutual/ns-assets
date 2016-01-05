@@ -1,0 +1,114 @@
+// Site layout
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.pg-header {
+  margin-bottom: 0;
+  background-color: $container-bg;
+  @include border-top-radius(4px);
+}
+
+.content-grid {
+  @include make-lg-column(9);
+  @include make-md-column(9);
+  @include make-sm-column(9);
+  // @include make-xs-column(9);
+}
+
+.soft-hdg {
+  color: $headings-color;
+}
+
+.pg-title {
+  margin-top: 60px;
+  text-align: right;
+  color: $brand-primary;
+}
+
+.inner-container {
+  background-color: $container-bg;
+  @include border-bottom-radius(4px);
+}
+
+.app-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include make-lg-column(9);
+}
+
+.contact-container {
+  @include make-lg-column(3);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.app-section {
+  margin: 20px auto;
+}
+
+.app-ribbon {
+  margin-bottom: 0;
+  border-color: $ns-brown-gold;
+}
+
+.panel-pg-hdg {
+  min-height: 200px;
+}
+
+.panel-heading h3 {
+  margin-top: 10px;
+}
+
+label {
+  font-weight: normal;
+}
+
+.corpname {
+  display: none;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  background-color: transparent;
+  border-bottom: 1px solid $container-bg;
+}
+
+.qte-btns {
+  margin-bottom: 5px;
+}
+
+.pg-footer {
+  margin-top: 30px;
+  color: #fff;
+}
+
+.sitemap-module {
+  padding: 15px;
+}
+
+.sitemap-module a {
+  color: $container-bg;
+}
+
+.sitemap-module .title {
+  display: inline-block;
+  width: 80%;
+  // text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.125em;
+  border-bottom: 4px solid $ns-gold;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+
+.copyright {
+  color: $container-bg;
+  font-size: 14px;
+}

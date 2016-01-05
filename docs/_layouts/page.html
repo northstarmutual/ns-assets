@@ -1,0 +1,21 @@
+---
+layout: default
+---
+  <div class="inner-container clearfix"><!-- (LOCATION:  462,H,1003) -->
+    <ol class="breadcrumb hidden-print">
+      <li class="active">{{ page.title }}</li>
+    </ol>
+    <div class="app-container column markdown-body">
+      <h1 class="page-title">
+        {{ page.title }}
+      </h1>
+      <div class="markdown-body">
+        {{ content }}
+      </div>
+    </div><!-- .app-container -->
+    <div class="col-3">
+      {% unless page.title == "About" %}
+        {% include sidenav.html %}
+      {% endunless %}
+    </div>
+  </div><!-- .inner-container -->

@@ -1,0 +1,55 @@
+.centered {
+  display: block;
+  float: none !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fill {
+  width: 100%;
+}
+
+.help-tip {
+  cursor: pointer;
+  color: $brand-primary;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.ui-datepicker-trigger {
+  display: none;
+}
+
+#spin {
+  width: 24px;
+  height: 16px;
+}
+
+.half{
+  width:48%;
+}
+
+.third{
+  width:32%;
+}
+
+.ad-Menu-btn {
+  text-align: left;
+  margin: .2em;
+}
+
+.tab-drawer {
+  margin-top: 0px;
+  border-top: 0px;
+  padding: 20px;
+  border: #ddd 1px solid;
+  border-top: none;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+select.mini {
+  font-size: 12px;
+}

@@ -1,0 +1,153 @@
+// Upload progress meter
+
+.upload-progress-indicator {
+  background-color: transparent;
+  background-repeat: repeat-x;
+  background-position: left top;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: #ccc;
+  margin: 0 0 20px 0;
+  overflow: hidden;
+  // text-transform: uppercase;
+}
+@media only screen and (min-width: 480px) {
+  .upload-progress-indicator {
+    height: 27px;
+  }
+}
+
+.upload-progress-indicator .item {
+  font-size: 12px;
+  padding: 4px 2% 4px;
+  position: relative;
+  text-align: center;
+  background-color: transparent;
+  background-repeat: repeat-x;
+  background-position: left top;
+  width: 20%;
+}
+
+@media only screen and (min-width: 480px) {
+  .upload-progress-indicator .item {
+    float: left;
+  }
+  .upload-progress-indicator .item.step-1 {
+    width: 20%;
+  }
+  .upload-progress-indicator .item.step-2 {
+    width: 20%;
+  }
+  .upload-progress-indicator .item.step-3 {
+    width: 20%;
+  }
+  .upload-progress-indicator .item.step-4 {
+    width: 20%;
+  }
+  .upload-progress-indicator .item.step-5 {
+    width: 20%;
+  }
+  .upload-progress-indicator .item:before,
+  .upload-progress-indicator .item span:before {
+    background-position: 0 -84px;
+    content: '';
+    display: block;
+    height: 27px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 17px;
+  }
+
+  .upload-progress-indicator .item.complete.first:before {
+    background-position: 0 -143px;
+    content: '';
+    display: block;
+    height: 27px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 17px;
+  }
+
+  .upload-progress-indicator .item.complete.in-progress:before {
+    background-position: 0 -113px !important;
+    content: '';
+    display: block;
+    height: 27px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 17px;
+  }
+
+  .upload-progress-indicator .item.complete.first:before + .inactive {
+    background-position: 0 -113px !important;
+    content: '';
+    display: block;
+    height: 27px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 17px;
+  }
+
+  .upload-progress-indicator .item span:before {
+    display: none;
+  }
+  .upload-progress-indicator .item.first:before {
+    background-position: 0 -55px;
+  }
+  .upload-progress-indicator .item.complete:before {
+    background-position: 0 -143px;
+  }
+  .upload-progress-indicator .item.item + .active span:before {
+    background-position: 0 -143px;
+    display: block !important;
+    right: auto;
+    left: -17px;
+    top: 0;
+  }
+  // .upload-progress-indicator .item.item  > .complete:before {
+  //   background-position: 0 -143px;
+  // }
+  .upload-progress-indicator .item.active:before {
+    background-position: 0px -113px !important;
+  }
+  .upload-progress-indicator .item.active + .item:before {
+    background-position: 0 -55px;
+  }
+
+  // .upload-progress-indicator .item.complete + .inactive:before {
+  //   background-position: 0 -113px;
+  // }  // .upload-progress-indicator .item.complete + .item:before {
+  //   background-position: 0 -143px;
+  // }
+  .upload-progress-indicator .item.last:before {
+    display: none;
+  }
+
+  .upload-progress-indicator .item.inactive:before {
+    background-position: 0 -55px;
+  }
+
+}
+.upload-progress-indicator .item.active,
+.upload-progress-indicator .item.complete {
+  background-position: left -27px;
+  color: #fff;
+}
+.upload-progress-indicator .item.active a,
+.upload-progress-indicator .item.complete a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.upload-progress-indicator, .upload-progress-indicator .item, .upload-progress-indicator .item:before, .upload-progress-indicator .item span:before {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAACqCAYAAABLYKRMAAAFSUlEQVR42t2Yx0o2TRCF5+pMnznniFlEQQTdeAt6A7pVEVH3utWlOWDOOedYP6ehXx3fnulQs5BfOODGY1dVd5952vv6+iKuvM/PT+LqD5l8fHwQV9GYvL+/E1fRmLy9vRFX3uvrK3EVjcnLywtxFY3J/f09ceXd3d0RV9GY3N7eElfRmNzc3BBX3vX1NXEVjcnV1RVxFY3J5eUlcRWNycXFBXEVjUlJSQlx9X8zKS0tJa68srIy4uoPmZSXlxNXf8iksrKSuPpDJtXV1cRVNCY1NTXEVTQmtbW1xFU0JnV1dcSV19DQQFxFY9LY2EhceU1NTcRVNCYtLS3Elbe+vk5ceSpEPTs7o62tLT7Srq2ticRn0SgQZGFhQQAAC2lR1ubmJh9pZVkspEU5KOv5+ZmHtKenp7SxscFDWoxxdXWVzs/P+UiLsp6ennhIK8tiIS3GibIwejbSoqyHhwd3pEUjT05OxMFjIS1+pqen3ZEWm+74+FjsZGekxYjn5uYE5zghLfbE8vIyHRwcuCEtVnB0dCRG7Iy0sgycaCeklWXs7++7Ie3j46MoY2VlxR1pYTI7OytOsBPS4lwsLS3R3t6eG9LibMgynJFWloET64S0sozd3V03pMWBOjw8FCM1RtqZmRniKi7Qe3p6KDU1lTIyMoTwu05xgY6pVFVVUWZmJhUUFAhpaVQVi2hqWlqakUGgCTQwMEA5OTkxbHUyQVn4Rs3Pz9ebhOUwysrKyqLi4mJBnYFwrQt0lJWbmxvjPSXS6nIYm6++vp4KCwvdTaDFxUXKzs6OLT/OxDTM+/v7RVkVFRVCPqQ1zWFcyPiOR1nOJtD8/HysLLkiyDqLURb2Do6GlLUJLmaUhb0To1GXQB8ZGaG8vLzv6dhmMRIQzYVJrCe2Jl1dXeIOKSoqEpMRPbEJ9OHhYUpOTharwITwTiC42NQAdy42Gw4kTq58bBAmpoGOMnBRYSrog4/QTQJ9aGiIUlJSxP7ANDBWH1zrDHCn4I/lLSf/uw+udYGOMnDrow9YAf4ojovDDFAGxol9gSZi6Uq4DspX3CEyMtBIuXQlXAeZdHd3i+xBI9ED/MdALlZl6+DgoBgndqXOQGmC73b0AMKWhkFzc3M4XP8O546ODkpISLCS9zOYZYAj1K0I/XeaYRq4Ajs7O8WVaETov03QCxwybPOJiQkzQleZ4KhjOklJSeID2NpEliRX09bWpkX9wNdyGGGzJSYm0vj4eDihB707495AWenp6aIsfElam0DYsbjN/v37R+3t7YI0lHCtewmX08JqxsbG1Ca692c0GpfSz7LiCN3kIRv9+VkWPtl9cG36Io7+oCxExujoqN/E9B0a/ZFjR1nb29vfcG3zoI39g/7gkGIToixrEwj9QVnYhAh2Qei2j9ooC03G73gzEHBta4KRI4Ompqa+Cd3mQRtTwubr7e31w7WNCVaBiABY+uDa9DEbq8CIUQb+ELFiZYKpYLOhDCVc617CUQYmgtj4ycc+E90jNrIHq5icnAyG6zADrAK7tK+vL5zQw17B0Qsk3M7OTiwhlXAdlK9ypChDS+gqAzQUzUQZRnD9O5xlL1pbW8Vxx5MHFGqiCmiEuhWhqwLdmtCDAt2K0MMC3ZjQdYFuROi6QDcidJNA1xK6aaCHErppoIcSuk2gBxK6baArCd020JWE7hLocYTuGug+QncNdB+hcwI9Nh3XQPcRumug+wjdJdDjCN020JWEbhvoSkK3CfRAQjcN9FBCNw30UEI3CXQtoesC3YjQdYFuROhhgW5M6GGBbkzoQYFuQ+j/AUvaLkUDUc3kAAAAAElFTkSuQmCC');
+}
