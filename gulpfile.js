@@ -90,7 +90,7 @@ gulp.task('move', function () {
     // Set the destination
     switch (true) {
       case server.toLowerCase() == 'arthur':
-        var host = 'https://quote.nstarco.com';
+        var host = 'http://quote.nstarco.com';
         break;
       case server.toLowerCase() == 'arthur2':
         var host = 'http://quotetest.nstarco.com';
