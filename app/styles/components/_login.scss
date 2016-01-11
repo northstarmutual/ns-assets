@@ -11,13 +11,13 @@
     padding-bottom:0;
     border-right: 4px solid #eee;
   }
-  svg {
-    position: relative;
-    right: 15px;
-  }
   .logo {
     width: 300px;
     margin: 20px auto;
+    img {
+      position: relative;
+      right: 15px;
+    }
   }
   .logo h1 {
     color: #fff;
