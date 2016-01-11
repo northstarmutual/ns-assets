@@ -112,3 +112,13 @@ label {
   color: $container-bg;
   font-size: 14px;
 }
+
+.accounting {
+  .pg-header,
+  .inner-container {
+    background-color: $accounting-bkd;
+    .breadcrumb {
+      background-color: $accounting-bkd;
+    }
+  }
+}
