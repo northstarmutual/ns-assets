@@ -16,3 +16,6 @@ employee_menu-*.html
 404-*.html
 index-*.html
 asset_manifest.json
+docs/404.html
+docs/employee_menu.html
+docs/index.html
