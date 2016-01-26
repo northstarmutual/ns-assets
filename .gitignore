@@ -9,6 +9,9 @@ docs/_site/
 404-*.html
 manifest.json
 docs/scripts/
+docs/styles/
+docs/images/
+docs/fonts/
 employee_menu-*.html
 404-*.html
 index-*.html
