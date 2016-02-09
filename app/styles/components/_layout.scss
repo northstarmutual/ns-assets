@@ -122,3 +122,580 @@ label {
     }
   }
 }
+
+.summary-details {
+  margin-bottom: 5px;
+  h3 {
+    font-size: 22px;
+  }
+  h3.label {
+    float: right;
+    font-size: 18px;
+  }
+}
+
+.ns-menu > li > a {
+  padding: 7px 13px;
+  font-weight: bold;
+}
+
+// Menu Attention! Link (Yeah its red :D)
+.attn-msg {
+  position: relative;
+  display: block;
+  padding-left: 32px;
+  color: red;
+}
+
+// Agents Only Help Link
+.help-link {
+  padding: 0 0 0 32px !important;
+  &:hover {
+    background-color: #fff !important;
+    text-decoration: underline !important;
+  }
+  &:focus {
+    background-color: #fff !important;
+    text-decoration: underline !important;
+  }
+}
+
+.debug-info {
+  // position: absolute;
+  // top: 15px;
+  // left: 15px;
+}
+
+.inline {
+  display: inline;
+}
+
+.no-margin {
+  margin:0;
+}
+
+/* Header Section
+-------------------------------------------------- */
+.ns-page-title {
+  float: right;
+}
+
+.ns-hdg {
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #998d57;
+}
+
+.ns-hdg .nav {
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  /*margin: 0 10px 0 0;*/
+}
+
+.ns-hdg .nav > li > a {
+  float: none;
+  padding: 10px 15px 10px;
+  color: #05007B !important;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #ffffff;
+  font-size: 1.4em;
+  text-transform:uppercase;
+  font-weight:300;
+}
+
+.ns-hdg .nav > li > a:focus,
+.ns-hdg .nav > li > a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  border-top:11px solid #CF9317;
+  opacity: 0.9;
+  color: #CF9317 !important;
+}
+
+.ns-hdg .nav > li.active  {
+   border-top:11px solid #05007B;
+   opacity: 0.9;
+}
+
+.ns-hdg .nav > li.active a {
+  padding-top:0px;
+  color: #CF9317 !important;
+}
+
+.ns-hdg .nav > li.active > a,
+.ns-hdg .nav > li.active > a:hover,
+.ns-hdg .nav > li.active > a:focus {
+  color: #CF9317;
+  background-color: transparent !important;
+}
+
+.ns-hdg .nav > li.active:hover {
+  border-top:none;
+  padding-top: 0px;
+}
+
+.ns-hdg .nav > li.active a:hover {
+  padding-top:11px;
+}
+
+.ns-hdg .btn-navbar {
+  background-color: #05007B;
+  background-image: none;
+}
+.ns-hdg .btn-navbar:hover {
+  background-color: #05007B;
+  background-image: none;
+}
+
+/* Agency Imitation */
+body.ns-imitate {
+  padding-top: 51px;
+}
+.ns-imitate-navbar {
+  color: #CF9317;
+}
+
+.ns-imitate-navbar h1 {
+  font-size: 1.5em;
+}
+
+/* Application Ribbon
+-------------------------------------------------- */
+.ns-ribbon {
+  border-top: 2px solid #998d57;
+  border-bottom: 2px solid #998d57;
+}
+
+.ns-ribbon .nav > li > a {
+  font-size: 1.2em;
+  color: #FFF;
+  text-shadow: none;
+}
+
+.ns-ribbon .nav > li {
+  display: block;
+  cursor: pointer;
+}
+
+.ns-ribbon .navbar-inner {
+  height: 38px;
+  margin: 0;
+}
+
+/* Dropdown caret color */
+.ns-ribbon .nav li.dropdown > .dropdown-toggle .caret {
+  border-top-color: #CF9317 !important;
+  border-bottom-color: #CF9317 !important;
+}
+
+.ns-ribbon .btn-navbar {
+  background-color: #CF9317 !important;
+  background-image: none !important;
+}
+.ns-ribbon .btn-navbar:hover {
+  background-color: #CF9317 !important;
+  background-image: none !important;
+}
+
+.lt-ie8 .ns-ribbon .nav > li > a:focus,
+.lt-ie8 .ns-ribbon .nav > li > a:hover,
+.lt-ie7 .ns-ribbon .nav > li > a:hover,
+.lt-ie7 .ns-ribbon .nav > li > a:hover {
+  background-color:transparent;
+  zoom: 1;
+}
+
+.ns-ribbon .nav > li > a.ns-impersonate {
+  padding-top: 5px !important;
+  padding-bottom: 6px !important;
+  color: #CF9317 !important;
+}
+
+.ns-ribbon-dropdown small {
+  padding-left: 27px;
+}
+
+.ns-app-ribbon {
+  display: block;
+  margin: 0 0 -1px;
+  padding: 8px 15px;
+  border: 1px solid #e5e5e5;
+}
+
+.ns-app-inner {
+  padding: 5px 20px;
+  margin: 10px auto;
+}
+
+/* in-house styles
+-------------------------------------------------- */
+.in-house-ribbon {
+  /*background-color: #05007B;*/
+  position: relative;
+  top:-20px;
+  padding:10px;
+  color: #fff;
+}
+
+/* summary-table
+-------------------------------------------------- */
+.summary-table caption,
+.summary-table td,
+.summary-table th {
+  padding-left: 0 !important;
+}
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+  background: #fff;
+  border-top: 2px solid #998d57;
+  margin-top: 70px;
+  margin-bottom: 0;
+  padding: 70px 0;
+}
+
+.footer-nav-links,
+.footer-icons {
+  margin-left: 0;
+  list-style: none;
+}
+
+.footer-nav-links li {
+  margin-right: 10px;
+  display: inline;
+}
+
+.footer-icons {
+  margin-top: 30px;
+}
+
+.footer-icons li {
+  float: left;
+  margin-right: 20px;
+}
+
+/* Agents Only Notification Message
+-------------------------------------------------- */
+.strip {
+  width: auto;
+  margin: 10px auto;
+  padding: 5px 10px;
+  text-align: left;
+  zoom: 1;
+}
+
+.strip .container .row-fluid > div,
+.strip .container .row > div {
+  font-weight: 400;
+}
+
+.strip .container .row-fluid,
+.strip .container .row {
+  color: white;
+}
+
+.notification {
+  position: absolute;
+  top: 10px;
+  right: 148px;
+  line-height: 16px;
+  height: 16px;
+  padding: 6px 10px;
+  color: white !important;
+  text-shadow: 0 1px hsla(0, 0%, 0%, 0.25);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  -webkit-border-radius: 50em;
+  -moz-border-radius: 50em;
+  border-radius: 50em;
+  -webkit-box-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.08), inset 0 1px hsla(0, 100%, 100%, 0.3);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), inset 0 1px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 1px 1px hsla(0, 0%, 0%, 0.08), inset 0 1px hsla(0, 100%, 100%, 0.3);
+}
+
+/* Agents Only Menu - Navigation Menus
+-------------------------------------------------- */
+.ns-menu > li > a {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ns-menu > .active > a {
+  position: relative;
+  z-index: 2;
+  padding: 9px 15px;
+  border: 0;
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  // -webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+  //    -moz-box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+  //         box-shadow: inset 1px 0 0 rgba(0,0,0,.1), inset -1px 0 0 rgba(0,0,0,.1);
+}
+
+.ns-menu > li > a > small {
+  padding-left: 18px;
+}
+
+.lt-ie8 .ns-menu > li > a > small,
+.lt-ie7 .ns-menu > li > a > small {
+  padding-left: 19px;
+}
+
+/* Typeography
+-------------------------------------------------- */
+.ul-hdg {
+  margin: 0 0 15px 0;
+  padding: 0 0 10px 0;
+  line-height: 1;
+  background: url('../img/border-2px.gif') repeat-x bottom left;
+}
+
+.search-params {
+  margin: 30px 0;
+}
+
+.search-params h2 {
+  color: #85AB00;
+}
+
+.search-params em {
+  color: #555555;
+}
+
+
+/* Dropdowns
+-------------------------------------------------- */
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+  // background-color: #eeeeee !important;
+  color: $default-link-color !important;
+  background-image: none !important;
+  background-repeat: none !important;
+  overflow: hidden;
+}
+
+.lt-ie8 .dropdown-menu li > a:hover,
+.lt-ie8 .dropdown-menu li > a:focus,
+.lt-ie8 .dropdown-submenu:hover > a {
+  overflow: visible;
+}
+
+.dropdown-menu {
+  margin: 0 !important;
+  padding: 0 !important;
+  -webkit-background-clip: padding;
+     -moz-background-clip: padding;
+       -o-background-clip: padding-box;
+      -ms-background-clip: padding-box;
+   -khtml-background-clip: padding-box;
+          background-clip: padding-box;
+
+  -webkit-box-shadow: 0 0 15px #303030;
+     -moz-box-shadow: 0 0 15px #303030;
+       -o-box-shadow: 0 0 15px #303030;
+          box-shadow: 0 0 15px #303030;
+
+}
+
+#main-menu-right .dropdown-menu {
+  width: 22em !important;
+}
+
+/* Misc List and other items
+-------------------------------------------------- */
+ul.ns-info-list li {
+  margin-bottom: 5px;
+}
+
+ul.ns-info-list-nested {
+  margin-left: 50px;
+  font-size: 1em;
+}
+
+ul.ns-info-list-nested li {
+  margin-bottom: 0px;
+}
+
+ul.ns-info-list-nested li:first-child,
+ul.ns-info-list-nested li:last-child {
+  list-style: none;
+  margin-left: -20px;
+}
+
+.dl-horizontal-info {
+  *zoom: 1;
+  line-height: 22px;
+}
+.dl-horizontal-info:before,
+.dl-horizontal-info:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.dl-horizontal-info:after {
+  clear: both;
+}
+.dl-horizontal-info dt {
+  float: left;
+  width: 120px;
+  clear: left;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 5px;
+}
+
+.dl-horizontal-info dd {
+  margin-left: 140px;
+}
+
+.dl-btm-spc {
+  margin-bottom: 5px;
+}
+
+.pol-spcr {
+  margin: 0 5px 0 5px;
+}
+
+/* Colors
+-------------------------------------------------- */
+.red {
+  color: red;
+}
+
+.ns-gold {
+  color: $ns-gold;
+}
+
+.ns-blue {
+  color: $ns-blue;
+}
+
+/* Seperators
+-------------------------------------------------- */
+hr.dashed {
+  background: none repeat scroll 0 0 transparent;
+  border-bottom: 1px dashed #CF9317;
+  border-top: medium none;
+  margin: 20px 0 10px;
+}
+
+/* Effects
+-------------------------------------------------- */
+.hover {
+  opacity:.5;
+  -webkit-transition:all .3s ease-in-out;
+     -moz-transition:all .3s ease-in-out;
+      -ms-transition:all .3s ease-in-out;
+       -o-transition:all .3s ease-in-out;
+          transition:all .3s ease-in-out;
+}
+
+.flexslider{
+  margin:0;
+  background:transparent !important;
+  border:none !important;
+  border-radius:none !important;
+}
+
+/* Bootstrap Extensions
+-------------------------------------------------- */
+[class^="icon-"], [class*=" icon-"] {
+  margin: 0 2px;
+  vertical-align: 0px;
+}
+
+/* Error Messages
+------------------------- */
+#error_explanation {
+  border: 1px solid #e9322d !important;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 16px;
+  margin: -7px;
+  background-color: #e9322d;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  /*font-size: 12px;*/
+  list-style: square;
+  color: #b94a48;
+}
+
+/* Internet Explorer
+-------------------------------------------------- */
+.lt-ie8 [class^="icon-"], .lt-ie7 [class*=" icon-"] {
+  vertical-align: 4px;
+}
+
+/* Application Ribbon
+-------------------------------------------------- */
+.app-ribbon .nav > li > a {
+  font-size: 1.2em;
+  color: #FFF;
+  text-shadow: none;
+}
+
+.app-ribbon .nav > li {
+  display: block;
+  cursor: pointer;
+}
+
+.app-ribbon{
+  margin: 0;
+}
+
+/* Dropdown caret color */
+.app-ribbon .nav li.dropdown > .dropdown-toggle .caret {
+  border-top-color: $ns-gold;
+  border-bottom-color: $ns-gold;
+}
+
+.app-ribbon .navbar-toggle {
+  background-color: $ns-gold !important;
+  background-image: none !important;
+}
+.app-ribbon .navbar-toggle:hover {
+  background-color: $ns-gold !important;
+  background-image: none !important;
+}
+
+.lt-ie8 .app-ribbon .nav > li > a:focus,
+.lt-ie8 .app-ribbon .nav > li > a:hover,
+.lt-ie7 .app-ribbon .nav > li > a:hover,
+.lt-ie7 .app-ribbon .nav > li > a:hover {
+  background-color:transparent;
+  zoom: 1;
+}
+
+#input-form, #select-form{
+  padding: 10px 25px;
+  margin: 5px -15px;
+}
+
+.ns-app-ribbon {
+  padding-bottom:0px;
+}
