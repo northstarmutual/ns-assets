@@ -41,7 +41,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
         .pipe(cssFilter.restore())
         .pipe($.useref.restore())
         .pipe($.useref())
-        .pipe(rev())
+        .pipe(gulpif(gulp.manifest, rev()))
         .pipe(assetManifest({
           bundleName: gulp.bundleName,
           manifestFile: gulp.distFolder + '/manifest.json',
@@ -63,9 +63,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('fonts', function () {
-    return $.bowerFiles()
-        .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
-        .pipe($.flatten())
+    return gulp.src('app/fonts/**/*')
         .pipe(gulp.dest(gulp.distFolder + '/fonts'))
         .pipe($.size());
 });
@@ -75,7 +73,6 @@ gulp.task('extras', function () {
         .pipe(gulp.dest(gulp.distFolder));
 });
 
-//gulp.task('move', ['cleanServer'], function () {
 gulp.task('move', function () {
     var distFolder = '';
     var server = '';
@@ -122,7 +119,6 @@ gulp.task('move', function () {
     gulp.src(files, { base: './' + distFolder + '/'})
         .pipe(gulp.dest(assetsPath));
 
-
     var formData = {
       token: 'G1Ac6E1MChpEfNU71U7b',
       bundleName: bundleName,
@@ -153,24 +149,24 @@ gulp.task('clean', function () {
     return gulp.src(['.tmp', distFolder], { read: false }).pipe($.clean());
 });
 
-gulp.task('docs', function () {
-    var distFolder = '';
-    (argv.production) ? distFolder = 'dist' : distFolder = 'dev';
-    var files = [
-        './' + distFolder + '/fonts/**/*.*',
-        './' + distFolder + '/images/**/*.*',
-        './' + distFolder + '/scripts/**/*.*',
-    ];
-    return gulp.src(files, { base: './' + distFolder + '/'})
-        .pipe(gulp.dest('./docs'));
+gulp.task('cleanDocs', function () {
+    return gulp.src(['./docs/styles/*', './docs/scripts/*', './docs/images/*', './docs/fonts/*'] , { read: false, force: true }).pipe($.clean());
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras', 'docs']);
+gulp.task('docs', ['cleanDocs'], function () {
+    gulp.distFolder = './docs';
+    gulp.manifest = false;  // Dont add hash to file (a27c654ad56f)
+    gulp.bundleName = 'docs';
+    console.log("Building the styleguide assets");
+    gulp.start('build');
+});
+
+gulp.task('build', ['html', 'images', 'fonts', 'extras']);
 
 gulp.task('default', ['clean'], function () {
     (argv.production) ? gulp.distFolder = 'dist' : gulp.distFolder = 'dev';
     gulp.bundleName = 'common';
-    //console.log(argv.env);
+    gulp.manifest = true; // Add hash to file
     (argv.production) ?
       console.log("Building production files in dist folder") : console.log('Run "gulp --production" to build production assets');
     gulp.start('build');
@@ -191,7 +187,7 @@ gulp.task('connect', function () {
         });
 });
 
-gulp.task('serve', ['connect', 'styles', 'docs'], function () {
+gulp.task('serve', ['connect', 'styles'], function () {
     require('opn')('http://localhost:9000');
 });
 
@@ -213,7 +209,7 @@ gulp.task('wiredep', function () {
         .pipe(gulp.dest('app'));
 });
 
-gulp.task('watch', ['connect', 'serve', 'docs'], function () {
+gulp.task('watch', ['connect', 'serve'], function () {
     var server = $.livereload();
 
     // watch for changes
@@ -228,8 +224,8 @@ gulp.task('watch', ['connect', 'serve', 'docs'], function () {
         server.changed(file.path);
     });
 
-    gulp.watch('app/styles/**/*.scss', ['styles', 'docs']);
-    gulp.watch('app/scripts/**/*.js', ['scripts', 'docs']);
-    gulp.watch('app/images/**/*', ['images', 'docs']);
+    gulp.watch('app/styles/**/*.scss', ['styles']);
+    gulp.watch('app/scripts/**/*.js', ['scripts']);
+    gulp.watch('app/images/**/*', ['images']);
     gulp.watch('bower.json', ['wiredep']);
 });
