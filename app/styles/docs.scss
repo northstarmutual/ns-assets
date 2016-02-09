@@ -1,6 +1,5 @@
 // Import core North Star Mutual styles
-$image-path:                 "images" !default;
-@import "main";
+@import 'components/variables.scss';
 
 // Import docs styles
 @import "docs/docs";

@@ -15,10 +15,10 @@ port: 8888
 
 version: 2.0.0
 
+exclude: ['index.html']
+
 sass:
-  sass_dir: ../
   style: compressed
 
 gitlab:
   repo: http://gitlab.galaxy.local/onlinequoting/ns-assets/
-

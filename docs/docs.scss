@@ -1,15 +1,1 @@
----
-# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
-# only main files contain this front matter, not partials.
----
 
-/*
- * Primer documentation styles
- * http://primercss.io
- *
- * Released under MIT license. Copyright 2015 GitHub, Inc.
- */
-
-// Import core North Star Mutual styles
-$icon-font-path:                 "fonts/" !default;
-@import "../app/styles/docs";
