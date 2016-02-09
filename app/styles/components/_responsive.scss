@@ -1,6 +1,178 @@
 //
 // Responsiveness... Make adjustments as needed
 //
+@media screen and (max-width: 767px) {
+  .collapse .nav{
+    display:none;
+    opacity:0%;
+  }
+  .collapse.in .nav{
+    display:block;
+    opacity:100%;
+  }
+
+  .pg-title {
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+
+  .ns-menu > li > a {
+    font-size: 1.2em;
+  }
+
+  .brand {
+    padding-left: 15px;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .debug-info {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 15px !important;
+  }
+}
+
+
+/* Responsive
+-------------------------------------------------- */
+
+/* Desktop large
+------------------------- */
+@media (min-width: 1200px) {
+  .ns-hdg .container,
+  .ns-ribbon .container {
+    width: 1170px;
+  }
+
+  .ns-page-title {
+    margin-top: 3em;
+  }
+
+}
+
+/* Desktop
+------------------------- */
+@media (max-width: 980px) {
+
+  .navbar-fixed-top {
+    margin-bottom: 0px;
+  }
+
+  .ns-app {
+    margin-top: 15px;
+  }
+
+  .nav-collapse .nav > li.active {
+    border-top: none;
+    border-right: 11px;
+    padding: 7px 15px;
+    color: #05007B;
+    text-decoration: none;
+    text-transform:uppercase;
+    font-weight:300;
+    /*border-top:11px solid transparent;*/
+  }
+  .nav-collapse .nav > li > a,
+  .nav-collapse .dropdown-menu a {
+    -webkit-border-radius: 0px;
+       -moz-border-radius: 0px;
+            border-radius: 0px;
+  }
+
+  .ns-page-title h1 {
+    font-size: 2em;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+}
+
+/* Tablet to desktop
+------------------------- */
+@media (min-width: 768px) and (max-width: 979px) {
+
+  body.ns-imitate {
+    padding-top: 0px;
+  }
+
+  .ns-page-title h1 {
+    font-size: 2em;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  .navbar-fixed-top,
+  .navbar-fixed-bottom,
+  .navbar-static-top {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .ns-menu > li > a {
+    font-size: 1.1em;
+  }
+
+}
+
+/* Tablet
+------------------------- */
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+
+  body.ns-imitate {
+    padding-top: 0px;
+  }
+
+  .navbar-fixed-top,
+  .navbar-fixed-bottom,
+  .navbar-static-top {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .ns-page-title h1 {
+    font-size: 2em;
+    margin-top: 5px;
+    width: 100%;
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  .ns-menu > li > a {
+    font-size: 1.2em;
+  }
+
+}
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+
+  /* Unfloat the back to top in footer to prevent odd text wrapping */
+  .footer .pull-right {
+    float: none;
+  }
+
+  .ns-page-title h1 {
+    font-size: 2em;
+    margin-top: 5px;
+    width: 100%;
+  }
+
+  .ns-imitate-navbar h1 {
+    font-size: 1em;
+  }
+}
 
 
 // Phones
@@ -22,9 +194,11 @@
     font-size: 1.6em;
   }
 
-  .summary-hdg-sm {
-    font-size: 1em;
-    float: none;
+  .summary-details {
+    h3.label {
+      font-size: 1em;
+      float: none;
+    }
   }
 
   .half-lg-full-sm {
