@@ -22,7 +22,7 @@ $(document).ready(function() {
   uploadObj.fileupload('option', {
       autoUpload: true,
       sequentialUploads: true,  // ICE Doesn't do that well with multiple simultaneous requests
-      maxFileSize: 10000000,
+      maxFileSize: 10000000, // 10mb max file upload size (in bytes)
       acceptFileTypes: /(\.|\/)(gif|jpeg|jpg|png|docx|xls|xlsx|doc|pdf|tif|txt|rtf)$/i
   })
 
