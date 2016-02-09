@@ -9,11 +9,6 @@
 
       <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-      <!-- build:css styles/vendor.css -->
-      <!-- bower:css -->
-      <!-- endbower -->
-      <!-- endbuild -->
-
       <!-- build:css styles/oldie.css -->
       <!--[if lt IE 8  ]>
       <link rel="stylesheet" href="styles/oldie.css">
@@ -64,358 +59,697 @@
       <script type="text/javascript" src="scripts/fileUpload/jquery.fileupload-validate.js"></script>
       <script type="text/javascript" src="scripts/fileUpload/jquery.fileupload-ui.js"></script>
       <script type="text/javascript" src="scripts/fileUpload/jquery.fileupload-jquery-ui.js"></script>
-      <script type="text/javascript" src="scripts/fileUpload/file_upload-1.0.6.js"></script>
+      <script type="text/javascript" src="scripts/fileUpload/file_upload.js"></script>
       <!-- endbuild -->
   </head>
-  <body>
+  <body class="DEV-bkd">
   <div class="container">
-    <div class="navbar pg-header">
-      <div class="navbar-inner">
-        <div class="col-6">
-          <h1 class="brand">
-            <a href="#">
-              <img src="images/nsm-logo-web.gif" alt="North Star Mutual Insurance Company"
-                class="img-responsive" title="North Star Mutual Insurance Company">
-            </a>
-          </h1>
-        </div>
-        <div class="col-6">
-          <h1 class="pg-title">
-            Frontend
-            <span class="glyphicon glyphicon-th-list"></span>&nbsp;&nbsp;
-          </h1>
+      <!-- (LOCATION:  244,H,1001) -->
+      <!-- Top Page Header  COMMON -->
+      <div class="navbar pg-header">
+        <div class="navbar-inner">
+          <div class="col-6">
+            <h1 class="brand">
+              <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=employee_menu">
+                <img src="/assets/images/NSM-Logo-web.gif" alt="North Star Mutual Insurance Company"
+                  class="img-responsive" title="North Star Mutual Insurance Company">
+              </a>
+            </h1>
+          </div>
+          <div class="col-6">
+            <h1 class="pg-title">
+              Employee Menu
+            </h1>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="navbar navbar-default app-ribbon">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-          <span class="glyphicon glyphicon-home"></span>
-          Employee Menu
+<div class="navbar navbar-default app-ribbon">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=employee_menu">
+      <span class="glyphicon glyphicon-home"></span>
+      Employee Menu
+    </a>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=Menu&iuserid=365">Agents Only Menu</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Manuals / Forms <b class="caret"></b>
         </a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Contact Us</a></li>
+        <ul class="dropdown-menu">
+      <li>
+        <a href="http://northstarmutual.com/userfiles/file/agentdownload/agencydownloadmanual.pdf" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Agency Download Manual " title=" Agency Download Manual ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Agency Download Manual
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=OnlineDocs&Service=AgentManual" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Online Agent Manual " title=" Online Agent Manual ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Online Agent Manual
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=OnlineDocs&Service=GeneralAgentManual" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Online General Agent Manual " title=" Online General Agent Manual ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Online General Agent Manual
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=OnlineDocs&Service=PolicyForms" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Online Policy Forms " title=" Online Policy Forms ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Online Policy Forms
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=OnlineDocs&Service=Printables" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Apps, Brochures & ACORD Forms " title=" Apps, Brochures & ACORD Forms ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Apps, Brochures & ACORD Forms
+
+        </a>
+      </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-               365        <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
+      </li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          Resources <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+      <li>
+        <a href="https://portal.adp.com/public/index.htm" target="_blank"  id="" class="ns-mnu-link"
+          alt=" ADP Portal " title=" ADP Portal ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  ADP Portal
+
+        </a>
+      </li>
+      <li>
+        <a href="http://northstarmutual.go.easyprojects.net/FormRecords/Widget?formId=1" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Change Request Form " title=" Change Request Form ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Change Request Form
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=download_resend" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Download Policy Re-send " title=" Download Policy Re-send ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Download Policy Re-send
+
+        </a>
+      </li>
+      <li>
+        <a href="https://www.google.com/maps" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Google Maps " title=" Google Maps ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Google Maps
+          <span class="glyphicon glyphicon-map-marker"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www6.iso.com/auth/global/login.do?req_url=https://www3.iso.com/cmcplus/" target="_blank"  id="" class="ns-mnu-link"
+          alt=" ISOnet " title=" ISOnet ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  ISOnet
+
+        </a>
+      </li>
+      <li>
+        <a href="https://insurancesolutions.lexisnexis.com/" target="_blank"  id="" class="ns-mnu-link"
+          alt=" LexisNexis Insurance Link " title=" LexisNexis Insurance Link ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  LexisNexis Insurance Link
+
+        </a>
+      </li>
+      <li>
+        <a href="http://northstarmutual.com/#"   id="MSBLink" class="ns-mnu-link"
+          alt=" MS/B RCT Calculator " title=" MS/B RCT Calculator ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  MS/B RCT Calculator
+
+          <br><small class="ns-gold"> (Internet Explorer Only) </small>
+        </a>
+      </li>
+<script type="text/javascript">
+//Submit the form information to the RCT Express Site and log the user in
+$('#MSBLink').on('click', function(event){
+  event.preventDefault();
+  document.getElementById("MSBLogin").submit();
+})
+</script>
+<form id="MSBLogin" method="POST" action="https://rct4.msbexpress.net/nstar/autologin.asp"
+  target="_blank" style="margin:0;padding:0;">
+  <INPUT type="hidden" name="txtaction" value="remotelogin">
+  <INPUT type="hidden" name="userid"    value="365">
+</form>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=naic_info" target="_blank"  id="naic-info" class="ns-mnu-link"
+          alt=" NAIC # / Logo Download " title=" NAIC # / Logo Download ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  NAIC # / Logo Download
+
+        </a>
+      </li>
+
+
+
+<script type="text/javascript">
+var html = '<div class="modal fade" id="NAICModal" tabindex="-2"';
+var html = html + 'role="dialog" aria-labelledby="NAICModalLabel">';
+var html = html + '<div class="modal-dialog modal-lg">';
+var html = html + '<div class="modal-content">';
+var html = html + '<div class="modal-header">';
+var html = html + '<button type="button" class="close" data-dismiss="modal" aria-label="Close">';
+var html = html + '<span aria-hidden="true">&times;</span></button>';
+var html = html + '<h4 class="modal-title">NAIC # / Logo Download</h4></div>';
+var html = html + '<div class="modal-body"><center>';
+var html = html + '<div id="NAICModalMeat"><p>Loading&hellip;</p></div>';
+var html = html + '</center></div>';
+var html = html + '</div><!-- /.modal-content -->';
+var html = html + '</div><!-- /.modal-dialog -->';
+var html = html + '</div><!-- /.modal -->';
+$('body').append(html);
+    $("#naic-info").click(function(event) {
+      event.preventDefault();
+      var url = this.href;
+      $.ajax({
+          method: "POST",
+          url: url
+        })
+          .done(function( msg ) {
+            $("#NAICModalMeat").html(msg);
+            $('#NAICModal').modal();
+        });
+    });
+</script>
+      <li>
+        <a href="http://mail.nstarco.com:20000/vacation" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Out of office " title=" Out of office ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Out of office
+
+        </a>
+      </li>
+      <li>
+        <a href="http://www.sfmic.com" target="_blank"  id="" class="ns-mnu-link"
+          alt=" SFM Work Comp " title=" SFM Work Comp ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  SFM Work Comp
+
+        </a>
+      </li>
+      <li>
+        <a href="http://www.sircon.com/index.html" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Sircon " title=" Sircon ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Sircon
+
+        </a>
+      </li>
+      <li>
+        <a href="http://spa.northstarmutual.com" target="_blank"  id="" class="ns-mnu-link"
+          alt=" SPA - Single Point Administration " title=" SPA - Single Point Administration ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  SPA - Single Point Administration
+
+        </a>
+      </li>
+      <li>
+        <a href="https://iportalnsmic.billmatrix.com/NSMIPortal/" target="_blank"  id="" class="ns-mnu-link"
+          alt=" BillMatrix iPortal " title=" BillMatrix iPortal ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  BillMatrix iPortal
+
+        </a>
+      </li>
+      <li>
+        <a href="https://tools.usps.com/go/ZipLookupAction!input.action?mode=0&refresh=true" target="_blank"  id="" class="ns-mnu-link"
+          alt=" USPS Address Validation Lookup " title=" USPS Address Validation Lookup ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  USPS Address Validation Lookup
+
+        </a>
+      </li>
+      <li>
+        <a href="http://intranet.nstarco.net/forms/cf-11FieldPersonnel.pdf" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Field Personnel Listing " title=" Field Personnel Listing ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Field Personnel Listing
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=OnlineDocs&Service=ITSupport" target="_blank"  id="" class="ns-mnu-link"
+          alt=" I.T. Help Reference List " title=" I.T. Help Reference List ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  I.T. Help Reference List
+
+        </a>
+      </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <span class="glyphicon glyphicon-user"></span>
+          WINNE       :   365 <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
               <li>
-                <a href="#" title="Sign Out" alt="Sign Out">
-                  <i class="icon-chevron-right"></i>Sign Out
+                <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=SysAdmin_Menu" title="System Admin Menu" alt="System Admin Menu">
+                  <i class="icon-chevron-right"></i>System Admin Menu
                 </a>
               </li>
-            </ul>
+              <li>
+                <a href="https://quotedev.nstarco.com/fieldstaff/default.asp?Category=Misc&Service=FieldRep_Menu" title="Field Rep Menu" alt="Field Rep Menu">
+                  <i class="icon-chevron-right"></i>Field Rep Menu
+                </a>
+              </li>
+          <li>
+            <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=Signoff&ref=NSInit" title="Sign Out" alt="Sign Out" class="logoff-link">
+              <span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;Sign Out
+            </a>
           </li>
         </ul>
-      </div>
+      </li>
+    </ul>
+  </div><!--/.nav-collapse -->
+</div><!-- /.navbar .app-ribon -->
+<form name="logOffForm" action="signoff.Asp" method="post" id="logOffForm">
+<input type="hidden" name="SessID" id="SessID" value="CISESSIONID"/>
+<input type="hidden" name="Path" id="Path" value="entry"/>
+</form>
+<script type="text/javascript">
+  $(function() {
+    $(".logoff-link").on("click", function(e) {
+      e.preventDefault();
+      $("#logOffForm").submit();
+    });
+  });
+</script>
+<div class="inner-container clearfix"><!-- (LOCATION:  244,H,1003) -->
+<div class="app-container col-12">
+<div class="col-3">
+  <div id="QuotingPanel" class="panel panel-default panel-condensed">
+    <div class="panel-heading hidden-print">
+      <h3>
+        Quoting
+      </h3>
     </div>
-    <div class="inner-container clearfix">
-      <ol class="breadcrumb hidden-print">
-        <li class="active">Frontend Menu</li>
-      </ol>
-      <div class="app-container">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3>Projects</h3>
-          </div>
-          <div class="panel-body">
-            <ul class="list-group" id="projects">
-            </ul>
-            <div class="docs-example clearfix">
-              <fieldset>
-                <form class="form-horizontal" role="form" method="post" action="https://quotedev.nstarco.com/entry/default.asp?Category=Umbrella&amp;Service=Applicant" id="r-applicant">
-                  <input type="hidden" name="formsubmit" value="true">
-                  <input type="hidden" name="validUSPS" id="validUSPS" value="">
-                  <div class="alert alert-info col-offset-3 col-6">
-                    <p>Does this risk qualify?
-                      <a href="#" class="btn" data-toggle="modal" data-target="#eligibility-modal">
-                      View Eligibility Guidelines
-                      </a>
-                    </p>
-                  </div>
+    <div class="panel-body">
+      <ul class="ns-menu nav">
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Autoapp&Service=states" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Auto - Personal " title=" Auto - Personal ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Auto - Personal
 
-                  <div class="row">
-                    <div class="col-offset-3 col-9">
-                      <h2 class="section-hdg">Applicant Information</h2>
-                    </div>
-                  </div>
-                    <div class="form-group <VALSTATE>(p)">
-              <label for="r-applicant-corp" class="col-3 control-label">
-                Is insured a corporation? *
-              </label>
-                      <div class="col-4">
-                        <label class="radio-inline">
-              <input type="radio" name="r-applicant-corp" value="Yes" class="corp-radio" id="corp-yes"> Yes
-                        </label>
-                        <label class="radio-inline">
-              <input type="radio" name="r-applicant-corp" value="No" checked="checked" class="corp-radio" id="corp-no"> No
-                        </label>
-                      </div>
-                    </div>
-                    <div class="form-group corpname <VALSTATE>(p)" style="display: none;">
-              <label for="r-applicant-corpname" class="col-3 control-label">
-                Corpration Name *
-              </label>
-                      <div class="col-4">
-              <input type="text" name="r-applicant-corpname" value="" class="form-control" maxlength="36" placeholder="Corporation Name" disabled="" autocomplete="off" id="corpname">
-                      </div>
-                    </div>
-                    <div class="form-group corpname" style="display: none;">
-              <label for="r-applicant-cxname" class="col-3 control-label">
-                Additional Name Info
-              </label>
-                      <div class="col-4">
-              <input type="text" name="r-applicant-cxname" value="" class="form-control" maxlength="36" placeholder="Additonal Name Info" disabled="" autocomplete="off" id="cxname">
-                      </div>
-                    </div>
-                    <div class="form-group appname <VALSTATE>(p)">
-              <label for="r-applicant-firstname" class="col-3 control-label">
-                First Name *
-              </label>
-                      <div class="col-4">
-              <input type="text" name="r-applicant-firstname" value="" class="form-control" maxlength="20" placeholder="First Name" autocomplete="off" id="firstname">
-                      </div>
-                    </div>
-                    <div class="form-group appname <VALSTATE>(p)">
-              <label for="r-applicant-lastname" class="col-3 control-label">
-                Last Name
-              </label>
-                      <div class="col-4">
-              <input type="text" name="r-applicant-lastname" value="" class="form-control" maxlength="20" placeholder="Last Name" autocomplete="off" id="lastname">
-                      </div>
-                    </div>
-                    <div class="form-group appname">
-              <label for="r-applicant-xname" class="col-3 control-label">
-                2nd Named Insured
-              </label>
-                      <div class="col-4">
-              <input type="text" name="r-applicant-xname" value="" class="form-control" maxlength="36" placeholder="2nd Named Insured" autocomplete="off" id="xname">
-                      </div>
-                    </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=CA_Autoapp&Service=ca_states" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Auto - Commercial " title=" Auto - Commercial ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Auto - Commercial
 
-                    <div class="row">
-                      <div class="col-offset-3 col-9">
-                        <h2 class="section-hdg">Property Address</h2>
-                      </div>
-                    </div>
-                    <div class="form-group <VALSTATE>(p)">
-              <label for="r-applicant-paddress" class="col-3 control-label">
-                Street Address *
-              </label>
-                      <div class="col-4">
-              <input type="text" name="r-applicant-paddress" value="" id="Address2" class="form-control" maxlength="36" placeholder="Street Address" autocomplete="off">
-                      </div>
-                    </div>
-                      <div class="form-group <VALSTATE>(p)">
-              <label for="r-applicant-paddress2" class="col-3 control-label">
-                Street Address 2
-              </label>
-                        <div class="col-4">
-              <input type="text" name="r-applicant-paddress2" value="" class="form-control" maxlength="36" placeholder="Street Address 2" autocomplete="off" id="paddress2">
-                        </div>
-                        <input type="hidden" id="Address1">
-                      </div>
-                    <div class="form-group <VALSTATE>(p)">
-              <label for="r-applicant-pzip" class="col-3 control-label">
-                Zip *
-              </label>
-                      <div class="col-4">
-              <input type="text" name="r-applicant-pzip" value="" id="Zip" class="form-control" maxlength="9" placeholder="Zip" autocomplete="off">
-                      </div>
-                    </div>
-                    <div class="form-group <VALSTATE>(p)">
-              <label for="r-applicant-pcity" class="col-3 control-label">
-                City *
-              </label>
-                      <div class="col-4">
-              <input type="text" name="r-applicant-pcity" value="" id="City" class="form-control" maxlength="17" placeholder="City" autocomplete="off">
-                      </div>
-                    </div>
+        </a>
+      </li>
+      <li>
+        <a href="http://intranet.nstarco.net/ns0007/Home.aspx" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Business Protector " title=" Business Protector ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Business Protector
 
-                    <div class="form-group <VALSTATE>(p)">
-              <label for="r-applicant-pstate" class="col-3 control-label">
-                State *
-              </label>
-                      <div class="col-4">
-                        <select name="r-applicant-pstate" class="form-control" id="State">
-                          <option selected="" value=" "></option>
-                          <option value="IA">IA</option>
-                          <option value="MN">MN</option>
-                          <option value="NE">NE</option>
-                          <option value="ND">ND</option>
-                          <option value="OK">OK</option>
-                          <option value="SD">SD</option>
-                        </select>
-                      </div>
-                    </div>
-                    <!-- This should be disabled until they select city / state -->
-                    <div class="form-group <VALSTATE>(p)">
-              <label for="r-applicant-pcounty" class="col-3 control-label">
-                County *
-              </label>
-                      <div class="col-4">
-                        <select name="r-applicant-pcounty" class="form-control" id="pcounty"><option value="1">AITKIN</option><option value="3">ANOKA</option><option value="5">BECKER</option><option value="7">BELTRAMI</option><option value="9">BENTON</option><option value="11">BIG STONE</option><option value="13">BLUE EARTH</option><option value="15">BROWN</option><option value="17">CARLTON</option><option value="19">CARVER</option><option value="21">CASS</option><option value="23">CHIPPEWA</option><option value="25">CHISAGO</option><option value="27">CLAY</option><option value="29">CLEARWATER</option><option value="31">COOK</option><option value="33">COTTONWOOD</option><option value="35">CROW WING</option><option value="37">DAKOTA</option><option value="39">DODGE</option><option value="41">DOUGLAS</option><option value="43">FARIBAULT</option><option value="45">FILLMORE</option><option value="47">FREEBORN</option><option value="49">GOODHUE</option><option value="51">GRANT</option><option value="53">HENNEPIN</option><option value="55">HOUSTON</option><option value="57">HUBBARD</option><option value="59">ISANTI</option><option value="61">ITASCA</option><option value="63">JACKSON</option><option value="65">KANABEC</option><option value="67">KANDIYOHI</option><option value="69">KITTSON</option><option value="71">KOOCHICHING</option><option value="73">LAC QUI PARLE</option><option value="75">LAKE</option><option value="77">LAKE OF THE WOODS</option><option value="79">LE SUEUR</option><option value="81">LINCOLN</option><option value="83" selected="">LYON</option><option value="87">MAHNOMEN</option><option value="89">MARSHALL</option><option value="91">MARTIN</option><option value="85">MCLEOD</option><option value="93">MEEKER</option><option value="95">MILLE LACS</option><option value="97">MORRISON</option><option value="99">MOWER</option><option value="101">MURRAY</option><option value="103">NICOLLET</option><option value="105">NOBLES</option><option value="107">NORMAN</option><option value="109">OLMSTED</option><option value="111">OTTER TAIL</option><option value="113">PENNINGTON</option><option value="115">PINE</option><option value="117">PIPESTONE</option><option value="119">POLK</option><option value="121">POPE</option><option value="123">RAMSEY</option><option value="125">RED LAKE</option><option value="127">REDWOOD</option><option value="129">RENVILLE</option><option value="131">RICE</option><option value="133">ROCK</option><option value="135">ROSEAU</option><option value="139">SCOTT</option><option value="141">SHERBURNE</option><option value="143">SIBLEY</option><option value="137">ST.LOUIS</option><option value="145">STEARNS</option><option value="147">STEELE</option><option value="149">STEVENS</option><option value="151">SWIFT</option><option value="153">TODD</option><option value="155">TRAVERSE</option><option value="157">WABASHA</option><option value="159">WADENA</option><option value="161">WASECA</option><option value="163">WASHINGTON</option><option value="165">WATONWAN</option><option value="167">WILKIN</option><option value="169">WINONA</option><option value="171">WRIGHT</option><option value="173">YELLOW MEDICINE</option></select>
-                      </div>
-                    </div>
+          <br><small class="ns-gold"> (Internet Explorer Only) </small>
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Dwell&Service=Home" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Dwelling Fire " title=" Dwelling Fire ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Dwelling Fire
 
-                    <div class="form-group">
-                      <label for="mailTo" class="col-3 control-label">&nbsp;</label>
-                      <div class="col-9">
-                        <label>
-                         <input type="checkbox" id="mailTo" name="mailTo" value="X">
-                          Check here if the Mailing Address is different from the Property Address.
-                        </label>
-                      </div>
-                    </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Farmown&Service=Home" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Farm " title=" Farm ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Farm
 
-                    <div id="mailingAddress" style="display:none;">
-                      <div class="row">
-                        <div class="col-offset-3 col-9">
-                          <h2 class="section-hdg">Mailing Address</h2>
-                        </div>
-                      </div>
-                      <div class="form-group <VALSTATE>(p)">
-              <label for="r-applicant-maddress" class="col-3 control-label">
-                Street Address *
-              </label>
-                        <div class="col-4">
-              <input type="text" name="r-applicant-maddress" value="" id="MTAddress2" class="form-control" maxlength="36" placeholder="Street Address" autocomplete="off">
-                        </div>
-                      </div>
-                      <div class="form-group <VALSTATE>(p)">
-              <label for="r-applicant-maddress2" class="col-3 control-label">
-                Street Address 2
-              </label>
-                        <div class="col-4">
-              <input type="text" name="r-applicant-maddress2" value="" class="form-control" maxlength="36" placeholder="Address Line 2" autocomplete="off" id="maddress2">
-                        </div>
-                        <input type="hidden" id="MTAddress1">
-                      </div>
-                      <div class="form-group <VALSTATE>(p)">
-              <label for="r-applicant-mcity" class="col-3 control-label">
-                City *
-              </label>
-                        <div class="col-4">
-              <input type="text" name="r-applicant-mcity" value="" id="MTCity" class="form-control" maxlength="17" placeholder="City" autocomplete="off">
-                        </div>
-                      </div>
-                      <div class="form-group <VALSTATE>(p)">
-              <label for="r-applicant-mstate" class="col-3 control-label">
-                State *
-              </label>
-                        <div class="col-4">
-              <input type="text" name="r-applicant-mstate" value="" id="MTState" class="form-control" maxlength="2" placeholder="State" autocomplete="off">
-                        </div>
-                      </div>
-                      <div class="form-group <VALSTATE>(p)">
-              <label for="r-applicant-mzip" class="col-3 control-label">
-                Zip *
-              </label>
-                        <div class="col-4">
-              <input type="text" name="r-applicant-mzip" value="" id="MTZip" class="form-control" maxlength="9" placeholder="Zip" autocomplete="off">
-                        </div>
-                      </div>
-                    </div> <!-- #mailingAddress -->
-                    <div id="validatingAddress" class="form-group validatingAddress" style="display:none;">
-                      <label class="col-3 control-label">&nbsp;</label>
-                      <div class="col-4">
-                      <img src="/assets/images/Loading.gif" height="40" width="40" alt="Validating Address">
-                      <p id="validationMsg"> Validating Address... </p>
-                      </div>
-                    </div>
-                    <div class="errorHelp form-group" id="errorHelp" style="display: none;">
-                      <label class="col-3 control-label">&nbsp;</label>
-                      <div class="col-9 alert alert-danger">
-                        <span id="Description" class="error">&nbsp;</span>
-                        <span id="ReturnText" class="moreInfo">&nbsp;</span>
-                      </div>
-                    </div>
+          <br><small class="ns-gold"> (IA, NE, ND, OK & SD) </small>
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=HOAPP&Service=Home" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Homeowners " title=" Homeowners ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Homeowners
 
-                    <div class="form-group">
-                      <div class="col-offset-3 col-4">
-                        <button type="button" class="btn btn-primary" data-loading-text="Loading..." name="applicant" id="submitButton">
-                          <span class="glyphicon glyphicon-floppy-disk"></span>
-                          Continue
-                        </button>
-                      </div>
-                    </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=HOAPP&Service=Home" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Mobile Home " title=" Mobile Home ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Mobile Home
 
-                </form>
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Umbrella&Service=Home" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Umbrella " title=" Umbrella ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Umbrella
 
-              </fieldset>
-            </div>
-          </div>
-        </div>
-      </div>
+        </a>
+      </li>
+      </ul><!-- /.ns-menu nav -->
     </div>
   </div>
-  <footer class="pg-footer">
-    <div class="container clearfix">
-      <div class="row">
-        <div class="col-4">
-          <div class="sitemap-module">
-            <div class="title"><a target="_blank" href="http://northstarmutual.com/about-us">About Us</a></div><br>
-            <a target="_blank" href="http://northstarmutual.com/our-values">Our Values</a><br>
-            <a target="_blank" href="http://northstarmutual.com/our-history">Our History</a><br>
-            <a target="_blank" href="http://northstarmutual.com/partnerships-associations">Partnerships &amp; Associations</a><br>
-            <a target="_blank" href="http://northstarmutual.com/recent-highlights">Recent Highlights</a><br>
-            <a target="_blank" href="http://northstarmutual.com/contact-us">Contact Us</a><br>
-          </div>
-          <div class="sitemap-module">
-            <div class="title"><a target="_blank" href="http://northstarmutual.com/products">Products</a></div><br>
-            <a target="_blank" href="http://northstarmutual.com/product-farm">Farm</a><br>
-            <a target="_blank" href="http://northstarmutual.com/product-home">Home</a><br>
-            <a target="_blank" href="http://northstarmutual.com/product-auto">Auto</a><br>
-            <a target="_blank" href="http://northstarmutual.com/product-business">Business</a><br>
-            <a target="_blank" href="http://northstarmutual.com/product-umbrella">Umbrella</a><br>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="sitemap-module">
-            <div class="title"><a target="_blank" href="https://paymentsnsmic.billmatrix.com/" target="_blank">Make Payment</a></div>
-          </div>
-          <div class="sitemap-module">
-            <div class="title"><a target="_blank" href="http://northstarmutual.com/claims-service">Claims Service</a></div><br>
-            <a target="_blank" href="http://northstarmutual.com/report-claim">Report Claim</a><br>
-            <a target="_blank" href="http://northstarmutual.com/roadside-assistance">Roadside Assistance</a><br>
-            <a target="_blank" href="http://northstarmutual.com/claims-faq">Claims FAQ</a><br>
-            <a target="_blank" href="http://northstarmutual.com/loss-control-tips">Loss Control Tips</a><br>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="sitemap-module">
-            <div class="title"><a target="_blank" href="https://quote.nstarco.com/cool-ice/default.asp?Category=misc&amp;Service=menu" target="_blank"> Agent Login</a></div>
-          </div>
-          <div class="sitemap-module">
-            <div class="title"><a target="_blank" href="http://northstarmutual.com/legal-notices">Legal Notices</a></div><br>
-            <a target="_blank" href="http://northstarmutual.com/ln-minnesota">Minnesota</a><br>
-            <a target="_blank" href="http://northstarmutual.com/ln-iowa">Iowa</a><br>
-            <a target="_blank" href="http://northstarmutual.com/ln-nebraska">Nebraska</a><br>
-            <a target="_blank" href="http://northstarmutual.com/ln-north-dakota">North Dakota</a><br>
-            <a target="_blank" href="http://northstarmutual.com/ln-oklahoma">Oklahoma</a><br>
-            <a target="_blank" href="http://northstarmutual.com/ln-south-dakota">South Dakota</a><br>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <span class="copyright">
-            North Star Mutual Insurance Company • 269 Barstad Road South, PO Box 48 • Cottonwood, MN 56229 • 800-622-5230
-          </span>
-        </div>
-      </div>
+</div><!-- /.ns-menu-container -->
+<div class="col-3">
+  <div id="InquiryPanel" class="panel panel-default panel-condensed">
+    <div class="panel-heading hidden-print">
+      <h3>
+        Inquiry
+      </h3>
     </div>
-  </footer>
+    <div class="panel-body">
+      <ul class="ns-menu nav">
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=AgentSummary&Service=SummaryInquiry" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Activity Summary " title=" Activity Summary ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Activity Summary
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Nabs&Service=AcctInq" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Billing System " title=" Billing System ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Billing System
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=CBRInq_Screen" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Credit Score Inquiry " title=" Credit Score Inquiry ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Credit Score Inquiry
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=ClaimInq&Service=Inquiry_screen" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Claims Inquiry " title=" Claims Inquiry ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Claims Inquiry
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=Pol_Inquiry" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Policy Inquiry " title=" Policy Inquiry ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Policy Inquiry
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=loss_ratio"   id="" class="ns-mnu-link"
+          alt=" Policy Loss Ratio " title=" Policy Loss Ratio ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Policy Loss Ratio
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Nabs&Service=SweepSummary" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Sweep Payment Summary " title=" Sweep Payment Summary ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Sweep Payment Summary
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Linecard&Service=LinecardInquiry" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Line Card Inquiry " title=" Line Card Inquiry ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Line Card Inquiry
+
+        </a>
+      </li>
+      </ul><!-- /.ns-menu nav -->
+    </div>
+  </div>
+</div><!-- /.ns-menu-container -->
+<div class="col-3">
+  <div id="ServicesPanel" class="panel panel-default panel-condensed">
+    <div class="panel-heading hidden-print">
+      <h3>
+        Services
+      </h3>
+    </div>
+    <div class="panel-body">
+      <ul class="ns-menu nav">
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=AgencyFiles&Service=Inquiry" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Agency Files " title=" Agency Files ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Agency Files
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Admin&Service=Home" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Agency Administration " title=" Agency Administration ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Agency Administration
+          <span class="glyphicon glyphicon-lock"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Admin&Service=AgencyReports" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Agency Reports " title=" Agency Reports ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Agency Reports
+          <span class="glyphicon glyphicon-stats"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=CBR_order_screen" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Credit Score Ordering " title=" Credit Score Ordering ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Credit Score Ordering
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=agtpollist" target="_blank"  id="" class="ns-mnu-link"
+          alt=" In Force Listing " title=" In Force Listing ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  In Force Listing
+
+        </a>
+      </li>
+      <li>
+        <a href="http://intranet.nstarco.net/labcalendar/calendar.aspx" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Resource Calendar " title=" Resource Calendar ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Resource Calendar
+          <span class="glyphicon glyphicon-calendar"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=NS-IOB&Service=DSP" target="_blank"  id="ns-iob" class="ns-mnu-link"
+          alt=" In / Out Board " title=" In / Out Board ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  In / Out Board
+          <span class="glyphicon glyphicon-user"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=NS-IOB&Service=IOBHRAdmin"   id="ns-iob" class="ns-mnu-link"
+          alt=" IOB Maintenance " title=" IOB Maintenance ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  IOB Maintenance
+          <span class="glyphicon glyphicon-user"></span>
+        </a>
+      </li>
+      </ul><!-- /.ns-menu nav -->
+    </div>
+  </div>
+</div><!-- /.ns-menu-container -->
+<div class="col-3">
+  <div id="I.T.Panel" class="panel panel-default panel-condensed">
+    <div class="panel-heading hidden-print">
+      <h3>
+        I.T.
+      </h3>
+    </div>
+    <div class="panel-body">
+      <ul class="ns-menu nav">
+      <li>
+        <a href="https://northstarmutual.go.easyprojects.net/" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Easy Projects " title=" Easy Projects ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Easy Projects
+          <span class="glyphicon glyphicon-tasks"></span>
+        </a>
+      </li>
+      <li>
+        <a href="http://gitlab.galaxy.local/docs/" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Online Docs " title=" Online Docs ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Online Docs
+          <span class="glyphicon glyphicon-file"></span>
+        </a>
+      </li>
+      <li>
+        <a href="http://gitlab.galaxy.local/" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Gitlab " title=" Gitlab ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Gitlab
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=ICEMONITOR" target="_blank"  id="" class="ns-mnu-link"
+          alt=" ICE Monitor " title=" ICE Monitor ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  ICE Monitor
+          <span class="glyphicon glyphicon-dashboard"></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://ivans2.nstarco.com/NorthStarRTA/RTADashboard.aspx" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Ivans Dashboard " title=" Ivans Dashboard ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Ivans Dashboard
+
+        </a>
+      </li>
+      <li>
+        <a href="https://portal.unisys.com/portal/page/portal/ESERVICE_PGR/global/ESERVICE_LOGIN/ESERVICE_HOME" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Unisys E-Services " title=" Unisys E-Services ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Unisys E-Services
+
+        </a>
+      </li>
+      <li>
+        <a href="http://websrv/irwebservice/irwebservice.asmx" target="_blank"  id="" class="ns-mnu-link"
+          alt=" IR Web Services " title=" IR Web Services ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  IR Web Services
+
+        </a>
+      </li>
+      <li>
+        <a href="http://websrvtest/irwebservice/irwebservice.asmx" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Test IR Web Services " title=" Test IR Web Services ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Test IR Web Services
+
+        </a>
+      </li>
+      <li>
+        <a href="https://www.support.unisys.com/common/ShowWebPage.aspx?id=6447&pla=MAP&nav=MAP" target="_blank"  id="" class="ns-mnu-link"
+          alt=" BIS Mobile " title=" BIS Mobile ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  BIS Mobile
+          <span class="glyphicon glyphicon-phone"></span>
+        </a>
+      </li>
+      <li>
+        <a href="http://quotetest.nstarco.com/entry/default.asp?Category=Misc&Service=employee_menu" target="_blank"  id="" class="ns-mnu-link"
+          alt=" TEST Employee Menu " title=" TEST Employee Menu ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  TEST Employee Menu
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=employee_menu" target="_blank"  id="" class="ns-mnu-link"
+          alt=" DEV Employee Menu " title=" DEV Employee Menu ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  DEV Employee Menu
+
+        </a>
+      </li>
+      </ul><!-- /.ns-menu nav -->
+    </div>
+  </div>
+</div><!-- /.ns-menu-container -->
+<div class="col-3">
+  <div id="IssuingPanel" class="panel panel-default panel-condensed">
+    <div class="panel-heading hidden-print">
+      <h3>
+        Issuing
+      </h3>
+    </div>
+    <div class="panel-body">
+      <ul class="ns-menu nav">
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Dwell&Service=Entry_Home" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Dwelling Fire " title=" Dwelling Fire ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Dwelling Fire
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Farmown&Service=Entry_Home" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Farm " title=" Farm ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Farm
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=HOAPP&Service=Entry_Home" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Homeowners " title=" Homeowners ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Homeowners
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=HOAPP&Service=Entry_Home" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Mobile Home " title=" Mobile Home ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Mobile Home
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Umbrella&Service=Entry_Home" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Umbrella " title=" Umbrella ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Umbrella
+
+        </a>
+      </li>
+      </ul><!-- /.ns-menu nav -->
+    </div>
+  </div>
+</div><!-- /.ns-menu-container -->
+<div class="col-3">
+  <div id="Claims EntryPanel" class="panel panel-default panel-condensed">
+    <div class="panel-heading hidden-print">
+      <h3>
+        Claims Entry
+      </h3>
+    </div>
+    <div class="panel-body">
+      <ul class="ns-menu nav">
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=ClaimsEnt&Service=Inquiry" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Claims Entry System " title=" Claims Entry System ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Claims Entry System
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=Misc&Service=Pol_Inquiry" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Loss Notice Entry " title=" Loss Notice Entry ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Loss Notice Entry
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=LossNotice&Service=reprint_loss" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Loss Notice Reprint " title=" Loss Notice Reprint ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Loss Notice Reprint
+
+        </a>
+      </li>
+      <li>
+        <a href="https://quotedev.nstarco.com/entry/default.asp?Category=ClaimsEnt&Service=reports_screen" target="_blank"  id="" class="ns-mnu-link"
+          alt=" Reports/Audits " title=" Reports/Audits ">
+          <span class="glyphicon glyphicon-chevron-right"></span>  Reports/Audits
+
+        </a>
+      </li>
+      </ul><!-- /.ns-menu nav -->
+    </div>
+  </div>
+</div><!-- /.ns-menu-container -->
+</div>
+</div>
+</div><!-- .inner-container -->
+</div><!-- .container -->
+<div class="container debug-info">
+<pre>
+---- Debug info ----
+sessionid:1453815425ICE91
+ssuserid: 365
+<pre>
 </div>
 </body>
 </html>
