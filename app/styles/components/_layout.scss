@@ -31,6 +31,10 @@ body {
   color: $brand-primary;
 }
 
+.page-header {
+  border-bottom: 4px solid $page-header-border-color;
+}
+
 .inner-container {
   background-color: $container-bg;
   @include border-bottom-radius(4px);
@@ -54,7 +58,7 @@ body {
 
 .app-ribbon {
   margin-bottom: 0;
-  border-color: $ns-brown-gold;
+  border-color: darken($brand-primary, 5%);
 }
 
 .panel-pg-hdg {

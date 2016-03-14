@@ -11,6 +11,10 @@
     opacity:100%;
   }
 
+  .navbar-collapse {
+    border-top: 0;
+  }
+
   .pg-title {
     text-align: left;
     margin-top: 10px;
@@ -35,6 +39,10 @@
     top: 15px;
     left: 0;
     right: 15px !important;
+  }
+
+  #pwdHelp {
+    padding-left: 40px;
   }
 }
 
@@ -95,7 +103,15 @@
 
 /* Tablet to desktop
 ------------------------- */
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 763px) and (max-width: 820px) {
+
+  .app-ribbon .nav > li > a {
+    font-size: 1.03em;
+  }
+
+}
+
+@media (min-width: 763px) and (max-width: 979px) {
 
   body.ns-imitate {
     padding-top: 0px;
@@ -112,10 +128,6 @@
   .navbar-static-top {
     margin-right: 0px;
     margin-left: 0px;
-  }
-
-  .ns-menu > li > a {
-    font-size: 1.1em;
   }
 
 }

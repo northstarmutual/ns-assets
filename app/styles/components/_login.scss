@@ -1,3 +1,15 @@
+#adminPwdHelp {
+  padding-left: 15px;
+  padding-right: 5px;
+}
+#adminPwdHelp ul {
+  padding:0;
+  margin:0;
+}
+#adminPwdHelp li {
+  padding-top: 10px;
+}
+
 .signonwrap {
 
   .container {
@@ -31,6 +43,18 @@
   .alert {
     margin: 5px;
   }
+  #pwdHelp {
+    padding-left: 15px;
+    padding-right: 5px;
+  }
+  #pwdHelp ul {
+    padding:0;
+    margin:0;
+  }
+  #pwdHelp li {
+    padding-top: 10px;
+  }
+
   @media (max-width: 767px) {
     .container {
       max-width: 325px;
@@ -47,6 +71,10 @@
       float: left;
       width: 100%;
       font-size: 13px;
+    }
+    #pwdHelp {
+      padding-left: 25px;
+      padding-right: 30px;
     }
   }
 }

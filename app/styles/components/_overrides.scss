@@ -89,13 +89,15 @@
   box-shadow: 1px 2px 2px rgba(29, 39, 71, .4);
 }
 
-// .panel-default > .panel-heading {
-//   background: linear-gradient(to bottom, $panel-default-heading-bg, $panel-default-border);
-// }
-
-// .panel-primary > .panel-heading {
-//   background: linear-gradient(to bottom, $brand-primary, darken($brand-primary, 5%));
-// }
+// .panel-success > .panel-heading,
+// .panel-info > .panel-heading,
+// .panel-danger > .panel-heading {
+.panel-default > .panel-heading {
+  border-bottom: 1px solid #999999;
+}
+.panel-primary > .panel-heading {
+  border-bottom: 3px solid $ns-gold;
+}
 
 // .panel-success > .panel-heading {
 //   background: linear-gradient(to bottom, $state-success-bg, $state-success-border);
@@ -113,6 +115,7 @@
 .panel-condensed {
   .panel-heading {
     padding: 5px 15px;
+    // border-bottom: 1px solid $ns-gold;
   }
   .panel-heading h3 {
     font-size: 16px;

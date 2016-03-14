@@ -1,8 +1,8 @@
 // Brand colors
 // -------------------------
-$ns-blue:                        #1F4598 !default;
-$ns-gold:                        #C6922C !default;
-$ns-brown-gold:                  #998d57 !default;
+$ns-blue:                        #193677 !default;
+$ns-gold:                        #D7AF63 !default;
+$ns-brown-gold:                  #AF8541 !default;
 $brand-primary:                  #677895 !default;
 $brand-success:                  #5cb85c !default;
 $brand-warning:                  #f0ad4e !default;
@@ -27,6 +27,7 @@ $font-family-serif:              Georgia, "Times New Roman", Times, serif !defau
 $font-family-monospace:          Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:               $font-family-sans-serif !default;
 $font-size-base:                 13px !default;
+$page-header-border-color:       $ns-gold !default;
 
 // Links
 // -------------------------
@@ -99,7 +100,20 @@ $dropdown-link-color:            $ns-blue !default;
 $dropdown-link-hover-color:      darken($ns-blue, 5%) !default;
 $dropdown-link-hover-bg:         #f5f5f5 !default;
 
+// Buttons
+// -------------------------
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             darken($brand-primary, 5%) !default;
+// $btn-primary-color:              #333 !default;
+// $btn-primary-bg:                 #e6e6e6 !default;
+// $btn-primary-border:             #adadad !default;
+
+$btn-default-color:              #333 !default;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             #ccc !default;
 
 $btn-viewdoc-color:              #fff !default;
 $btn-viewdoc-bg:                 darken($default-link-color, 5%) !default;
 $btn-viewdoc-border:             $default-link-color !default;
+
